@@ -331,7 +331,7 @@
 					{% endfor %}
 				</ul>
 				<!-- end links -->
-        
+
 				<!-- begin support -->
 				<ul class="support">
           {% if props.select %}
@@ -647,41 +647,56 @@
 				<ul class="nav__list">
 					{% for nav in props.navArray %}
 					<li class="nav__item js-nav ">
-						<a href="#" class="nav__link nav__link_mod "> {{nav.title}}</a>
-						{% if nav.ul %}
-            <div class="nav__in ">
-              {% for i in range(0, props.colsNum)%}
-              <div class="nav__col">
-              {% for item in  nav.ul %}
-  						<ul class="nav__drop">
-  							{% for item in nav.ul %}
-                {% if item.caption %}
-                <li class="nav__item nav__item_bold">
-  								{{ item.caption}}
-  							</li>
-                {% elseif  item.last %}
-                <li class="nav__item nav__item_last">
-                  <a href="#" class="nav__link">{{ item.last }}</a>
-  							</li>
-                {% else %}
-  							<li class="nav__item">
-  								<a href="#" class="nav__link">{{ item.text }}</a>
-  							</li>
-                {% endif %}
-  							{% endfor %}
-  							{% if list.ul %}
-  							<ul class="nav__drop">
-  								{% for ul in nav.ul %}
-  								<li class="nav__item"><a href="#" class="nav__link"></a></li>
-  								{% endfor %}
-  							</ul>
-  							{% endif %}
-  						</ul>
-              {% endfor %}
-              </div>
-              {% endfor %}
+						<button type="button" class="nav__link nav__link_mod "> {{nav.title}}</button>
 
-  						{% endif %}
+            <div class="nav__in">
+  						<ul class="nav__drop nav__drop_main">
+                {% for item in nav.ul %}
+                  <li>
+                    {% if item.ulIn %}
+                    {% for num in item.ulIn %}
+      							<ul class="nav__drop nav__drop_secondary">
+                      {% if num.caption %}
+                      <li class="nav__item nav__item_bold">
+                        {{ num.caption}}
+                      </li>
+                      {% endif %}
+      								{% for el in num.list %}
+                      {% if el.last %}
+                      <li class="nav__item nav__item_last">
+                        <a href="#" class="nav__link">{{ el.last }}</a>
+                      </li>
+                      {% else %}
+                      <li class="nav__item"><a href="#" class="nav__link">{{el.text}}</a></li>
+                      {% endif %}
+      								{% endfor %}
+      							</ul>
+                    {% endfor %}
+                    {% else %}
+
+
+      							<ul class="nav__drop ">
+                      {% if item.caption %}
+                      <li class="nav__item nav__item_bold">
+                        {{ item.caption}}
+                      </li>
+                      {% endif %}
+      								{% for el in item.list %}
+                      {% if el.last %}
+                      <li class="nav__item nav__item_last">
+                        <a href="#" class="nav__link">{{ el.last }}</a>
+                      </li>
+                      {% else %}
+                      <li class="nav__item"><a href="#" class="nav__link">{{el.text}}</a></li>
+                      {% endif %}
+      								{% endfor %}
+      							</ul>
+
+
+                    {% endif %}
+                  </li>
+                {% endfor %}
+  						</ul>
             </div>
 					</li>
 					{% endfor %}
