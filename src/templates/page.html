@@ -1,0 +1,1187 @@
+---
+title: Index page
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+{{ header.block({
+  class: 'header_yellow',
+	logo: {
+		img: 'logo-rf.png',
+		description: 'Flowers to Russia & Worldwide by RussianFlora.com'
+	},
+	lang: true,
+	linksArray: [
+		{
+			icon: 'cont',
+			text: 'Contacts'
+		},
+		{
+			icon: 'marker',
+			text: 'Shopping in $ <span class="uppercase">USD</span>'
+		},
+		{
+			icon: 'basket',
+			text: 'View Cart'
+		},
+		{
+			icon: 'user',
+			text: 'My Account'
+		}
+	],
+	supportImage: ['orders-1-RFL.png', 'call-1-RFL.png', 'icon_online_3.gif'],
+	country: {
+		flug: 'ru'
+	},
+	locatorList: ['Service Locator', 'Russia', 'Ukraine', 'Belarus', 'Latvia', 'Lithuania', 'Georgia', 'Kazakhstan', 'Moldova', 'A-Z'],
+  colsNum: 1,
+  navArray: [
+    {
+      title: 'catalog',
+      ul: [
+        {
+          text: 'Flowers'
+        },
+        {
+          text: 'Gifts'
+        },
+        {
+          text: 'Sweets'
+        },
+        {
+          text: 'Custom Order'
+        },
+        {
+          text: 'Personal Flower Selector'
+        },
+        {
+          text: 'Corporate Flower Selector'
+        }
+      ]
+    },
+    {
+      title: 'Flowers',
+      ul: [
+        {
+          caption: 'By Category'
+        },
+        {
+          text: 'Bouquets'
+        },
+        {
+          text: 'Designer Bouquets'
+        },
+        {
+          text: 'Flower Baskets'
+        },
+        {
+          text: 'Fruit Bouquets'
+        },
+        {
+          text: 'Plants'
+        }
+      ],
+      ul: [
+        {
+          caption: 'By Category'
+        },
+        {
+          text: 'Bouquets'
+        },
+        {
+          text: 'Designer Bouquets'
+        },
+        {
+          text: 'Flower Baskets'
+        },
+        {
+          text: 'Fruit Bouquets'
+        },
+        {
+          text: 'Plants'
+        },
+        {
+          last: 'all flowers'
+        }
+      ]
+
+    },
+    {
+      title: 'Gifts',
+      ul: [
+        {
+          caption: 'By Category'
+        },
+        {
+          text: 'Bouquets'
+        },
+        {
+          text: 'Designer Bouquets'
+        },
+        {
+          text: 'Flower Baskets'
+        },
+        {
+          text: 'Fruit Bouquets'
+        },
+        {
+          text: 'Plants'
+        },
+        {
+          last: 'all flowers'
+        }
+      ]
+    },
+    {
+      title: 'Sweets',
+      ul: [
+        {
+          caption: 'By Category'
+        },
+        {
+          text: 'Bouquets'
+        },
+        {
+          text: 'Designer Bouquets'
+        },
+        {
+          text: 'Flower Baskets'
+        },
+        {
+          text: 'Fruit Bouquets'
+        },
+        {
+          text: 'Plants'
+        },
+        {
+          last: 'all flowers'
+        }
+      ]
+    },
+    {
+      title: 'Occasion',
+      ul: [
+        {
+          caption: 'By Category'
+        },
+        {
+          text: 'Bouquets'
+        },
+        {
+          text: 'Designer Bouquets'
+        },
+        {
+          text: 'Flower Baskets'
+        },
+        {
+          text: 'Fruit Bouquets'
+        },
+        {
+          text: 'Plants'
+        },
+        {
+          last: 'all flowers'
+        }
+      ]
+    },
+    {
+      title: 'Service Area ',
+      ul: [
+        {
+          caption: 'By Category'
+        },
+        {
+          text: 'Bouquets'
+        },
+        {
+          text: 'Designer Bouquets'
+        },
+        {
+          text: 'Flower Baskets'
+        },
+        {
+          text: 'Fruit Bouquets'
+        },
+        {
+          text: 'Plants'
+        },
+        {
+          last: 'all flowers'
+        }
+      ]
+    },
+    {
+      title: 'Customer Care',
+      ul: [
+        {
+          caption: 'By Category'
+        },
+        {
+          text: 'Bouquets'
+        },
+        {
+          text: 'Designer Bouquets'
+        },
+        {
+          text: 'Flower Baskets'
+        },
+        {
+          text: 'Fruit Bouquets'
+        },
+        {
+          text: 'Plants'
+        },
+        {
+          last: 'all flowers'
+        }
+      ]
+    }
+  ]
+}) }}
+
+
+
+{{ header.block({
+  class: 'header_dark',
+	logo: {
+		img: 'logo-drinkable.png'
+	},
+	lang: true,
+	linksArray: [
+		{
+			icon: 'cont',
+			text: 'Contacts'
+		},
+		{
+			icon: 'marker',
+			text: 'Shopping in $ <span class="uppercase">USD</span>'
+		},
+		{
+			icon: 'basket',
+			text: 'View Cart'
+		},
+		{
+			icon: 'user',
+			text: 'My Account'
+		}
+	],
+	supportImage: ['orders-1-RFL.png', 'call-1-RFL.png', 'icon_online_3.gif'],
+	country: {
+		flug: 'ru'
+	},
+	locatorList: ['Service Locator', 'Russia', 'Ukraine', 'Belarus', 'Latvia', 'Lithuania', 'Georgia', 'Kazakhstan', 'Moldova', 'A-Z'],
+  colsNum: 1,
+  navArray: [
+    {
+      title: 'catalog',
+      ul: [
+        {
+          text: 'Flowers'
+        },
+        {
+          text: 'Gifts'
+        },
+        {
+          text: 'Sweets'
+        },
+        {
+          text: 'Custom Order'
+        },
+        {
+          text: 'Personal Flower Selector'
+        },
+        {
+          text: 'Corporate Flower Selector'
+        }
+      ]
+    },
+    {
+      title: 'Flowers',
+      ul: [
+        {
+          caption: 'By Category'
+        },
+        {
+          text: 'Bouquets'
+        },
+        {
+          text: 'Designer Bouquets'
+        },
+        {
+          text: 'Flower Baskets'
+        },
+        {
+          text: 'Fruit Bouquets'
+        },
+        {
+          text: 'Plants'
+        }
+      ],
+      ul: [
+        {
+          caption: 'By Category'
+        },
+        {
+          text: 'Bouquets'
+        },
+        {
+          text: 'Designer Bouquets'
+        },
+        {
+          text: 'Flower Baskets'
+        },
+        {
+          text: 'Fruit Bouquets'
+        },
+        {
+          text: 'Plants'
+        },
+        {
+          last: 'all flowers'
+        }
+      ]
+
+    },
+    {
+      title: 'Gifts',
+      ul: [
+        {
+          caption: 'By Category'
+        },
+        {
+          text: 'Bouquets'
+        },
+        {
+          text: 'Designer Bouquets'
+        },
+        {
+          text: 'Flower Baskets'
+        },
+        {
+          text: 'Fruit Bouquets'
+        },
+        {
+          text: 'Plants'
+        },
+        {
+          last: 'all flowers'
+        }
+      ]
+    },
+    {
+      title: 'Sweets',
+      ul: [
+        {
+          caption: 'By Category'
+        },
+        {
+          text: 'Bouquets'
+        },
+        {
+          text: 'Designer Bouquets'
+        },
+        {
+          text: 'Flower Baskets'
+        },
+        {
+          text: 'Fruit Bouquets'
+        },
+        {
+          text: 'Plants'
+        },
+        {
+          last: 'all flowers'
+        }
+      ]
+    },
+    {
+      title: 'Occasion',
+      ul: [
+        {
+          caption: 'By Category'
+        },
+        {
+          text: 'Bouquets'
+        },
+        {
+          text: 'Designer Bouquets'
+        },
+        {
+          text: 'Flower Baskets'
+        },
+        {
+          text: 'Fruit Bouquets'
+        },
+        {
+          text: 'Plants'
+        },
+        {
+          last: 'all flowers'
+        }
+      ]
+    },
+    {
+      title: 'Service Area ',
+      ul: [
+        {
+          caption: 'By Category'
+        },
+        {
+          text: 'Bouquets'
+        },
+        {
+          text: 'Designer Bouquets'
+        },
+        {
+          text: 'Flower Baskets'
+        },
+        {
+          text: 'Fruit Bouquets'
+        },
+        {
+          text: 'Plants'
+        },
+        {
+          last: 'all flowers'
+        }
+      ]
+    },
+    {
+      title: 'Customer Care',
+      ul: [
+        {
+          caption: 'By Category'
+        },
+        {
+          text: 'Bouquets'
+        },
+        {
+          text: 'Designer Bouquets'
+        },
+        {
+          text: 'Flower Baskets'
+        },
+        {
+          text: 'Fruit Bouquets'
+        },
+        {
+          text: 'Plants'
+        },
+        {
+          last: 'all flowers'
+        }
+      ]
+    }
+  ]
+}) }}
+
+
+
+{{ header.block({
+  class: 'header_white',
+	logo: {
+		img: 'logo-MSK-2.png',
+    description: 'Flower delivery to Moscow, Russia by Flowers2Moscow.com'
+	},
+	lang: true,
+	linksArray: [
+		{
+			icon: 'cont',
+			text: 'Contacts'
+		},
+		{
+			icon: 'marker',
+			text: 'Shopping in $ <span class="uppercase">USD</span>'
+		},
+		{
+			icon: 'basket',
+			text: 'View Cart'
+		},
+		{
+			icon: 'user',
+			text: 'My Account'
+		}
+	],
+	supportImage: [ 'icon_online_3.gif', 'click-to-request.png'],
+
+	locatorList: ['Service Locator', 'Russia', 'Ukraine', 'Belarus', 'Latvia', 'Lithuania', 'Georgia', 'Kazakhstan', 'Moldova', 'A-Z'],
+  colsNum: 3,
+  navArray: [
+    {
+      title: 'catalog',
+      ul: [
+        {
+          text: 'Flowers'
+        },
+        {
+          text: 'Gifts'
+        },
+        {
+          text: 'Sweets'
+        },
+        {
+          text: 'Custom Order'
+        },
+        {
+          text: 'Personal Flower Selector'
+        },
+        {
+          text: 'Corporate Flower Selector'
+        }
+      ]
+    },
+    {
+      title: 'Flowers',
+      ul: [
+        {
+          caption: 'By Category'
+        },
+        {
+          text: 'Bouquets'
+        },
+        {
+          text: 'Designer Bouquets'
+        },
+        {
+          text: 'Flower Baskets'
+        },
+        {
+          text: 'Fruit Bouquets'
+        },
+        {
+          text: 'Plants'
+        }
+      ],
+      ul: [
+        {
+          caption: 'By Category'
+        },
+        {
+          text: 'Bouquets'
+        },
+        {
+          text: 'Designer Bouquets'
+        },
+        {
+          text: 'Flower Baskets'
+        },
+        {
+          text: 'Fruit Bouquets'
+        },
+        {
+          text: 'Plants'
+        },
+        {
+          last: 'all flowers'
+        }
+      ]
+
+    },
+    {
+      title: 'Gifts',
+      ul: [
+        {
+          caption: 'By Category'
+        },
+        {
+          text: 'Bouquets'
+        },
+        {
+          text: 'Designer Bouquets'
+        },
+        {
+          text: 'Flower Baskets'
+        },
+        {
+          text: 'Fruit Bouquets'
+        },
+        {
+          text: 'Plants'
+        },
+        {
+          last: 'all flowers'
+        }
+      ]
+    },
+    {
+      title: 'Sweets',
+      ul: [
+        {
+          caption: 'By Category'
+        },
+        {
+          text: 'Bouquets'
+        },
+        {
+          text: 'Designer Bouquets'
+        },
+        {
+          text: 'Flower Baskets'
+        },
+        {
+          text: 'Fruit Bouquets'
+        },
+        {
+          text: 'Plants'
+        },
+        {
+          last: 'all flowers'
+        }
+      ]
+    },
+    {
+      title: 'Occasion',
+      ul: [
+        {
+          caption: 'By Category'
+        },
+        {
+          text: 'Bouquets'
+        },
+        {
+          text: 'Designer Bouquets'
+        },
+        {
+          text: 'Flower Baskets'
+        },
+        {
+          text: 'Fruit Bouquets'
+        },
+        {
+          text: 'Plants'
+        },
+        {
+          last: 'all flowers'
+        }
+      ]
+    },
+    {
+      title: 'Service Area ',
+      ul: [
+        {
+          caption: 'By Category'
+        },
+        {
+          text: 'Bouquets'
+        },
+        {
+          text: 'Designer Bouquets'
+        },
+        {
+          text: 'Flower Baskets'
+        },
+        {
+          text: 'Fruit Bouquets'
+        },
+        {
+          text: 'Plants'
+        },
+        {
+          last: 'all flowers'
+        }
+      ]
+    },
+    {
+      title: 'Customer Care',
+      ul: [
+        {
+          caption: 'By Category'
+        },
+        {
+          text: 'Bouquets'
+        },
+        {
+          text: 'Designer Bouquets'
+        },
+        {
+          text: 'Flower Baskets'
+        },
+        {
+          text: 'Fruit Bouquets'
+        },
+        {
+          text: 'Plants'
+        },
+        {
+          last: 'all flowers'
+        }
+      ]
+    }
+  ]
+}) }}
+
+
+
+
+{{ header.block({
+  class: 'header_dark-blue',
+	logo: {
+		img: 'logo-Israel.png',
+    description: 'Gift & Flower Delivery to Israel by IsraelFlorist.com'
+	},
+	lang: true,
+	linksArray: [
+		{
+			icon: 'cont',
+			text: 'Contacts'
+		},
+		{
+			icon: 'marker',
+			text: 'Shopping in $ <span class="uppercase">USD</span>'
+		},
+		{
+			icon: 'basket',
+			text: 'View Cart'
+		},
+		{
+			icon: 'user',
+			text: 'My Account'
+		}
+	],
+	supportImage: [ 'icon_online_3.gif', 'click-to-request.png'],
+
+	locatorList: ['Service Locator', 'Russia', 'Ukraine', 'Belarus', 'Latvia', 'Lithuania', 'Georgia', 'Kazakhstan', 'Moldova', 'A-Z'],
+  colsNum: 1,
+  navArray: [
+    {
+      title: 'catalog',
+      ul: [
+        {
+          text: 'Flowers'
+        },
+        {
+          text: 'Gifts'
+        },
+        {
+          text: 'Sweets'
+        },
+        {
+          text: 'Custom Order'
+        },
+        {
+          text: 'Personal Flower Selector'
+        },
+        {
+          text: 'Corporate Flower Selector'
+        }
+      ]
+    },
+    {
+      title: 'Flowers',
+      ul: [
+        {
+          caption: 'By Category'
+        },
+        {
+          text: 'Bouquets'
+        },
+        {
+          text: 'Designer Bouquets'
+        },
+        {
+          text: 'Flower Baskets'
+        },
+        {
+          text: 'Fruit Bouquets'
+        },
+        {
+          text: 'Plants'
+        }
+      ],
+      ul: [
+        {
+          caption: 'By Category'
+        },
+        {
+          text: 'Bouquets'
+        },
+        {
+          text: 'Designer Bouquets'
+        },
+        {
+          text: 'Flower Baskets'
+        },
+        {
+          text: 'Fruit Bouquets'
+        },
+        {
+          text: 'Plants'
+        },
+        {
+          last: 'all flowers'
+        }
+      ]
+
+    },
+    {
+      title: 'Gifts',
+      ul: [
+        {
+          caption: 'By Category'
+        },
+        {
+          text: 'Bouquets'
+        },
+        {
+          text: 'Designer Bouquets'
+        },
+        {
+          text: 'Flower Baskets'
+        },
+        {
+          text: 'Fruit Bouquets'
+        },
+        {
+          text: 'Plants'
+        },
+        {
+          last: 'all flowers'
+        }
+      ]
+    },
+    {
+      title: 'Sweets',
+      ul: [
+        {
+          caption: 'By Category'
+        },
+        {
+          text: 'Bouquets'
+        },
+        {
+          text: 'Designer Bouquets'
+        },
+        {
+          text: 'Flower Baskets'
+        },
+        {
+          text: 'Fruit Bouquets'
+        },
+        {
+          text: 'Plants'
+        },
+        {
+          last: 'all flowers'
+        }
+      ]
+    },
+    {
+      title: 'Occasion',
+      ul: [
+        {
+          caption: 'By Category'
+        },
+        {
+          text: 'Bouquets'
+        },
+        {
+          text: 'Designer Bouquets'
+        },
+        {
+          text: 'Flower Baskets'
+        },
+        {
+          text: 'Fruit Bouquets'
+        },
+        {
+          text: 'Plants'
+        },
+        {
+          last: 'all flowers'
+        }
+      ]
+    },
+    {
+      title: 'Service Area ',
+      ul: [
+        {
+          caption: 'By Category'
+        },
+        {
+          text: 'Bouquets'
+        },
+        {
+          text: 'Designer Bouquets'
+        },
+        {
+          text: 'Flower Baskets'
+        },
+        {
+          text: 'Fruit Bouquets'
+        },
+        {
+          text: 'Plants'
+        },
+        {
+          last: 'all flowers'
+        }
+      ]
+    },
+    {
+      title: 'Customer Care',
+      ul: [
+        {
+          caption: 'By Category'
+        },
+        {
+          text: 'Bouquets'
+        },
+        {
+          text: 'Designer Bouquets'
+        },
+        {
+          text: 'Flower Baskets'
+        },
+        {
+          text: 'Fruit Bouquets'
+        },
+        {
+          text: 'Plants'
+        },
+        {
+          last: 'all flowers'
+        }
+      ]
+    }
+  ]
+}) }}
+
+
+
+
+{{ header.block({
+  class: 'header_light-blue',
+	logo: {
+		img: 'Logo-SPB.png',
+    description: 'Flower delivery to St Petersburg, Russia by FlowersToPetersburg.com'
+	},
+	lang: true,
+	linksArray: [
+		{
+			icon: 'cont',
+			text: 'Contacts'
+		},
+		{
+			icon: 'marker',
+			text: 'Shopping in $ <span class="uppercase">USD</span>'
+		},
+		{
+			icon: 'basket',
+			text: 'View Cart'
+		},
+		{
+			icon: 'user',
+			text: 'My Account'
+		}
+	],
+  select: true,
+	supportImage: [ 'icon_online_3.gif', 'click-to-request.png'],
+
+	locatorList: ['Service Locator', 'Russia', 'Ukraine', 'Belarus', 'Latvia', 'Lithuania', 'Georgia', 'Kazakhstan', 'Moldova', 'A-Z'],
+  colsNum: 1,
+  navArray: [
+    {
+      title: 'catalog',
+      ul: [
+        {
+          text: 'Flowers'
+        },
+        {
+          text: 'Gifts'
+        },
+        {
+          text: 'Sweets'
+        },
+        {
+          text: 'Custom Order'
+        },
+        {
+          text: 'Personal Flower Selector'
+        },
+        {
+          text: 'Corporate Flower Selector'
+        }
+      ]
+    },
+    {
+      title: 'Flowers',
+      ul: [
+        {
+          caption: 'By Category'
+        },
+        {
+          text: 'Bouquets'
+        },
+        {
+          text: 'Designer Bouquets'
+        },
+        {
+          text: 'Flower Baskets'
+        },
+        {
+          text: 'Fruit Bouquets'
+        },
+        {
+          text: 'Plants'
+        }
+      ],
+      ul: [
+        {
+          caption: 'By Category'
+        },
+        {
+          text: 'Bouquets'
+        },
+        {
+          text: 'Designer Bouquets'
+        },
+        {
+          text: 'Flower Baskets'
+        },
+        {
+          text: 'Fruit Bouquets'
+        },
+        {
+          text: 'Plants'
+        },
+        {
+          last: 'all flowers'
+        }
+      ]
+
+    },
+    {
+      title: 'Gifts',
+      ul: [
+        {
+          caption: 'By Category'
+        },
+        {
+          text: 'Bouquets'
+        },
+        {
+          text: 'Designer Bouquets'
+        },
+        {
+          text: 'Flower Baskets'
+        },
+        {
+          text: 'Fruit Bouquets'
+        },
+        {
+          text: 'Plants'
+        },
+        {
+          last: 'all flowers'
+        }
+      ]
+    },
+    {
+      title: 'Sweets',
+      ul: [
+        {
+          caption: 'By Category'
+        },
+        {
+          text: 'Bouquets'
+        },
+        {
+          text: 'Designer Bouquets'
+        },
+        {
+          text: 'Flower Baskets'
+        },
+        {
+          text: 'Fruit Bouquets'
+        },
+        {
+          text: 'Plants'
+        },
+        {
+          last: 'all flowers'
+        }
+      ]
+    },
+    {
+      title: 'Occasion',
+      ul: [
+        {
+          caption: 'By Category'
+        },
+        {
+          text: 'Bouquets'
+        },
+        {
+          text: 'Designer Bouquets'
+        },
+        {
+          text: 'Flower Baskets'
+        },
+        {
+          text: 'Fruit Bouquets'
+        },
+        {
+          text: 'Plants'
+        },
+        {
+          last: 'all flowers'
+        }
+      ]
+    },
+    {
+      title: 'Service Area ',
+      ul: [
+        {
+          caption: 'By Category'
+        },
+        {
+          text: 'Bouquets'
+        },
+        {
+          text: 'Designer Bouquets'
+        },
+        {
+          text: 'Flower Baskets'
+        },
+        {
+          text: 'Fruit Bouquets'
+        },
+        {
+          text: 'Plants'
+        },
+        {
+          last: 'all flowers'
+        }
+      ]
+    },
+    {
+      title: 'Customer Care',
+      ul: [
+        {
+          caption: 'By Category'
+        },
+        {
+          text: 'Bouquets'
+        },
+        {
+          text: 'Designer Bouquets'
+        },
+        {
+          text: 'Flower Baskets'
+        },
+        {
+          text: 'Fruit Bouquets'
+        },
+        {
+          text: 'Plants'
+        },
+        {
+          last: 'all flowers'
+        }
+      ]
+    }
+  ]
+}) }}
+
+{% endblock %}

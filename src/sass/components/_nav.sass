@@ -1,0 +1,150 @@
+.nav
+  position: relative
+  display: inline-block
+  vertical-align: middle
+  +r(960)
+    display: none
+    overflow-y: auto
+    max-height: 100vh
+    margin-right: -10px
+    padding-left: 20px
+    padding-bottom: 10px
+    &.is-open
+      display: block
+  &__item
+    position: relative
+    display: inline-block
+    vertical-align: middle
+    +r(960)
+      width: 100%
+    &.is-open
+      .nav__in
+        display: flex
+
+  &__list > li
+    &:hover
+      background: #fff
+      .nav__link_mod
+        color: #000
+        &:after
+          border-color: #000 transparent transparent
+  &__col
+    display: inline-block
+    vertical-align: top
+    margin: 0 20px
+    flex: 1 0 auto
+  &__link
+    color: #000
+    font-size: 16px
+    +rob-r
+    &_mod
+      display: block
+      text-transform: uppercase
+      padding: 15px 10px
+      font-size: 16px
+      color: #fff
+      +rob-cb
+      +md
+        padding: 15px 7px
+      +r(960)
+        padding-left: 20px
+      &:after
+        content: ''
+        display: inline-block
+        vertical-align: middle
+        margin-left: 5px
+        +arr(8, 4, #fff, b)
+  &__in
+    display: none
+    position: absolute
+    left: 0
+    right: 0
+    width: 1200px
+    // top: 500px
+    background: #fff
+    max-width: 1200px
+    z-index: 2
+    padding: 0 10px
+    flex-flow: row nowrap
+    justify-content: center
+    flex: 1 0 auto
+    &.is-sm
+      width: 200px
+      .nav__col
+        margin: 0
+    +r(960)
+      position: relative
+      background: #fff
+      // background: transparent
+      max-width: 100%
+      left: 0
+      right: 0
+      padding-left: 0px
+      flex-wrap: wrap
+  &__drop
+    padding: 10px 0
+    +r(960)
+      padding: 0
+    & > .nav__item
+      display: block
+      & > a
+        &:hover
+          color: $green
+          text-decoration: underline
+
+  &__item_bold
+    font-size: 17px
+    color: #000
+    font-weight: bold
+    margin-bottom: 4px
+    +rob-cb
+    +r(960)
+      padding-bottom: 5px
+      border-bottom: 1px dotted $red
+
+.nav__item
+  &_last
+    position: relative
+    margin-top: 5px
+    padding-bottom: 5px
+    padding-top: 10px
+    margin-left: -10px
+    margin-right: -10px
+    text-align: center
+    &:hover
+      > a
+        color: $red
+    +r(960)
+      margin-right: 0
+      margin-left: 0
+      padding-top: 0
+      padding-bottom: 20px
+      text-align: left
+      // display: inline
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0px
+      right: 0px
+      border-top: 1px solid #e5e5e5
+      padding-bottom: 10px
+      +r(960)
+        display: none
+    > a
+      display: inline-block
+      width: 100%
+      text-transform: uppercase
+      color: $red
+      font-size: 15px
+      white-space: nowrap
+      padding: 3px 10px
+      +rob-cb
+      +r(960)
+        padding: 0
+        &:hover
+          background: transparent
+      &:hover
+        text-decoration: none
+        color: $red
+        background: #f5f5f5

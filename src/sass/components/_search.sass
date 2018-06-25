@@ -1,0 +1,57 @@
+.search
+  display: inline-block
+  vertical-align: middle
+  position: relative
+  float: right
+  margin: 12px 0
+  text-align: right
+  +r(960)
+    display: none
+    position: absolute
+    float: none
+    top: 40px
+    left: 0
+    z-index: 5
+    background: #000
+    width: 100%
+    padding: 10px 12px
+    text-align: left
+    &.is-open
+      display: block
+  input
+    padding-right: 25px
+    padding-left: 7px
+    width: 170px
+    border-radius: 7px
+    border: 0
+    height: 26px
+    font-size: 16px
+    +placeholder-color($gray)
+    +r(960)
+      width: 200px
+    //   width: calc(100% - 40px)
+    //   height: 30px
+  &__button
+    position: absolute
+    right: 5px
+    top: 3px
+    background: url('../img/search.png')
+    background-size: cover
+    width: 20px
+    height: 20px
+  &__close
+    display: none
+    background: url('../img/close.png')
+    width: 18px
+    height: 18px
+    // background-size: cover
+    position: absolute
+    left: calc(100% + 10px)
+    top: 3px
+    +r(960)
+      display: block
+  &__in
+    position: relative
+    display: inline-block
+    +r(960)
+      margin-left: 70px

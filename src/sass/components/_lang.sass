@@ -1,0 +1,99 @@
+.lang
+  position: relative
+  display: inline-block
+  vertical-align: middle
+  margin-right: 10px
+  +clr
+  +r(960)
+    position: absolute
+    right: 0
+    top: 12px
+  &.is-open
+    .lang__wrap
+      display: block
+  &__current
+    background: transparent
+    img
+      display: inline-block
+      vertical-align: middle
+      width: 25px
+      height: 25px
+      overflow: hidden
+      border-radius: 50%
+      +r(960)
+        float: right
+        margin-left: 5px
+      // margin-bottom: 3px
+    span
+      display: inline-block
+      vertical-align: middle
+      font-size: 17px
+      color: $borde
+      +rob-l
+  &__arr
+    display: inline-block
+    vertical-align: middle
+    background: url('../img/arr.png')
+    background-size: cover
+    width: 14px
+    height: 9px
+    margin: 0 3px
+
+
+  &__wrap
+    display: none
+    position: absolute
+    top: 0
+    background-color: #fff
+    border: 1px solid $yellow2
+    z-index: 9999
+    border-radius: 9px
+    padding: 8px 10px 10px 11px
+    top: -3px
+    left: -12px
+    width: 200px
+    text-align: left
+    +r(960)
+      left: auto
+      right: 0
+      width: 140px
+    .lang__current
+      margin-bottom: 5px
+      span
+        color: $green
+  &__current-in
+    display: inline-block
+    margin-left: 20px
+  &__item
+    &:not(:last-child)
+      margin-bottom: 5px
+  &__link
+    display: inline-block
+    vertical-align: middle
+    +clr
+    +r(960)
+      width: 100%
+    img,
+    span
+      display: inline-block
+      vertical-align: middle
+    &:hover span
+      text-decoration: underline
+    img
+      margin-right: 3px
+      +r(960)
+        float: right
+        margin: 3px 0 0 0
+    span
+      display: inline-block
+      vertical-align: middle
+      color: $green
+  &__country
+    display: inline-block
+    vertical-align: middle
+    color: $green
+
+  &__current
+    .lang__arr
+      +r(960)
+        display: none

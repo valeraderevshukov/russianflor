@@ -1,0 +1,5 @@
+ProjectTitle: russianflora
+
+PageList:
+- file: page.html
+  ready: 50

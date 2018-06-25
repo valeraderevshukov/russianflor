@@ -1,0 +1,423 @@
+.header
+  &__inner
+    +clr
+  &__logo
+    float: left
+    padding: 12px 0
+    +r(1130)
+      float: none
+      text-align: center
+    +r(960)
+      padding-bottom: 0
+  &__info
+    margin-top: 10px
+    float: right
+    +r(1130)
+      float: none
+      text-align: center
+    +md
+      margin-bottom: 10px
+  &__country
+    padding: 10px 20px
+    float: left
+    +r(1130)
+      padding-left: 0
+      float: none
+  &__middle
+    border-top: 1px solid transparent
+    +r(960)
+      border-top-color: $yellow2
+  &__locator
+    float: right
+    +r(1130)
+      display: block
+      float: none
+
+  &__bottom
+    .inner
+      padding: 0 15px
+      +r(1130)
+        padding: 0 10px
+
+  &__logo-sm
+    display: inline-block
+    vertical-align: middle
+    padding: 5px 0 5px 20px
+    +r(1130)
+      padding-left: 0
+    +r(960)
+      display: none
+  &__top-btn
+    display: none
+    +r(960)
+      display: inline-block
+      vertical-align: middle
+      float: left
+      margin-right: -60px
+      button
+        position: relative
+        z-index: 99999999
+        display: inline-block
+        vertical-align: middle
+
+        &:not(:last-child)
+          margin-right: 10px
+
+
+
+  &_yellow
+    background: $yellow
+    border-top: 3px solid $yellow2
+    +r(960)
+      border-top-color: transparent
+    .logo__description
+      margin: -14px 0 0 60px
+      color: $red
+      font-size: 15px
+      text-transform: uppercase
+    .links__text
+      color: $borde
+    .links__item_cont
+      .links__pic
+        background: url('../img/cont.png')
+        background-size: cover
+    .links__item_marker
+      .links__pic
+        background: url('../img/coins.png')
+        background-size: contain
+        background-repeat: no-repeat
+        vertical-align: middle
+        margin-bottom: -5px
+        width: 21px
+        height: 18px
+
+    .links__item_basket
+      .links__pic
+        background: url('../img/cart2.png')
+        background-size: cover
+    .links__item_user
+      .links__pic
+        background: url('../img/user.png')
+        background-size: cover
+    .header__middle
+      background: $red
+    .header__bottom
+      background: $borde
+      +r(960)
+        background: $red
+    .burger
+      background: url('../img/burger.png')
+    .mob-search
+      background: url('../img/search-mob.png')
+    .logo-sm
+      display: inline-block
+      vertical-align: middle
+      background: url('../img/home-RFL.png')
+      width: 30px
+      height: 31px
+      background-size: cover
+
+  &_dark
+    background: $dark
+    background: linear-gradient(180deg,#262626 0,#262626 56%,#0f0f0f)
+    border-top: 3px solid $yellow2
+    +r(960)
+      border-top-color: transparent
+    .header__logo
+      padding: 25px 0
+    .logo__description
+      display: none
+    .links__item
+      &:hover .links__text
+        color: #fff
+    .links__text,
+    .locator__link
+      color: $yellow2
+    .logo-sm
+      display: inline-block
+      vertical-align: middle
+      width: 31px
+      height: 33px
+      background-image: url('../img/top-menu-ico.png')
+      background-repeat: no-repeat
+      background-size: contain
+    .links__item_cont
+      .links__pic
+        background: url('../img/cont-yellow.png')
+        background-size: cover
+    .links__item_marker
+      .links__pic
+        background: url('../img/coins.png')
+        background-size: contain
+        background-repeat: no-repeat
+        vertical-align: middle
+        margin-bottom: -5px
+        width: 21px
+        height: 18px
+
+    .links__item_basket
+      .links__pic
+        background: url('../img/cart-ico-yellow.png')
+        background-size: cover
+    .links__item_user
+      .links__pic
+        background: url('../img/user-yellow.png')
+        background-size: cover
+    .header__middle
+      background: #535d68
+    .header__bottom
+      background: #daa85f
+      background: linear-gradient(180deg,#daa85f 0,#8e643a)
+    .burger
+      background: url('../img/burger.png')
+    .mob-search
+      background: url('../img/search-mob.png')
+    .nav__in
+      background: #fc9
+    .nav__list > li:hover
+      background:  #fc9
+    .nav__drop
+      & > .nav__item
+        display: block
+        & > a
+          &:hover
+            color: #23527c
+    .lang__current span
+      color:  #fc9
+  &_white
+    .logo__description
+      margin: 0
+      color: #787f89
+      font-size: 15px
+      text-transform: uppercase
+
+    .links__item
+      &:hover .links__text
+        color: #0086cb
+    .links__text,
+    .locator__link
+      color: #0086cb
+    .logo-sm
+      display: inline-block
+      vertical-align: middle
+      width: 31px
+      height: 33px
+      background-image: url('../img/top-menu-ico.png')
+      background-repeat: no-repeat
+      background-size: contain
+    .links__item_cont
+      .links__pic
+        background: url('../img/cont-gray.png')
+        background-repeat: no-repeat
+        background-position: right center
+
+    .links__item_marker
+      .links__pic
+        background: url('../img/coins.png')
+        background-size: contain
+        background-repeat: no-repeat
+        vertical-align: middle
+        margin-bottom: -5px
+        width: 21px
+        height: 18px
+
+    .links__item_basket
+      .links__pic
+        background: url('../img/cart-ico-gray.png')
+        background-repeat: no-repeat
+        background-position: right center
+    .links__item_user
+      .links__pic
+        background-image: url('../img/user-gray.png')
+        background-repeat: no-repeat
+        background-position: right center
+    // .header__middle
+    //   background: #535d68
+    .header__bottom
+      background: #ff4751
+    .nav__in
+      background: $yellow2
+    .burger
+      background: url('../img/burger.png')
+    .mob-search
+      background: url('../img/search-mob.png')
+    .nav__in
+      background: #fff3f3
+    .nav__list > li:hover
+      background: #fff3f3
+    .nav__drop
+      & > .nav__item,
+        display: block
+        & > a
+          color: #787f89
+          &:hover
+            color: #23527c
+    .nav__item_bold
+      color: #787f89
+    .lang__current span
+      color: #0086cb
+  &_dark-blue
+    .logo__description
+      margin: 0
+      color: #787f89
+      // font-size: 15px
+      // text-transform: uppercase
+
+    .links__item
+      &:hover .links__text
+        color: #0086cb
+    .links__text,
+    .locator__link
+      color: #0086cb
+    .logo-sm
+      display: inline-block
+      vertical-align: middle
+      width: 31px
+      height: 33px
+      background-image: url('../img/top-menu-ico.png')
+      background-repeat: no-repeat
+      background-size: contain
+    .links__item_cont
+      .links__pic
+        background: url('../img/cont-gray.png')
+        background-repeat: no-repeat
+        background-position: right center
+
+    .links__item_marker
+      .links__pic
+        background: url('../img/coins.png')
+        background-size: contain
+        background-repeat: no-repeat
+        vertical-align: middle
+        margin-bottom: -5px
+        width: 21px
+        height: 18px
+
+    .links__item_basket
+      .links__pic
+        background: url('../img/cart-ico-gray.png')
+        background-repeat: no-repeat
+        background-position: right center
+    .links__item_user
+      .links__pic
+        background-image: url('../img/user-gray.png')
+        background-repeat: no-repeat
+        background-position: right center
+    // .header__middle
+    //   background: #535d68
+    .header__bottom
+      background: #069
+    .nav__in
+      background: $yellow2
+    .burger
+      background: url('../img/burger.png')
+    .mob-search
+      background: url('../img/search-mob.png')
+    .nav__in
+      background: #d9e8f0
+    .nav__list > li:hover
+      background: #d9e8f0
+    .nav__drop
+      & > .nav__item,
+        display: block
+        & > a
+          color: #787f89
+          &:hover
+            color: #23527c
+    .nav__item_bold
+      color: #787f89
+    .lang__current span
+      color: #0086cb
+  &_light-blue
+    .logo__description
+      margin: 0
+      color: #787f89
+      // font-size: 15px
+      // text-transform: uppercase
+
+    .links__item
+      &:hover .links__text
+        color: #0086cb
+    .links__text,
+    .locator__link
+      color: #0086cb
+    .logo-sm
+      display: inline-block
+      vertical-align: middle
+      width: 31px
+      height: 33px
+      background-image: url('../img/top-menu-ico.png')
+      background-repeat: no-repeat
+      background-size: contain
+    .links__item_cont
+      .links__pic
+        background: url('../img/cont-gray.png')
+        background-repeat: no-repeat
+        background-position: right center
+
+    .links__item_marker
+      .links__pic
+        background: url('../img/coins.png')
+        background-size: contain
+        background-repeat: no-repeat
+        vertical-align: middle
+        margin-bottom: -5px
+        width: 21px
+        height: 18px
+
+    .links__item_basket
+      .links__pic
+        background: url('../img/cart-ico-gray.png')
+        background-repeat: no-repeat
+        background-position: right center
+    .links__item_user
+      .links__pic
+        background-image: url('../img/user-gray.png')
+        background-repeat: no-repeat
+        background-position: right center
+    // .header__middle
+    //   background: #535d68
+    .header__bottom
+      background: #237dbb
+    .nav__in
+      background: $yellow2
+    .burger
+      background: url('../img/burger.png')
+    .mob-search
+      background: url('../img/search-mob.png')
+    .nav__in
+      background: #d9e8f0
+    .nav__list > li:hover
+      background: #d9e8f0
+    .nav__drop
+      & > .nav__item,
+        display: block
+        & > a
+          color: #787f89
+          &:hover
+            color: #23527c
+    .nav__item_bold
+      color: #787f89
+    .lang__current span
+      color: #0086cb
+
+
+
+
+.burger
+  display: inline-block
+  vertical-align: middle
+  width: 22px
+  height: 18px
+  background-size: cover
+  margin-top: -2px
+
+
+
+
+.mob-search
+  display: inline-block
+  vertical-align: middle
+  width: 22px
+  height: 21px
+  background-size: cover
