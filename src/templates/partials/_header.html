@@ -12,7 +12,7 @@
         </div>
 				<!-- begin logo -->
 				<a href="#" class="logo">
-					<img src="./img/{{ props.logo.img }}" alt="logo" class="logo__img">
+					<img src="./assets/img/general/{{ props.logo.img }}" alt="logo" class="logo__img">
 					{% if props.logo.description %}
 					<h1 class="logo__description">{{ props.logo.description }}</h1>
 					{% endif %}
@@ -24,13 +24,13 @@
 				<!-- begin lang -->
 				<div class="lang js-dropdown">
 					<button type="button" class="lang__current">
-            <img src="./img/flags/en-flag.png" alt="">
+            <img src="./assets/img/general/flags/en-flag.png" alt="">
             <span class="lang__arr"></span>
             <span>En</span>
           </button>
 					<div class="lang__wrap ">
 						<div class="lang__current">
-              <img src="./img/flags/en-flag.png" alt="">
+              <img src="./assets/img/general/flags/en-flag.png" alt="">
               <div class="lang__current-in">
                 <span class="lang__arr"></span>
                 <span>English</span>
@@ -71,7 +71,7 @@
 							] %}
 							<li class="lang__item">
 								<a href="#" class="lang__link">
-									<img src="./img/flags/{{lang.icon}}.png" alt="">
+									<img src="./assets/img/general/flags/{{lang.icon}}.png" alt="">
 									<span>{{ lang.text | safe }}</span>
 								</a>
 								<span class="lang__country">{{ lang.country }}</span>
@@ -337,50 +337,50 @@
           {% if props.select %}
           <li class="support__item">
             <div class="select">
-              <img class="select__main" src="./img/phone-ico.png" alt="">
+              <img class="select__main" src="./assets/img/general/phone-ico.png" alt="">
               <select class="js-select2" name="state">
                 <option value="de-flag"><span class="select__pic">
-                  <img src="./img/flags/de-flag.png" alt="">
+                  <img src="./assets/img/general/flags/de-flag.png" alt="">
                 </span>USA Local: +1-617-904-3278</option>
                 <option value="de-flag">
                   <span class="select__pic">
-                    <img src="./img/flags/de-flag.png" alt="">
+                    <img src="./assets/img/general/flags/de-flag.png" alt="">
                   </span>
                   SPB, Russia: +7 (812) 429-7211
                 </option>
                 <option value="">
                   <!-- <span class="select__pic">
-                    <img src="./img/flags/ru-flag.png" alt="">
+                    <img src="./assets/img/general/flags/ru-flag.png" alt="">
                   </span> -->
                   Toll-free (within Russia): +8-800-100-2179
                 </option>
                 <option value="de-flag">
                   <span class="select__pic">
-                    <img src="./img/flags/ua-flag.png" alt="">
+                    <img src="./assets/img/general/flags/ua-flag.png" alt="">
                   </span>
                   Kiev, Ukraine: +380-44-392-2186
                 </option>
                 <option value="de-flag">
                   <span class="select__pic">
-                    <img src="./img/flags/uk-flag.png" alt="">
+                    <img src="./assets/img/general/flags/uk-flag.png" alt="">
                   </span>
                   London, the UK: +44 - 20 8133 7779
                 </option>
                 <option value="de-flag">
                   <span class="select__pic">
-                    <img src="./img/flags/italy-flag.png" alt="">
+                    <img src="./assets/img/general/flags/italy-flag.png" alt="">
                   </span>
                   Italy toll-free: +39-800-126-353
                 </option>
                 <option value="de-flag">
                   <span class="select__pic">
-                    <img src="./img/flags/france-flag.png" alt="">
+                    <img src="./assets/img/general/flags/france-flag.png" alt="">
                   </span>
                   Paris, France: +33 0970 440 572
                 </option>
                 <option value="de-flag">
                   <span class="select__pic">
-                    <img src="./img/flags/france-flag.png" alt="">
+                    <img src="./assets/img/general/flags/france-flag.png" alt="">
                   </span>
                   Germany: +49 8231 4014 099
                 </option>
@@ -392,7 +392,7 @@
 
           <li class="support__item">
 
-            <a href="#" class="support__link"><img src="./img/{{ image }}" alt="img"></a>
+            <a href="#" class="support__link"><img src="./assets/img/general/{{ image }}" alt="img"></a>
 
 					</li>
 
@@ -408,8 +408,8 @@
 		<div class="header__inner inner">
 			<!-- begin country -->
 			<div class="header__country country">
-				<a href="#" class="country__flag"><img src="./img/ru.png" alt=""></a>
-				<div class="country__globe"><img src="./img/globus-ico.png" alt=""></div>
+				<a href="#" class="country__flag"><img src="./assets/img/general/ru.png" alt=""></a>
+				<div class="country__globe"><img src="./assets/img/general/globus-ico.png" alt=""></div>
 				<div class="country__select">
 					<select class="select">
 						<option value="">Enter the gift's destination country</option>
