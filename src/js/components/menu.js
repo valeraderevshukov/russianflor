@@ -26,7 +26,6 @@ function setEvent() {
     nav.on('mouseleave', function() {
       $(this).removeClass('is-open');
     });
-    console.log('>960');
   }
 
 }

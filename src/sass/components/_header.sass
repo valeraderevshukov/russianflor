@@ -381,8 +381,8 @@
     //   background: #535d68
     .header__bottom
       background: #237dbb
-    .nav__in
-      background: $yellow2
+    // .nav__in
+    //   background: $yellow2
     .burger
       background: url('../img/burger.png')
     .mob-search
@@ -391,6 +391,78 @@
       background: #d9e8f0
     .nav__list > li:hover
       background: #d9e8f0
+    .nav__drop
+      & > .nav__item,
+        display: block
+        & > a
+          color: #787f89
+          &:hover
+            color: #23527c
+    .nav__item_bold
+      color: #787f89
+    .lang__current span
+      color: #0086cb
+
+  &_bright-blue
+    .logo__description
+      margin: 0
+      color: #787f89
+      // font-size: 15px
+      // text-transform: uppercase
+
+    .links__item
+      &:hover .links__text
+        color: #0086cb
+    .links__text,
+    .locator__link
+      color: #0086cb
+    .logo-sm
+      display: inline-block
+      vertical-align: middle
+      width: 31px
+      height: 33px
+      background-image: url('../img/top-menu-ico.png')
+      background-repeat: no-repeat
+      background-size: contain
+    .links__item_cont
+      .links__pic
+        background: url('../img/cont-gray.png')
+        background-repeat: no-repeat
+        background-position: right center
+
+    .links__item_marker
+      .links__pic
+        background: url('../img/coins.png')
+        background-size: contain
+        background-repeat: no-repeat
+        vertical-align: middle
+        margin-bottom: -5px
+        width: 21px
+        height: 18px
+
+    .links__item_basket
+      .links__pic
+        background: url('../img/cart-ico-gray.png')
+        background-repeat: no-repeat
+        background-position: right center
+    .links__item_user
+      .links__pic
+        background-image: url('../img/user-gray.png')
+        background-repeat: no-repeat
+        background-position: right center
+    // .header__middle
+    //   background: #535d68
+    .header__bottom
+      background: #1586fb
+
+    .burger
+      background: url('../img/burger.png')
+    .mob-search
+      background: url('../img/search-mob.png')
+    .nav__in
+      background: $yellow3
+    .nav__list > li:hover
+      background: $yellow3
     .nav__drop
       & > .nav__item,
         display: block

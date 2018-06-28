@@ -1,15 +1,27 @@
 .logo
   display: inline-block
   vertical-align: middle
-  &__img
-    margin-bottom: 3px
-    +r(960)
-      max-width: 180px
-    +r(360)
-      max-width: 150px
+  &:hover
+    text-decoration: none
+  // &__img
+  //   margin-bottom: 3px
+  //   +r(960)
+  //     max-width: 180px
+  //   +r(360)
+  //     max-width: 150px
   &__description
+    display: block
     font-size: 17px
     color: $gray
     +rob-l
     +r(960)
       display: none
+
+
+.logo
+  img.logo__img
+    margin-bottom: 3px
+    +r(960)
+      max-width: 180px
+    +r(360)
+      max-width: 150px
