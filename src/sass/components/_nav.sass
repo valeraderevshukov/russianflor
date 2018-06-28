@@ -18,11 +18,16 @@
     +r(960)
       width: 100%
     &.is-open
+      background: #fff
       .nav__in
         display: block
+      .nav__link_mod
+        color: #000
+        &:after
+          border-color: #000 transparent transparent
 
   &__list > li
-    &:hover
+    +hover
       background: #fff
       .nav__link_mod
         color: #000

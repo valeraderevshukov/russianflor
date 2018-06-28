@@ -1,4 +1,4 @@
-
+import { isTouch } from '../_utils';
 let nav = $('.js-nav');
 let menu = $('.js-menu');
 let left;
@@ -9,8 +9,15 @@ function setEvent() {
   width = $(window).width();
   if (width < 960) {
     nav.on('touch click', function(event) {
-      event.stopPropagation();
-      $(this).toggleClass('is-open');
+      event.preventDefault();
+      let that = $(this);
+      if (!that.hasClass('is-open')) {
+        nav.removeClass('is-open');
+        that.addClass('is-open');
+      }
+      else {
+        that.removeClass('is-open');
+      }
     });
   } else {
     nav.on('mouseenter', function(event) {
@@ -88,9 +95,11 @@ function setMenuSize( item) {
 }
 
 $(window).on('resize', function() {
-  width = $(window).width();
-  nav.removeClass('is-open');
-  $('.nav__drop_main').removeAttr('style');
-  $('.nav__in').removeAttr('style');
-  setEvent();
+  if (!isTouch()) {
+    width = $(window).width();
+    nav.removeClass('is-open');
+    $('.nav__drop_main').removeAttr('style');
+    $('.nav__in').removeAttr('style');
+    setEvent();
+  }
 });

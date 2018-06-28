@@ -130,8 +130,9 @@
     .logo__description
       display: none
     .links__item
-      &:hover .links__text
-        color: #fff
+      +hover
+        .links__text
+          color: #fff
     .links__text,
     .locator__link
       color: $yellow2
@@ -176,13 +177,16 @@
       background: url('../img/search-mob.png')
     .nav__in
       background: #fc9
-    .nav__list > li:hover
-      background:  #fc9
+    .nav__list > li
+      +hover
+        background:  #fc9
+      &.is-open
+        background: #fc9
     .nav__drop
       & > .nav__item
         display: block
         & > a
-          &:hover
+          +hover
             color: #23527c
     .lang__current span
       color:  #fc9
@@ -194,8 +198,9 @@
       text-transform: uppercase
 
     .links__item
-      &:hover .links__text
-        color: #0086cb
+      +hover
+        .links__text
+          color: #0086cb
     .links__text,
     .locator__link
       color: #0086cb
@@ -245,14 +250,17 @@
       background: url('../img/search-mob.png')
     .nav__in
       background: #fff3f3
-    .nav__list > li:hover
-      background: #fff3f3
+    .nav__list > li
+      +hover
+        background: #fff3f3
+      &.is-open
+        background: #fff3f3
     .nav__drop
       & > .nav__item,
         display: block
         & > a
           color: #787f89
-          &:hover
+          +hover
             color: #23527c
     .nav__item_bold
       color: #787f89
@@ -266,8 +274,9 @@
       // text-transform: uppercase
 
     .links__item
-      &:hover .links__text
-        color: #0086cb
+      +hover
+        .links__text
+          color: #0086cb
     .links__text,
     .locator__link
       color: #0086cb
@@ -317,14 +326,17 @@
       background: url('../img/search-mob.png')
     .nav__in
       background: #d9e8f0
-    .nav__list > li:hover
-      background: #d9e8f0
+    .nav__list > li
+      +hover
+        background: #d9e8f0
+      &.is-open
+        background: #d9e8f0
     .nav__drop
       & > .nav__item,
         display: block
         & > a
           color: #787f89
-          &:hover
+          +hover
             color: #23527c
     .nav__item_bold
       color: #787f89
@@ -338,8 +350,9 @@
       // text-transform: uppercase
 
     .links__item
-      &:hover .links__text
-        color: #0086cb
+      +hover
+        .links__text
+          color: #0086cb
     .links__text,
     .locator__link
       color: #0086cb
@@ -389,14 +402,17 @@
       background: url('../img/search-mob.png')
     .nav__in
       background: #d9e8f0
-    .nav__list > li:hover
-      background: #d9e8f0
+    .nav__list > li
+      +hover
+        background: #d9e8f0
+      &.is-open
+        background: #d9e8f0
     .nav__drop
       & > .nav__item,
         display: block
         & > a
           color: #787f89
-          &:hover
+          +hover
             color: #23527c
     .nav__item_bold
       color: #787f89
@@ -411,8 +427,9 @@
       // text-transform: uppercase
 
     .links__item
-      &:hover .links__text
-        color: #0086cb
+      +hover
+        .links__text
+          color: #0086cb
     .links__text,
     .locator__link
       color: #0086cb
@@ -461,14 +478,17 @@
       background: url('../img/search-mob.png')
     .nav__in
       background: $yellow3
-    .nav__list > li:hover
-      background: $yellow3
+    .nav__list > li
+      +hover
+        background: $yellow3
+      &.is-open
+        background: $yellow3
     .nav__drop
       & > .nav__item,
         display: block
         & > a
           color: #787f89
-          &:hover
+          +hover
             color: #23527c
     .nav__item_bold
       color: #787f89

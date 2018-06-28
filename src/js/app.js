@@ -1,9 +1,10 @@
 import './components';
+import {DOC, BODY, NO_TOUCH} from './_constants';
+import {isTouch} from './_utils';
 
-
-
-
-
+DOC.ready(() => {
+  if (!isTouch()) BODY.addClass(NO_TOUCH);
+});
 
 
 let burger = $('.js-burger');
@@ -12,9 +13,6 @@ let search = $('.js-search');
 let btnClose = $('.js-search-close');
 let searchOpen = $('.js-search-open');
 let header = $('.js-header');
-
-
-
 
 
 drop.on('mouseover click', function() {
