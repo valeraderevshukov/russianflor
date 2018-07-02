@@ -62,7 +62,7 @@ function setMenuSize( item) {
       });
 
     } else {
-      if (width < 1230 ) {
+      if (width < 1380 ) {
         liLength = 2;
         item.find('.nav__drop_main').css({
           'column-count': liLength,

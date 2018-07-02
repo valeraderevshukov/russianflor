@@ -17,6 +17,7 @@
     vertical-align: middle
     +r(960)
       width: 100%
+
     &.is-open
       background: #fff
       .nav__in
@@ -113,8 +114,12 @@
       page-break-inside: avoid
       break-inside: avoid
       width: 100%
-      +r(960)
-        width: 50%
+      // +r(960)
+      //   width: 50%
+    .nav__drop
+      li:last-child
+        +r(960)
+          padding-bottom: 20px
   &__drop_secondary
     &:not(:last-child)
       margin-bottom: 10px
@@ -152,7 +157,6 @@
       margin-right: 0
       margin-left: 0
       padding-top: 0
-      padding-bottom: 20px
       text-align: left
       // display: inline
     &:before
