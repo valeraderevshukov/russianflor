@@ -1,6 +1,9 @@
 .header
   position: relative
   // overflow: hidden
+  &.is-logined
+    .links__item_logout
+      display: block
   &__inner
     +clr
   &__logo
@@ -103,11 +106,8 @@
         background-size: cover
     .links__item_logout
       .links__pic
-        background-image: url('/assets/img/templates/rf/logout-rf.png')
-        background-repeat: no-repeat
-        position: relative
-        top: 10px
-        left: 5px
+        background-image: url('../assets/img/general/logout-rf.png')
+        background-size: cover
     .header__middle
       background: $red
     .header__bottom
@@ -172,6 +172,10 @@
     .links__item_user
       .links__pic
         background: url('../assets/img/general/user-yellow.png')
+        background-size: cover
+    .links__item_logout
+      .links__pic
+        background-image: url('../assets/img/general/logout-rf.png')
         background-size: cover
     .header__middle
       background: #535d68
@@ -245,6 +249,10 @@
         background-image: url('../assets/img/general/user-gray.png')
         background-repeat: no-repeat
         background-position: right center
+    .links__item_logout
+      .links__pic
+        background-image: url('../assets/img/general/logout-rf.png')
+        background-size: cover
     // .header__middle
     //   background: #535d68
     .header__bottom
@@ -321,6 +329,10 @@
         background-image: url('../assets/img/general/user-gray.png')
         background-repeat: no-repeat
         background-position: right center
+    .links__item_logout
+      .links__pic
+        background-image: url('../assets/img/general/logout-rf.png')
+        background-size: cover
     // .header__middle
     //   background: #535d68
     .header__bottom
@@ -397,6 +409,10 @@
         background-image: url('../assets/img/general/user-gray.png')
         background-repeat: no-repeat
         background-position: right center
+    .links__item_logout
+      .links__pic
+        background-image: url('../assets/img/general/logout-rf.png')
+        background-size: cover
     // .header__middle
     //   background: #535d68
     .header__bottom
@@ -474,6 +490,10 @@
         background-image: url('../assets/img/general/user-gray.png')
         background-repeat: no-repeat
         background-position: right center
+    .links__item_logout
+      .links__pic
+        background-image: url('../assets/img/general/logout-rf.png')
+        background-size: cover
     // .header__middle
     //   background: #535d68
     .header__bottom

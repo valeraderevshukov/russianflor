@@ -1,19 +1,16 @@
 .links
   position: relative
-  display: inline-block
-  vertical-align: middle
+  display: inline-flex
+  flex-flow: row nowrap
+  align-items: baseline
   +r(960)
     width: 100%
   &__link
     &:hover
       text-decoration: none
   &__item
-    position: relative
-    display: inline-block
-    vertical-align: middle
-    // &:not(:last-child)
-    //   margin-right: 10px
-
+    &:not(:last-child)
+      margin-right: 5px
     &:hover
       .links__text
         color: $green
@@ -23,11 +20,6 @@
     width: 30px
     height: 30px
     margin-top: -5px
-    // +r(960)
-    //   mr-2
-    //   width: 25px
-    //   height: 25px
-    //   margin-top: -2px
   &__text
     display: inline-block
     vertical-align: middle
@@ -91,8 +83,8 @@
   &__item_marker
     +r(960)
       margin-right: 0
-      float: left
-
+      flex: 1 0 auto
+      text-align: left
     .links__text
       +r(960)
         font-size: 0
@@ -100,12 +92,10 @@
           font-size: 14px
           color: $green
           text-decoration: underline
-  &__item_basket
-    +r(960)
-      margin-right: 100px
-      float: right
-
-  &__item_user
-    +r(960)
-      position: absolute
-      right: 0
+  &__item_logout
+    display: none
+    .links__pic
+      width: 24px
+      height: 22px
+      margin-bottom: -4px
+      vertical-align: bottom

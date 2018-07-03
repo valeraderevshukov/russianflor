@@ -9,7 +9,7 @@ function setEvent() {
   width = $(window).width();
   if (width < 960) {
     nav.on('touch click', function(event) {
-      event.preventDefault();
+      // event.preventDefault();
       let that = $(this);
       if (!that.hasClass('is-open')) {
         nav.removeClass('is-open');
