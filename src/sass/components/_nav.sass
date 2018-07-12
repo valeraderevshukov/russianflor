@@ -45,6 +45,11 @@
     position: static
     color: #000
     font-size: 16px
+    &_holiday
+      background-image: url('../assets/img/general/holiday_symbol.png')
+      background-repeat: no-repeat
+      background-position: 98% 3px
+      padding-right: 28px
     +rob-r
     &_mod
       display: block
@@ -74,7 +79,7 @@
     // top: 500px
     background: #fff
     max-width: 1200px
-    min-width: 150px
+    min-width: 185px
     z-index: 2
     padding: 0 10px
     // flex-flow: row nowrap
@@ -104,6 +109,8 @@
       padding: 0
       column-count: 2
       width: 100%
+    +r(360)
+      column-count: 1
     &.is-big
       .nav__item_last
         text-align: left
