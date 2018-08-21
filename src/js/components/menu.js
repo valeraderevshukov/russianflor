@@ -32,6 +32,8 @@ function setEvent() {
     });
     nav.on('mouseleave', function() {
       $(this).removeClass('is-open');
+      $('.nav__drop_main').removeAttr('style');
+      $('.nav__in').removeAttr('style');
     });
   }
 
@@ -39,57 +41,52 @@ function setEvent() {
 setEvent();
 
 function setMenuSize( item) {
-  let height = item.find('.nav__drop_main').height();
+  let height = item.find('.nav__drop_main').innerHeight();
   let liLength = item.find('.nav__drop_main > li').length;
   let containerWidth = $('.header__inner').innerWidth();
+  width = $(window).width();
 
-
-  if (width <= 1180) {
-    containerWidth = containerWidth - 20;
-  } else {
-    containerWidth = containerWidth - 50;
-  }
   if (liLength > 1) {
-    if (height >= 1000 || item.find('.nav__drop_main').hasClass('is-big')) {
-      item.find('.nav__drop_main')
-        .css({
-          'column-count': 2,
-        })
-        .addClass('is-big');
+    if (item.find('.nav__drop_main').hasClass('is-big')) {
       item.find('.nav__in').css({
         'left': -(left),
         'width': containerWidth
       });
 
     } else {
-      if (width < 1380 ) {
-        liLength = 2;
-        item.find('.nav__drop_main').css({
-          'column-count': liLength,
-        });
-
-      } else if (width < 1024 ) {
-        liLength = 2;
-        item.find('.nav__drop_main').css({
-          'column-count': liLength,
-        });
-      } else {
-        item.find('.nav__drop_main').css({
-          'column-count': liLength,
-        });
-      }
-
+      let inner = item.find('.nav__drop_main');
+      let innerWidth = inner.innerWidth();
+      let innerPosition = inner.offset().left;
+      let innerSum = innerPosition + innerWidth;
+      let distinction = 0;
+     
       if (width < 960) {
         item.find('.nav__in').css({
           'width': '100%',
         });
       } else {
-        item.find('.nav__in').css({
-          'width': 140 * liLength,
-        });
-
+        distinction = width - innerSum - 15;
+        if (innerSum >= width && innerWidth < width - 40 ) {
+          item.find('.nav__in').css({
+            'width': innerWidth,
+            'left': distinction,
+            'white-space': 'normal'
+          });
+        }
+        else {
+          if (innerWidth >= width - 40 ) innerWidth = width - 40;
+          innerSum = innerPosition + innerWidth;
+          distinction = width - innerSum - 15;
+          if (distinction > 0 ) distinction = 0;
+          distinction = distinction;
+          console.log(innerWidth, width, distinction);
+          item.find('.nav__in').css({
+            'width': innerWidth,
+            'left': distinction,
+            'white-space': 'normal'
+          });
+        }
       }
-
     }
   }
 }

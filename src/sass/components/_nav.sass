@@ -5,7 +5,6 @@
   +r(960)
     display: none
     overflow-y: auto
-    // max-height: 100vh
     margin-right: -10px
     padding-left: 20px
     padding-bottom: 10px
@@ -75,16 +74,12 @@
     position: absolute
     left: 0
     right: 0
-    // width: 500px
-    // top: 500px
+    font-size: 0
     background: #fff
     max-width: 1200px
     min-width: 185px
     z-index: 2
-    padding: 0 7px
-    // flex-flow: row nowrap
-    // justify-content: center
-    // flex: 1 0 auto
+    white-space: nowrap
     &.is-sm
       // width: 200px
       +r(960)
@@ -96,7 +91,6 @@
     +r(960)
       position: relative
       background: #fff
-      // background: transparent
       max-width: 100%
       left: 0
       right: 0
@@ -104,7 +98,12 @@
       flex-wrap: wrap
   &__drop_main
     column-gap: 5px
-    padding: 8px 0
+    padding: 8px 7px
+    font-size: 0
+    vertical-align: top
+    display: inline-block
+    & > li .nav__drop
+      padding-right: 15px
     +r(960)
       padding: 0
       column-count: 2
@@ -115,16 +114,18 @@
       .nav__item_last
         text-align: left
       > li
-        width: 50%
+        vertical-align: top
         display: inline-block
     > li
       -webkit-column-break-inside: avoid
       page-break-inside: avoid
       break-inside: avoid
-      width: 100%
-      // +r(960)
-      //   width: 50%
+      vertical-align: top
+      display: inline-block
+      +r(960)
+        display: block
     .nav__drop
+      text-align: left
       li:last-child
         +r(960)
           padding-bottom: 20px
@@ -188,6 +189,7 @@
       +rob-cb
       +r(960)
         padding: 0
+        white-space: normal
         &:hover
           background: transparent
       &:hover
