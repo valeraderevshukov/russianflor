@@ -71,7 +71,7 @@ DOC.ready(() => {
           distinction = width - innerSum - 15;
           if (innerSum >= width && innerWidth < width - 40 ) {
             item.find('.nav__in').css({
-              'width': innerWidth,
+              'width': innerWidth + 5,
               'left': distinction,
               'white-space': 'normal'
             });
@@ -84,7 +84,7 @@ DOC.ready(() => {
             distinction = distinction;
             console.log(innerWidth, width, distinction);
             item.find('.nav__in').css({
-              'width': innerWidth,
+              'width': innerWidth + 5,
               'left': distinction,
               'white-space': 'normal'
             });
