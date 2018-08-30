@@ -1,0 +1,73 @@
+{% import "components/_select.html" as select_builder %}
+{% import "partials/_mixins.html" as mixins %}
+
+{% macro card(props) %}
+    {% for prop in props %}
+        <div class="card card__{{prop.size}}">
+
+            <div class="card__top">
+                <a class="card__image" href="{{prop.image.link}}" style='background-image: url(./assets/img/general/gifts-1/{{prop.image.src}})'>
+                    {% if prop.free_mark %}
+                        <div class="card__freemark">
+                            <img src="./assets/img/general/{{prop.free_mark.image}}" alt="">
+                        </div>
+                    {% endif %}
+                </a>
+                <a href="{{prop.title.link}}" class="card__title">
+                    <h3>{{prop.title.text}}</h3>
+                </a>
+            </div>
+
+            <div class="card__bottom">
+
+                {% if prop.title_divider %}
+                    <div class="card__divider {% if prop.title_divider.modifier %}{{prop.title_divider.modifier}}{% else %}divider-grey{% endif %}"></div>
+                {% endif %}
+
+                {% if prop.id %}
+                    <div class="card__id">
+                        <span class="card__id--id">ID:</span><span class="card__id--number">{{prop.id}}</span>
+                    </div>
+                {% endif %}
+
+                {% if prop.button_link %}
+                    <a class="card__button-link {% if prop.button_link.modifier %}{{prop.button_link.modifier}}{% endif %}" href="{{prop.button_link.link_link}}">
+                        {{prop.button_link.link_text}}
+                    </a>
+                {% endif %}
+
+                {% if prop.button_link_divider %}
+                    <div class="card__divider {% if prop.button_link_divider.modifier %}{{prop.button_link_divider.modifier}}{% else %}divider-grey{% endif %}"></div>
+                {% endif %}
+
+                {% if prop.link %}
+                    <a class="card__link" href="{{prop.link.link_link}}">
+                        {{prop.link.link_text}}
+                    </a>
+                {% endif %}
+
+                {% if prop.price %}
+                    <div class="card__price">from $
+                        {{prop.price}}
+                    </div>
+                {% endif %}
+
+                {% if prop.select %}
+                    <div class="card__select">
+                        {{select_builder.sel(prop.select)}}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    {% endfor %}
+{% endmacro %}
+
+{% macro smallCard(props) %}
+    <a class="small-card" href="{{prors.link}}">
+        <div class="small-card__image" style='background-image: url(./assets/img/general/small-cards/{{props.image.src}})'></div>
+        <h4 class="small-card__title">{{props.title}}</h4>
+        <div class="small-card__id">Product ID:
+            {{props.id}}</div>
+        <div class="small-card__price">${{props.price}}</div>
+    </a>
+{% endmacro %}

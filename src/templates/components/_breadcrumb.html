@@ -1,0 +1,19 @@
+{% macro make(breadcrumbs) %}
+    <nav aria-label="breadcrumb">
+        {# we can add another class, but it MUST be first #}
+        <ol class="breadcrumb {% if breadcrumbs[0].class %}{{breadcrumbs[0].class}}{% endif %}">
+            {% for item in breadcrumbs %}
+                {# prevent looping through item with class #}
+                {% if not item.class %}
+                    {% if item.active %}
+                        <li class="breadcrumb-item active" aria-current="page">{{item.text}}</li>
+                    {% else %}
+                        <li class="breadcrumb-item">
+                            <a href="{{item.link}}">{{item.text}}</a>
+                        </li>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+        </ol>
+    </nav>
+{% endmacro %}

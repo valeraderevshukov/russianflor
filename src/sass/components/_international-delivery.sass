@@ -1,0 +1,196 @@
+.international
+    font-family: $corp
+    margin-bottom: 76px
+    +sm 
+        margin-bottom: 16px
+    &__breadcrumbs
+        margin: 20px auto
+    &__filter
+        margin-bottom: 36px
+    .filter__text
+        color: $text-link
+        font-size: 20px
+        font-weight: bold
+    &__main-title
+        text-align: center
+        margin-bottom: 20px
+    &__descr
+        margin-bottom: 30px
+        // +clr
+        display: flex
+        flex-wrap: wrap
+        .title-middle
+            margin-bottom: 28px
+            flex: 0 0 100%
+            +md 
+                margin-bottom: 14px
+            +sm 
+                flex: 1 0 100%
+                margin-bottom: 6px
+    &__general-links
+        flex: 0 0 30%
+        padding-right: 40px
+        padding-top: 20px
+        +sm
+            flex: 1 0 100%
+    &__quarantee
+        flex: 0 0 70%
+        +sm 
+            flex: 1 0 100%
+            order: -1
+    &__quarantee-image
+        float: left
+        padding-right: 50px
+        padding-bottom: 30px
+        +sm 
+            padding-right: 10px
+            padding-bottom: 10px
+            width: 100px
+    &__local-links
+        padding: 0 40px
+        margin-bottom: 10px
+        +sm 
+            padding: 0 10px
+        .title-big
+            text-align: center
+            margin-bottom: 16px
+    &__global-links
+        margin-bottom: 30px
+    &__global-links-container
+        text-align: center
+        padding: 0 190px
+        a
+            margin: 0 5px 20px
+    &__cards
+        margin-bottom: 32px
+    &__order
+        .title-thin 
+            text-align: center
+        .subtitle
+            text-align: center
+            margin-bottom: 20px
+        .title-middle
+            margin-bottom: 10px
+        
+
+.general-links
+    font-family: $corp
+    &__item
+        margin-bottom: 20px
+    &__link
+        display: block
+        color: $text-link
+        font-size: 20px
+        font-weight: bold
+        position: relative
+        padding-left: 15px
+        line-height: 1
+        &:before
+            content: '>'
+            position: absolute
+            top: 0
+            left: 0
+            font-size: 20px
+            color: $main-green
+            font-weight: 900
+            +sm 
+                font-size: 16px
+        +sm 
+            font-size: 16px
+
+
+.local-links
+    display: flex
+    margin: 0 -18px
+    justify-content: center
+    +sm 
+        flex-flow: column
+    &__col
+        padding: 0 18px
+        +sm 
+            text-align: center
+    a
+        display: inline-block
+        text-decoration: underline
+        color: $text_black
+        font-size: 20px
+        font-weight: bold
+        position: relative
+        line-height: 1
+        margin-bottom: 18px
+        margin-right: auto
+        +hover
+            color: $text-link
+            +colorTrans
+            // &:after
+            //     background-color: $text-link
+            //     +colorTrans
+        +md 
+            font-size: 16px
+            margin-bottom: 10px
+        +sm 
+            font-size: 16px
+            margin-right: 30px  
+        // &:after
+        //     position: absolute
+        //     content: ''
+        //     top: 100%
+        //     left: 0
+        //     right: 0
+        //     height: 2px
+        //     background-color: $title_dark
+
+.global-button-link
+    display: inline-block
+    font-family: $corp
+    vertical-align: middle
+    font-size: 20px
+    text-align: center
+    color: $white
+    padding: 5px 14px
+    border-radius: 20px
+    background-color: $main-green
+    transition: background-color 0.5s
+    +hover
+        background-color: $dark-green
+        transition: background-color 0.5s
+    +sm 
+        width: 80%
+
+
+.inline-form
+    display: inline-block
+    padding: 10px 
+    +sm 
+        display: block
+    &__input
+        display: inline-block
+        vertical-align: middle
+        border: 1px solid $text-link
+        padding: 6px 20px
+        font-size: 20px
+        font-family: $corp
+        border-radius: 6px
+        line-height: 1
+        width: 300px
+        +placeholder
+            font-size: inherit
+            color: inherit
+        +sm 
+            display: block
+            width: 100%
+    &__submit
+        font-size: 20px
+        color: $white
+        background-color: $main-green
+        padding: 9px 30px
+        border-radius: 20px
+        line-height: 1
+        +colorTrans
+        +hover
+            background-color: $dark-green
+            +colorTrans
+        +sm 
+            display: block
+            width: 100%
+            margin-top: 16px

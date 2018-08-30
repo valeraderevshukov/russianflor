@@ -1,0 +1,146 @@
+{# --- title: Index page --- #}
+{% set holidays_set = [
+    {"date": "44 days prior to Easter",
+    "holiday": "Ash Wednesday/Carnival (Quarta-feira de Cinzas/Carnaval)"},
+    {"date": "Friday prior to Easter",
+    "holiday": "Good Friday (Sexta-feira Santa)"},
+	{"date": "The first Sunday after the first full moon that follows the spring equinox",
+    "holiday": "Easter (Pascoa)"},
+    {"date": "Friday prior to Easter",
+    "holiday": "Good Friday (Sexta-feira Santa)"},
+    {"date": "Second Sunday in May",
+    "holiday": "Mother's Day (Dia das Maes)"},
+    {"date": "Second Sunday in August",
+    "holiday": "Father's Day (Dia dos Pais)"},
+    {"date": "December 25",
+    "holiday": "Christmas Day (Natali)"},
+    {"date": "January 1",
+    "holiday": "New Year's Day (Ano Novo)"},
+    {"date": "June 12",
+    "holiday": "Valentine's Day (Dia dos Namorados)"},
+    {"date": "April 21",
+    "holiday": "Tiradentes' Day (Dia di Tiredentes)"},
+	{"date": "May 1",
+    "holiday": "Labor Day (Dia do Trabalho)"},
+    {"date": "September 7",
+    "holiday": "Independence Day (Dia da Independencia)"},
+    {"date": "October 12",
+    "holiday": "Our Lady of Aparecida (Nossa Senhora Aparecida)"},
+    {"date": "November 2",
+    "holiday": "All Souls Day (Dia de Finados)"}
+] %}
+{# IMPORTING MIXINS #}
+
+{% import "partials/_mixins.html" as mixins %}
+{% import "components/_breadcrumb.html" as breadcrumb %}
+{% import "components/_titles.html" as titles %}
+{# MAIN LAYOUT #}
+
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+    {{header_gbo.header({
+        logo: {
+            description: 
+                {
+                    'text_top': 'Gift delivery to USA and internationally',
+                    'text_bottom': 'Gift baskets to Hawaii'
+                }
+            }
+
+    })}}
+    {% include "components/_carousel.html" %}
+
+    <div class="holiday-traditions">
+        <div class="holiday-traditions__container inner">
+            {# BREADCRUMBS #}
+            <div class="gift-catalog__breadcrumbs">
+                {{breadcrumb.make([ {"class": "breadcrumb--no-underline"}, {"text": "Home", "link": "ui.html"}, {"text": "Gift baskets to
+            Brazil", link:"#"}, {"text": "Holiday traditions in Brazil", "active": true} ]) }}
+            </div>
+            <div class="holiday-traditions__title">
+                {{titles.titleBig('holiday traditions of sending gifts to brazil')}}
+            </div>
+            <div class="holiday-traditions__holiday-list">
+                <div class="holiday-list">
+                    {% for day in holidays_set %}
+                        <div class="holiday-list__wrapper">
+                            <div class="holiday-list__date">
+                                {{day.date}}
+                            </div>
+                            <div class="holiday-list__day">
+                                <a href="#">{{day.holiday}}</a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="holiday-traditions__descr">
+                <div class="text">
+                    <p>
+                        Gift delivery to Brazil or any country raises questions such as, 'What does one give for this occasion, and when does one send it?' The plethora of celebrations, holidays, and gift-giving traditions in every country just goes to show that no matter where you find yourself, gifts are always welcome. However, in each country there may be subtle and important variations in the way one gives gifts. It's important to be aware of the significance of holidays and gifts across a variety of cultures, so when it's time to honor a friend or family member from abroad, one sends a suitable and intended message. Sending the perfect gifts to Brazil can be a challenge if one isn't familiar with the holidays and how they're celebrated.
+                    </p>
+                    <p>
+                        Dominated by exotic jungles, lined with gorgeous exotic beaches, and bustling with metropolitan, fun-loving cities, Brazil is unimaginably diverse and breath-taking. Given its rich, independent history and reputation for the best parties in the world, mouthwatering local delicacies, melting pot of cultures, and stunning natural vistas Brazil is representative of the phrase 'life's a beach.' Brazilians have fierce pride for their country and themselves; you can see their love for freedom and beauty in their colorful festivals and gorgeous, sprawling cities, and you can experience their generosity and ebullience in Brazil's welcoming atmosphere.
+                    </p>
+                    <p>
+                        When the time comes to celebrate or repay Brazilian hospitality, it will be important to remember some guidelines for gift-giving etiquette. It is never a good idea to send scissors, cutlery, or sharp objects as gifts since these are typically symbols for the severing of a friendship or close bond. One should never give black or purple items as gifts, since these are considered colors of mourning; handkerchiefs should be avoided as well, since they are also associated with funerals. Finally, one should avoid overly personal gifts such as perfume or jewelry. When one is invited to a home for the first time it is customary to bring a Wine Gift or Tea-Coffee gifts; it is also a good idea to bring a gift for any small children in the home such as a Chocolate Gift or Sweets. Anytime you know a gift is appropriate, but are unsure what to send, Flowers, Wine Gifts, Gourmet Gifts, and Sweets are usually well-received.
+                    </p>
+                    <p>
+                        In Brazil's business world, it is typically considered bad form to give a gift upon first meeting one's business associate; one should offer to pay for a meal first, and then use the time to gauge your associate's interests. This way, when the time comes to give a gift, it will have more meaning. One should also be modest in purchasing a gift for a business associate; Brazilians are sensitive to the cost of the gift, and an overly expensive one will smack of a bribe or cause embarrassment. No matter the occasion, however, one can hardly ever go wrong with a Gourmet Gift, Wine Gift, or Tea-Coffee Gift in the world of business.
+                    </p>
+                    <p>
+                        It's no secret that Brazilians love to celebrate; their culture is a glorious mix of different people, religions, interests, and cuisines. They are highly generous and love to give as much as they love to receive. Regardless of the holiday - New Year's Day, Carnival, Mother's Day, Father's Day, or Christmas - you are welcome to celebrate with the people of Brazil and they will receive your Gourmet Gifts, Wine Gifts, Tea-Coffee Gifts, Flowers, and Fruit Baskets with joy. Brazilians are also great lovers of chocolate, and some holidays are more appropriate than others to send it; Chocolate Gifts and other Sweets are perfect for Valentine's Day and especially Easter. No matter what you send to Brazil, if it's heartfelt your passion and generosity are sure to be reciprocated.
+                    </p>
+                </div>
+                <hr>
+                <div class="text">
+                    <p>
+                        With so many opportunities to celebrate, commemorate, aggregate it can be difficult to keep up with the perfect gift for every occasion, but gift delivery to the Brazil has never been easier. Now, when you're ready to send gifts to the Brazil,
+                        <a href="" class="text-link">GiftBasketsOverseas.com</a>
+                        makes it easy to wade through the holiday confusion and send the gift that says just how you feel. No matter the day, no matter the hour representatives are waiting to help you send a gift to someone you love in the Brazil 24 hours a day, seven days a week. Make sure to take a look at our
+                        <a href="" class="text-link">Brazil gift catalog</a>
+                        where you're sure to find exactly what you're looking for no matter who you're looking for.
+                    </p>
+                </div>
+            </div>
+            <div class="holiday-traditions__title">
+                {{titles.titleBig('Most Celebrated National Holidays in Brazil')}}
+            </div>
+            <div class="holiday-traditions__holidays">
+                <section class="holiday">
+                    {{titles.titleMiddle('44 days prior to Easter - Ash Wednesday/Carnival (Quarta-feira de Cinzas/Carnaval)')}}
+                    <div class="text-big">
+                        Ash Wednesday/Carnival (Quarta-feira de Cinzas/Carnaval) - Date varies - 44 days prior to Easter Carnival in Brazil is a world-renowned four-day festival that falls right before the Lenten holiday and merges with it at the end of the week. The enormous celebration originated in pagan customs that celebrated the arrival of spring, but when Christian culture became prevalent, it adopted the festival as an ideal way to let loose and have fun before the restrictions of Lent, which is a time when many Christians abstain from something they enjoy (usually a favorite food) in preparation for the remembrance of Jesus' crucifixion. Each city in Brazil has its own celebratory traditions including parades, social gatherings, dancing, masquerades, and feasts, but the festival is most famous for its compelling rumba and samba music and dance. The most elaborate parades during Carnival usually portray themed samba performances; the dancers wear elaborate, colorful costumes and use their dance to tell a tale. All the energetic celebrations are bound to make everyone hungry, and Carnival is also a time for great feasts; Brazil is a huge melting pot of many different cultures, so favorite dishes from many ethnicities are usually served along with regional favorites.
+                    </div>
+                    <div class="subtitle">
+                        Gift Suggestions for Ash Wednesday/Carnival in Brazil :
+                        <a href="" class="text-link">Flowers</a>,
+                        <a href="" class="text-link">Fruit-Baskets</a>,
+                        <a href="" class="text-link">Gourmet-Gift-Baskets</a>,
+                        <a href="" class="text-link">Sweet-Gifts</a>,
+                        <a href="" class="text-link">Tea-Coffee-Gifts</a>,
+                        <a href="" class="text-link">Wine-Gift-Sets</a>
+                    </div>
+                </section>
+                <section class="holiday">
+                    {{titles.titleMiddle('Friday prior to Easter - Good Friday (Sexta-feira Santa))')}}
+                    <div class="text-big">
+                        Good Friday (Sexta-feira Santa) - Date varies - Friday prior to Easter Good Friday is traditionally a Christian holiday in Brazil; it is held on the Friday before Easter to commemorate the death of Jesus in anticipation of his resurrection three days later. Since it is also a national holiday, Good Friday is the start of a four-day weekend and falls during the Easter school holidays. Many people enjoy a short vacation around this time. Others take the opportunity to spend time with their family or friends.
+                    </div>
+                    <div class="subtitle">
+                        Gift Suggestions for Ash Wednesday/Carnival in Brazil :
+                        <a href="" class="text-link">Flowers</a>,
+                        <a href="" class="text-link">Fruit-Baskets</a>,
+                        <a href="" class="text-link">Gourmet-Gift-Baskets</a>,
+                        <a href="" class="text-link">Sweet-Gifts</a>,
+                        <a href="" class="text-link">Tea-Coffee-Gifts</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    {% include "components/_subscribe.html" %}
+    {% include "partials/_footer.html" %}
+{% endblock %}

@@ -1,0 +1,84 @@
+{# --- title: Index page --- #} 
+{# IMPORTING DATA COMPONENTS #} 
+{% import "data/_cards.html" as cards_set %} 
+{% import "data/_selects.html" as selects_set %} 
+{# IMPORTING MIXINS #} 
+{% import "partials/_mixins.html" as mixins %} 
+{% import "components/_titles.html" as titles %} 
+{% import "components/_cards.html" as cards_init %} 
+{% import "components/_select.html" as select_builder %}
+{% import "components/_breadcrumb.html" as breadcrumb %} 
+{% import "components/_range.html" as range_input %} 
+{# MAIN LAYOUT#}
+{# MAIN LAYOUT #}
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	<form action="/" class="filter filter--single">
+		<div class="filter__select-wrapper">
+			<a href="#" class="filter__country-flag">
+				<img class="js-selected-counry-flag" src="./assets/img/general/ru.png" alt="">
+			</a>
+			<div class="filter__select-image">
+				<img src="./assets/img/general/globus-ico.png" alt="">
+			</div>
+			<div class="filter__select">
+				{# SELECTOR-1  #}
+				{{select_builder.sel(selects_set.countriesSelect)}}
+			</div>
+			<div class="filter__tooltip js-tooltip" title="{{selects_set.tooltip}}">
+				{{mixins.icon('info')}}
+			</div>
+		</div>
+	</form>
+
+	<form action="/" class="filter filter--center">
+		<div class="filter__select-wrapper">
+			<a href="#" class="filter__country-flag">
+				<img class="js-selected-counry-flag" src="./assets/img/general/ru.png" alt="">
+			</a>
+			<div class="filter__select-image">
+				<img src="./assets/img/general/globus-ico.png" alt="">
+			</div>
+			<div class="filter__select">
+				{# SELECTOR-1 #} {{select_builder.sel(selects_set.destinationCountries)}}
+			</div>
+			<div class="filter__tooltip js-tooltip" title="{{selects_set.tooltip}}">
+				{{mixins.icon('info')}}
+			</div>
+		</div>
+		<div class="filter__select-wrapper">
+			<a href="#" class="filter__country-flag">
+				<img class="js-selected-counry-flag" src="./assets/img/general/ru.png" alt="">
+			</a>
+			<div class="filter__select-image">
+				<img src="./assets/img/general/globus-ico.png" alt="">
+			</div>
+			<div class="filter__select">
+				{# SELECTOR-1 #} {{select_builder.sel(selects_set.sortingTypesSelect)}}
+			</div>
+			<div class="filter__tooltip js-tooltip" title="{{selects_set.tooltip}}">
+				{{mixins.icon('info')}}
+			</div>
+		</div>
+	</form>
+		{# <div class="inner">
+				{% include "components/_select.html" %}
+				{% include "components/_breadcrumb.html" %}
+				{{titles.titleBiggest('Please login or continue as guest')}}
+				{{titles.titleBig('March 8 Flowers Gifts')}}
+				{{titles.titleMiddle('Customer Reviews:')}}
+
+				<div class="text">Falling in love is easy, but staying in love takes devotion. We have put together a bouquet that will help you go that extra mile. Your recipient will receive lovely pink Roses, yellow and purple Alstroemeria, and a stunning Orchid Branch. Add to your Anniversary, ask for forever, or make her smile with Burst Of Romance.</div>
+
+				{% include "components/_collapse.html" %}
+
+				<div class="cards">{{cards.card(cards1)}}</div>
+
+				{% include "components/_buttons.html" %}
+				{% include "components/_dropdown-menu.html" %}
+		</div> #}
+		{# {% include "partials/_footer.html" %} #}
+
+
+{% endblock %}

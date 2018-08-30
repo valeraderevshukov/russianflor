@@ -1,2 +1,11 @@
 import './menu';
 import './select';
+import './_slider';
+import './_carousel';
+import './_tooltip';
+import './_range-slider';
+import './_collapse';
+import './_dropdown';
+import './_increment';
+import './_tabs';
+import './_sm-toggle';

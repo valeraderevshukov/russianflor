@@ -1,4 +1,4 @@
-import './components';
+import './components/index';
 import {DOC, BODY, NO_TOUCH} from './_constants';
 import {isTouch} from './_utils';
 

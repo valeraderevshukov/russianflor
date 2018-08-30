@@ -1,0 +1,21 @@
+.divider-grey
+	height: 2px
+	background-repeat: repeat-x
+	background-size: contain
+	background-size: 6px 2px
+	background-image: url(../assets/img/general/divider-grey.svg)
+	+sm 
+		height: 1px
+		background-size: 3px 1px
+	&--bold
+		height: 3px
+		background-size: 10px 3px
+
+.divider-green
+	@extend .divider-grey
+	background-image: url(../assets/img/general/divider-green.svg)
+
+
+.divider-blue
+	@extend .divider-grey
+	background-image: url(../assets/img/general/divider-blue.svg)

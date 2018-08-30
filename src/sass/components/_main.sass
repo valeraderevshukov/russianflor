@@ -1,0 +1,205 @@
+.start-page
+    .title-big 
+        text-align: center
+    &__special
+        text-align: center
+        .text-link-green
+            font-weight: normal
+        .icon   
+            font-size: 28px
+            vertical-align: middle
+        +sm 
+            background-color: transparent
+    &__filter
+        margin-top: 8px
+    &__cards
+        margin-top: 32px
+        margin-bottom: 56px
+        .title-big 
+            margin-bottom: 32px
+    &__holidays
+        margin: 32px auto
+        .title-big 
+            margin-bottom: 16px
+        .title-middle-uppercase
+            margin-bottom: 16px
+        .filter--single
+            margin: 16px auto
+    &__baskets
+        margin: 32px auto 24px
+        text-align: center
+        +sm 
+            margin: 16px auto
+        .advantages
+            margin-top: 32px
+    &__brand
+        margin: 32px auto 52px
+        text-align: center
+        +sm 
+            margin: 24px auto
+        .title-big
+            margin-bottom: 32px
+            +sm 
+                margin-bottom: 24px
+        .add-logo
+            margin-bottom: 30px
+        .btn
+            width: 200px
+            margin-top: 36px
+            +sm 
+                margin-top: 24px
+
+.advantages
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+.advantage
+    flex: 0 0 25%
+    text-align: center
+    padding: 0 25px
+    margin-bottom: 32px
+    +sm 
+        flex: 0 0 50%
+        margin-bottom: 24px
+    &__img
+        padding-bottom: 200px
+        margin: 0 auto 20px
+        width: 200px
+        +cover
+        border-radius: 50%  
+        border: 2px solid $blue
+    &__title
+        display: block
+        font-family: $corp
+        font-size: 22px
+        font-weight: bold
+        line-height: 1.09
+        letter-spacing: -0.03em
+        text-align: center
+        color: $dark_blue
+        text-transform: uppercase
+        +colorTrans
+        +hover
+            color: $dark-green
+            +colorTrans
+        +sm 
+            font-size: 18px
+
+.request-gift-form
+    padding: 10px 
+    font-size: 0
+    &__input
+        display: inline-block
+        vertical-align: middle
+        border: 2px solid $light-grey
+        padding: 5px 13px
+        font-size: 17px
+        font-family: $corp
+        font-weight: 300
+        border-radius: 6px
+        line-height: 1
+        width: 222px
+        color: $dark-blue
+        margin-right: 18px
+        +placeholder
+            font-size: inherit
+            color: inherit
+        +sm 
+            display: block
+            width: 100%
+    &__submit
+        display: inline-block
+        font-family: $corp
+        font-size: 17px
+        letter-spacing: -0.4px
+        text-align: center
+        color: $white
+        background-color: $main-green
+        padding: 9px 25px
+        border-radius: 20px
+        line-height: 1
+        vertical-align: middle
+        text-transform: uppercase
+        +colorTrans
+        +hover
+            background-color: $dark-green
+            +colorTrans
+        +sm 
+            display: block
+            width: 100%
+            margin-top: 16px
+
+.add-logo
+    font-family: $corp
+    &__logo
+        display: block
+        float: left
+        width: 230px
+        padding:  0 40px
+        +sm 
+            float: none
+            width: 100%
+            margin-bottom: 24px
+    &__link
+        font-size: 17px
+        letter-spacing: -0.02em
+        text-align: center
+        color: $dark-blue
+        text-transform: uppercase
+    &__image
+        padding-bottom: 106px
+        background-size: contain
+        background-position: 50% 50%
+        background-repeat: no-repeat
+    &__text 
+        float: left
+        +sm     
+            float: none
+
+.gift-variants
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    align-items: flex-start
+
+.gift-variant
+    flex: 0 0 320px
+    text-align: center
+    font-family: $corp
+    
+    &:not(:last-child)
+        margin-bottom: 16px
+    
+    &__image
+        margin: 0 auto 12px
+        width: 200px
+        padding-bottom: 200px
+        // background-size: contain
+        // background-position: 50% 50%
+        // background-repeat: no-repeat
+        +cover
+        border: 2px solid $blue
+    &__title
+        font-size: 22px
+        font-weight: bold
+        line-height: 1.09
+        letter-spacing: -0.05em
+        color: $dark_blue
+        text-transform: uppercase
+        margin-bottom: 24px
+        +sm 
+            font-size: 18px
+            margin-bottom: 8px
+    &__text
+        width: 200px
+        margin: 0 auto
+        font-size: 18px
+        font-weight: 300
+        color: #000
+        line-height: 1
+    &__link
+        display: block
+        font-family: $corp
+        font-size: 18px
+        font-weight: 300
+        color: $dark-green

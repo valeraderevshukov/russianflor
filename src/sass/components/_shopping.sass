@@ -1,0 +1,319 @@
+.shopping-page
+	&__breadcrumbs
+		margin-bottom: 18px
+		margin-top: 30px
+	&__title
+		margin-bottom: 18px
+	
+.coupons
+	&__title
+		& > *
+			display: inline-block
+			vertical-align: middle
+	&__tooltip
+		margin: 4px 0 0 10px
+		.icon
+			font-size: 1.4em
+		.icon-info
+				fill: darken(#fff, 10%)
+	&__form
+		margin-top: 18px
+		display: flex
+		justify-content: space-between
+		+sm 
+			flex-flow: column
+	&__subtotal
+		font-family: $corp
+		font-size: 24px
+		font-weight: 300
+		letter-spacing: -0.03em
+		text-align: left
+		color: $dark-grey
+		&--price 
+			font-weight: 900
+			color: #2e7a99
+
+.coupons-form
+	&__input	
+		display: inline-block
+		font-family: $corp
+		font-size: 16px
+		font-weight: normal
+		font-style: normal
+		font-stretch: normal
+		line-height: 1.38
+		letter-spacing: normal
+		text-align: left
+		color: $coupons-text
+		padding: 6px 10px
+		width: 292px
+		border: 1px solid #d7dfe2
+		border-radius: 2px
+	&__submit
+		+sm
+			margin: 12px auto
+.shopping
+	display: inline-block
+	position: relative
+	&.is-open
+		.shopping__list
+			opacity: 1
+			visibility: visible
+			transition: 0.5s visibility, 0.5s opacity
+	&__list
+		position: absolute
+		top: 100%
+		left: 0
+		right: 0
+		opacity: 0
+		visibility: hidden
+		transition: 0.5s visibility, 0.5s opacity
+		background-color: $light-green
+		border-left: 2px solid $main-green
+		border-right: 2px solid $main-green
+		z-index: 100
+	&__item
+		padding: 14px
+		border-bottom: 2px solid $main-green
+	&__link
+		font-family: CorpidE1sSCd
+		font-size: 17px
+		font-weight: normal
+		font-style: normal
+		font-stretch: normal
+		line-height: 1.29
+		letter-spacing: -0.4px
+		text-align: left
+		color: #333333
+
+.checkout
+	position: relative
+	&__top
+		margin: 20px auto 28px
+	&__bottom
+		margin: 20px auto 34px
+	&__buttons
+		display: flex
+		justify-content: space-between
+		position: relative
+		+sm 
+			flex-flow: column
+			align-items: flex-start
+			& > *
+				margin-bottom: 12px
+			
+	&__descr	
+		margin-bottom: 40px
+		font-size: 15px
+		font-weight: 300
+		text-align: right
+		color: #1d1d1b
+		+sm 
+			text-align: left
+
+
+.check-table
+	font-family: $corp
+	border-collapse: collapse
+	margin-top: 30px
+	position: relative
+	+sm 
+		&:before
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 1px
+			content: ''
+			background-image: url(../assets/img/general/divider-green.svg)
+			background-repeat: repeat-x
+			background-size: contain
+			background-size: 3px 1px
+	thead 
+		+sm 
+			display: none
+	th
+		padding: 16px 0 20px
+	td 
+		padding: 24px 0 30px
+	td,
+	th
+		position: relative
+		&:after
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+			height: 3px
+			content: ''
+			background-image: url(../assets/img/general/divider-green.svg)
+			background-repeat: repeat-x
+			background-size: contain
+			background-size: 7px 3px
+			+sm 
+				height: 1px
+				background-size: 3px 1px
+			
+	th
+		&:before
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 3px
+			content: ''
+			background-image: url(../assets/img/general/divider-green.svg)
+			background-repeat: repeat-x
+			background-size: contain
+			background-size: 7px 3px
+			+sm 
+				height: 1px
+				background-size: 3px 1px
+	td 
+		+sm 
+			display: block
+			padding: 12px 0 
+			&:before 
+				content: attr(data-label)
+				float: left
+				font-weight: bold
+				text-transform: uppercase
+				font-size: 16px
+				color: $table_title
+
+	tr 
+		+sm 
+			display: block
+			margin-bottom: 16px
+	&__title
+		font-size: 21px
+		font-weight: bold
+		color: $table_title
+		text-align: left
+		&:nth-child(1)
+			// width: 720px
+			width: 60%
+		&:nth-child(2)
+			// width: 170px
+			width: 14%
+		&:nth-child(3)
+			// width: 130px
+			width: 14%
+		
+	&__descr
+		font-size: 0
+		+sm 
+			&:before 
+				content: attr(data-label)
+				display: inline-block
+				vertical-align: middle
+				float: none !important
+				font-weight: bold
+				text-transform: uppercase
+				font-size: 16px
+				color: $table_title
+	&__photo
+		display: inline-block
+		vertical-align: top
+		width: 200px
+		text-align: center
+		+md 
+			width: 150px
+		+sm 
+			margin-left: 20px
+			width: 100px
+			vertical-align: middle
+	&__img
+		display: inline-block
+		max-width: 100%
+	&__text
+		display: inline-block
+		vertical-align: top
+		width: calc(100% - 200px)
+		padding-right: 10px
+		+md
+			width: calc(100% - 150px)
+		+sm 
+			width: calc(100% - 200px)
+			padding-left: 20px
+			vertical-align: middle
+			
+	&__name
+		font-size: 21px
+		font-weight: 900
+		font-style: normal
+		font-stretch: normal
+		line-height: 1.24
+		letter-spacing: normal
+		text-align: left
+		color: $table_title
+		+sm 
+			font-size: 18px
+	&__id
+		font-size: 21px
+		font-weight: normal
+		font-style: normal
+		font-stretch: normal
+		line-height: normal
+		letter-spacing: normal
+		text-align: left
+		color: $id-color-lighter
+		&--number
+			color: $id-color-darker
+		+sm 
+			font-size: 18px
+	&__price
+		font-size: 21px
+		color: $id-color-lighter
+		+sm 
+			text-align: right
+	&__amount
+		+sm 
+			text-align: right
+	&__total
+		font-size: 21px
+		font-weight: 900
+		color: #2e7a99
+		+sm 
+			text-align: right
+
+.plus-minus
+	&__btn
+		display: inline-flex
+		vertical-align: middle
+		align-items: center
+		justify-content: center
+		height: 26px
+		width: 26px
+		font-size: 26px
+		background-color: $light-grey
+		color: #fff
+		transition: background-color 0.5s
+		.icon
+			font-size: 20px
+			fill: $white
+		&:hover
+			background-color: $main-green
+			transition: background-color 0.5s
+		+md 
+			height: 18px
+			width: 18px
+			.icon
+				font-size: 14px
+
+
+
+	&__input
+		display: inline-block
+		vertical-align: middle
+		width: 60px
+		text-align: center
+		font-size: 21px
+		font-weight: normal
+		font-style: normal
+		font-stretch: normal
+		line-height: normal
+		letter-spacing: normal
+		color: #666666
+		+md 
+			width: 30px

@@ -1,0 +1,9 @@
+{% macro range(min, max, start, end, class) %}
+<div class="range {% if class %}{{class}}{% endif %}">
+    <div class="range__numbers">
+        €<span class="js-range-min">{{start}}</span>
+        - €<span class="js-range-max">{{end}}</span>
+    </div>
+    <div class="js-range-slider range__slider" data-range-max="{{max}}" data-range-min="{{min}}" data-range-start="{{start}}" data-range-end="{{end}}"></div>
+</div>
+{% endmacro %}

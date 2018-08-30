@@ -1,0 +1,155 @@
+.title-biggest
+    font-family: $corp
+    font-size: 48px
+    font-weight: 800
+    color: $title_dark
+    font-style: normal
+    font-stretch: normal
+    line-height: normal
+    letter-spacing: normal
+    +sm
+        font-size: 28px
+
+.title-big
+    font-family: $corp
+    font-size: 32px
+    font-weight: 800
+    letter-spacing: -0.02em
+    color: $title_dark
+    text-transform: uppercase
+    word-spacing: 0.1em
+    line-height: 1
+    +md 
+        font-size: 28px
+    +sm 
+        font-size: 26px
+
+.title-middle
+    font-family: $corp
+    font-size: 30px
+    font-weight: 700
+    letter-spacing: -0.03em
+    color: $text_black
+    word-spacing: 0.05em
+    line-height: 1
+    +md 
+        font-size: 26px
+    +sm 
+        font-size: 22px
+
+.title-middle-uppercase
+    font-family: $corp
+    font-size: 21px
+    font-weight: 800
+    letter-spacing: -0.02em
+    color: $title_dark
+    text-transform: uppercase
+    word-spacing: 0.1em
+    line-height: 1
+    // +md 
+    //     font-size: 28px
+    // +sm 
+    //     font-size: 26px
+
+.title-small
+    font-family: $corp
+    line-height: 1
+    font-size: 24px
+    font-weight: 700
+    letter-spacing: -0.05em
+    text-align: left
+    color: $text_black
+
+.title-thin
+    font-family: $corp
+    font-size: 30px
+    font-weight: 300
+    text-transform: uppercase
+    color: $title_dark
+    letter-spacing: -0.05em
+    word-spacing: 0.1em
+    vertical-align: middle
+    +sm 
+        font-size: 22px
+
+.text
+    font-family: $corp
+    font-size: 18px
+    font-weight: 300
+    font-style: normal
+    font-stretch: normal
+    line-height: normal
+    letter-spacing: normal
+    text-align: left
+    color: $dark_blue
+    line-height: 1.22
+    &--bold 
+        color: $text_black
+        font-weight: bold
+    p
+        margin-bottom: 16px
+
+.text-link,
+.text-link-green
+    position: relative
+    &:after
+        content: ''
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        height: 1px
+        background-color: $text-link 
+
+.text-link
+    color: $text-link
+.text-link-green
+    color: $main-green
+    &:after
+        background-color: $main-green
+
+.subtitle
+    font-family: $corp
+    font-size: 20px
+    font-weight: 700
+    color: $text_black
+    +md 
+        font-size: 18px
+    +sm 
+        font-size: 16px
+
+.text-big
+    font-size: 20px
+    font-family: $corp
+    line-height: 1.22
+    letter-spacing: -0.01em
+    p 
+        margin-bottom: 16px
+    &--italic
+        font-style: italic
+    +md 
+        font-size: 18px
+    +sm 
+        font-size: 16px
+
+.testimonial
+    margin-bottom: 42px
+    font-family: $corp
+    +sm 
+        margin-bottom: 24px
+    &__text
+        font-style: italic
+        font-weight: 400
+        margin-bottom: 8px
+        +sm 
+            font-size: 14px
+            margin-bottom: 6px
+    &__details
+        font-weight: 700
+        +sm 
+            font-size: 14px
+
+.roboto
+    +rob-r
+.roboto-light
+    +rob-l

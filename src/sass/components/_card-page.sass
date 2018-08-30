@@ -1,0 +1,275 @@
+.card-page
+    font-family: $corp
+    margin-top: 27px
+    &__container
+        +clr
+        font-family: $corp
+    &__left 
+        float: left
+        width: 350px
+        +sm 
+            float: none
+            width: 100%
+            margin-bottom: 24px
+    &__right 
+        margin-left: 426px
+        +lg 
+            margin-left: 400px
+        +sm
+            float: none
+            width: 100%
+            margin-left: 0
+    &__image
+        border: 2px solid #fbf3e5
+        text-align: center
+    &__go-back
+        margin: 32px auto
+    &__tabs
+        margin-bottom: 24px
+        +sm 
+            margin-bottom: 12px
+    &__download
+        margin: 14px auto
+    &__purchased-number-title
+        padding: 20px 5px
+        font-size: 24px
+        font-weight: 300
+        font-style: normal
+        font-stretch: normal
+        line-height: normal
+        letter-spacing: -1.2px
+        text-align: center
+        color: #3a5864
+    &__card-list
+        text-align: center
+        img 
+            display: inline-block
+
+.card-page
+    &__main-title
+        margin-bottom: 34px
+        +sm 
+            margin-bottom: 16px
+    &__id
+        font-size: 24px
+        color: #6f6f6e
+        &--number
+            font-weight: bold
+            color: $dark_blue
+    &__total-price
+        margin: 16px auto 19px
+    &__delivery
+        margin: 13px auto 19px
+        display: flex
+        align-items: stretch
+        &-item 
+            +md 
+                margin-bottom: 10px
+            &:first-child
+                margin-right: 8px
+                +md 
+                    margin-right: 0
+            &:last-child
+                flex-grow: 1
+                height: auto
+        +md 
+            flex-flow: column
+    &__budget
+        margin: 22px 0
+    &__review
+        margin: 12px 0 24px
+    &__recently-viewed
+        margin: 21px 0 54px
+        +sm 
+            margin: 21px 0 21px
+        .cards-container
+            display: flex
+            margin: 22px 0 24px
+            .small-card:first-child
+                margin-right: 24px
+        .video
+            margin-bottom: 24px
+
+.go-back
+    display: flex
+    align-items: center
+    justify-content: center
+    &__icon
+        font-size: 0
+        .icon
+            font-size: 38px
+            fill: $main-green
+            +colorTrans
+    &__text
+        margin-left: 10px
+        font-size: 18px
+        font-weight: bold
+        color: $main-green
+        text-transform: uppercase
+        +colorTrans
+    +hover
+        .go-back__icon .icon
+            fill: $dark-green
+            +colorTrans
+        .go-back__text
+            color: $dark-green
+            +colorTrans
+
+.download-spreadsheet
+    display: block
+    &__icon
+        display: inline-block
+        vertical-align: top
+        margin-right: 20px
+        .icon
+            font-size: 2.5em
+    &__text
+        display: inline-block
+        vertical-align: top
+        padding-top: 2px
+        font-family: CorpidE1sSCd
+        font-size: 18px
+        letter-spacing: -0.5px
+        text-align: left
+        color: #3a9ac1
+    &__title
+        font-weight: 900
+        text-transform: uppercase
+        line-height: 1
+
+.location-card
+    padding: 14px 15px 18px 14px
+    background-color: $extra-light-green
+    border-radius: 5px
+    +md 
+        max-width: 400px
+        padding: 12px
+    &__title
+        font-size: 16px
+        font-weight: bold
+        font-style: normal
+        font-stretch: normal
+        line-height: 1.38
+        color: #3c3c3b
+        margin-bottom: 16px
+        +lg 
+            margin-bottom: 8px
+
+    &__select-wrapper
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin-bottom: 12px
+        flex-wrap: wrap
+        +md 
+            align-items: flex-start
+            justify-content: flex-start
+            margin-bottom: 6px
+    &__label
+        margin-right: 5px
+        font-family: $corp
+        font-size: 16px
+        line-height: 31px
+        color: $dark_blue
+        +md 
+            flex: 0 0 100%
+    &__select
+        width: 262px
+        .select2-container--default .select2-selection--single
+            border: none
+        &--countries
+            width: 194px
+            +lg 
+                width: 156px
+            +md
+                width: 194px
+    &__country-flag
+        max-height: 30px
+        max-width: 40px
+        overflow: hidden
+        margin-right: 8px
+        +lg 
+            margin-right: 4px
+        img
+            max-height: 30px
+            display: inline-block
+            vertical-align: middle
+
+
+.budget-form
+    &__title
+        margin-bottom: 14px
+        +sm 
+            margin-bottom: 8px
+    &__select
+        margin-bottom: 18px
+        +sm     
+            margin-bottom: 12px
+
+.review
+    font-family: $corp
+    &__header 
+        margin-bottom: 1.2em
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+        & > *
+            // display: inline-block
+            // vertical-align: middle
+            padding-right: 10px
+    // &__title
+    //     margin-right: 10px
+    &__number
+        font-size: 24px
+        font-weight: 300
+        line-height: normal
+        letter-spacing: -0.6px
+        text-align: left
+        color: $dark-grey
+        +md 
+            flex: 1 0 100%
+            font-size: 20px
+            margin: 10px auto
+    &__single-review
+        margin-bottom: 0.5em
+        font-size: 17px
+        line-height: normal
+        color: $text_black
+    &__text
+        font-weight: 300
+        margin-bottom: 0.5em
+    &__details
+        font-weight: bold
+
+// ===== STAR =====
+
+.stars
+    font-size: 0
+.star .icon
+    font-size: 25px
+
+.stars-rating-1
+    span 
+        +first(1)
+            .icon
+                fill: $blue
+.stars-rating-2
+    span 
+        +first(2)
+            .icon
+                fill: $blue
+.stars-rating-3
+    span 
+        +first(3)
+            .icon
+                fill: $blue
+.stars-rating-4
+    span 
+        +first(4)
+            .icon
+                fill: $blue
+.stars-rating-5
+    span 
+        +first(5)
+            .icon
+                fill: $blue

@@ -1,0 +1,10 @@
+{% import "partials/_mixins.html" as mixins %}
+<div class="plus-minus">
+    <button class="plus-minus__btn js-table-minus">
+        {{mixins.icon('minus')}}
+    </button>
+    <input type="text" class="plus-minus__input js-table-input" value="1">
+    <button class="plus-minus__btn js-table-plus">
+        {{mixins.icon('plus')}}
+    </button>
+</div>

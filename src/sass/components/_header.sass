@@ -568,3 +568,338 @@
   width: 20px
   height: 20px
   background-size: cover
+
+
+// =================== GBO ==========================================================================================
+
+.header
+  font-family: $corp
+  // &:before
+  //   position: absolute
+  //   content: ''
+  //   top: 0
+  //   left: 0
+  //   right: 0
+  //   height: 50px
+  //   width: 100%
+  //   background-color: $special_bg
+  //   z-index: -1
+  &_main //russian flora
+    .header__top
+      background-color: $special_bg
+      padding-bottom: 10px
+      padding-top: 12px
+      text-align: center
+      +r(960)
+        padding-bottom: 0
+        font-size: 0
+      .header__text-left
+        text-align: right
+        font-family: $corp
+        font-size: 17px
+        font-weight: 300
+        color: $dark-blue
+        float: left
+        width: 420px
+        +lg 
+          width: 345px
+        .icon
+          vertical-align: middle
+          font-size: 25px
+          fill: $dark-blue
+        .header__currency
+          text-transform: uppercase
+          text-decoration: underline
+          font-weight: 700
+    .header__logo
+      float: none
+      padding: 0
+      +r(960)
+        display: none
+    
+    .header__logo-container
+      display: flex
+      align-items: center
+      flex-wrap: wrap
+      justify-content: center
+    .logo
+      font-family: $corp
+      flex: 0 0 55%
+      display: flex
+      align-items: center
+      justify-content: space-between
+      margin: 12px auto
+      +lg
+        flex: 0 0 100%
+        justify-content: center
+        +r(960) 
+          display: inline-block
+          flex: auto
+          margin: 0
+      &.d-md-block
+        display: none
+        +r(960) 
+          display: inline-block
+      +sm 
+        float: none
+        display: inline-block
+        width: auto
+      &__img
+        flex: 0 0 50%
+        text-align: center
+        display: block
+        &--long 
+          flex: 0 0 440px
+        img 
+          max-width: 100%
+          display: inline-block
+        +r(960) 
+          flex: auto
+          display: inline-block
+          max-width: 200px
+          vertical-align: top
+        +sm 
+          max-width: 150px
+          
+      &__description
+        float: right
+        font-family: $corp
+        font-weight: 800
+        color: $text_black
+        text-transform: uppercase
+        flex: 0 0 45%
+        font-size: 14px
+        +lg 
+          display: none
+      &__description-bottom
+        display: block
+        text-transform: none
+        color: $blue
+        font-weight: 700
+        font-size: 15px
+        position: relative
+        padding-left: 10px
+        &:before
+          position: absolute
+          left: 0
+          top: 50%
+          transform: translateY(-57%)
+          content: '>'
+          font-size: 15px
+          font-weight: 800
+          color: $main-green
+    .header__info
+       font-size: 0 
+       margin-top: 0
+       +r(960)
+        margin-top: 16px
+    .support
+      flex: 0 0 45%
+      margin: 15px auto
+      text-align: center
+      +lg 
+        flex: 0 0 100%
+      &__item
+        font-size: 0
+      &__link
+        display: inline-block
+    .lang
+      margin-right: 100px
+      font-family: $corp
+      +lg 
+        margin-right: 10px
+      +r(960)
+        position: absolute
+        top: 12px
+    .lang__arr
+      background-image: url(../assets/img/general/arr_dark.png);
+    .lang__link
+      font-size: 17px
+      span 
+        color: $dark_blue
+    .lang__current span
+      color: $dark_blue
+      &.d-sm-block
+        display: none
+        +sm 
+          display: inline-block
+      +sm 
+        &.d-sm-none
+          display: none
+    .links
+      +r(960)
+        justify-content: flex-end
+    .links__item:not(:last-child)
+      margin-right: 32px
+    .links__text
+      color: $dark_blue
+      margin-left: 10px
+      font-family: $corp
+    .links__dt
+      +r(960)
+        display: none
+    .links__item_cont
+      .links__pic
+        background-image: url('../assets/img/general/contacts-gbo.png')
+        // background-size: contain
+        background-repeat: no-repeat
+        vertical-align: middle
+        background-position: center
+    .links__item_marker
+      .links__pic
+        background-image: url('../assets/img/general/coins-gbo.png')
+        // background-size: contain
+        background-repeat: no-repeat
+        vertical-align: middle
+        margin-bottom: 0
+        width: 23px
+        height: 20px
+        background-position: center
+    .links__item_basket
+      .links__pic
+        background-image: url('../assets/img/general/basket-rounded.png')
+        // background-size: contain
+        background-repeat: no-repeat
+        vertical-align: middle
+        background-position: center
+    .links__item_user
+      .links__pic
+        background-image: url('../assets/img/general/login.png')
+        // background-size: contain
+        background-repeat: no-repeat
+        vertical-align: middle
+        background-position: center
+    .header__middle
+      background: $dark-blue
+    .locator__link
+      color: $light-blue
+    .locator__item
+      margin-left: 0
+    .locator__item:not(:last-child):after 
+      color: $light-blue
+      margin-left: 0
+    .nav__link_mod:after
+      content: url('../assets/img/general/chevron-down.svg')
+      border: none
+      width: 14px
+      height: 18px
+    .nav__item.is-open 
+      .nav__list>li:hover .nav__link_mod:after,
+      .nav__link_mod:after
+        content: url('../assets/img/general/chevron-down-black.svg')
+    .lang__wrap .lang__current span, 
+    .links__item:hover .links__text
+      color: $text-link
+    .header__country
+      font-family: $corp
+      padding: 10px 10px 10px 70px
+      max-width: 440px
+      width: 100%
+      +lg
+        padding: 10px 0
+      +r(960)
+        max-width: 100vw
+    .country__globe
+      +sm 
+        display: none
+    .country__input
+      position: relative
+      +r(960)
+        width: 100%
+      input
+        font-family: $corp
+        width: 260px
+        font-size: 17px
+        font-weight: 300
+        font-style: normal
+        color: $dark-blue
+        padding: 5px 12px
+        border-radius: 6px
+        +r(960)
+          width: 100%
+        +sm 
+          font-size: 15px
+      .country__input-icon
+        position: absolute
+        right: 15px
+        top: 50%
+        transform: translateY(-50%)
+        font-size: 0
+        .icon
+          fill: $main-green
+          font-size: 13px
+    .header__bottom
+      background: linear-gradient($text-link ,$blue)
+      +r(960)
+        background: linear-gradient($text-link ,$blue)
+    .burger
+      vertical-align: middle
+      +hover
+        .icon
+          fill: $text-link
+          +colorTrans
+      .icon
+        fill: $dark-blue
+        font-size: 20px
+        vertical-align: middle
+        +colorTrans
+    .header__top-btn
+      font-size: 0
+    .header__top-btn button:not(:last-child)
+      margin-right: 4px
+    .mob-search
+      vertical-align: middle
+      .icon
+        margin-top: -2px
+        font-size: 24px
+        fill: $text-link
+        vertical-align: middle
+      +hover
+        .icon
+          fill: $dark-green
+    .header__logo-sm
+      padding: 5px 0
+    .logo-sm
+      display: inline-block
+      vertical-align: middle
+      background: url('../assets/img/general/home-main.png')
+      width: 30px
+      height: 31px
+      background-size: cover
+    .search 
+      input
+        border-radius: 6px
+        height: 30px
+        width: 210px
+        color: $text-link
+        font-family: $corp
+        font-size: 17px
+        padding-top: 5px
+        padding-bottom: 7px
+        padding-left: 12px
+        +placeholder
+          color: inherit
+      +lg 
+        width: 100%
+        text-align: left
+      +r(960)
+        background-color: $dark-green
+      .search__button
+        background-image: none
+        margin-right: 6px
+        .icon
+          fill: $text-link
+          font-size: 24px
+    .links__dropdown-list a
+      color: #000
+      font-size: 17px
+    .links__mob
+      color: $text-link
+      font-size: 17px
+    .links__text
+      +sm 
+        font-size: 17px
+        color: $text-link
+
+.no-touch .header_main .nav__list>li:hover .nav__link_mod:after
+  content: url('../assets/img/general/chevron-down-black.svg')

@@ -1,0 +1,111 @@
+{# --- title: Index page --- #}
+{# IMPORTING DATA COMPONENTS #}
+{% import "data/_cards.html" as cards_set %}
+{% import "data/_selects.html" as selects_set %}
+{# IMPORTING MIXINS #}
+{% import "partials/_mixins.html" as mixins %}
+{% import "components/_titles.html" as titles %}
+{% import "components/_cards.html" as cards_builder %}
+{% import "components/_sm-toggle-buttons.html" as toggle %}
+{% import "components/_select.html" as select_builder %}
+{% import "components/_breadcrumb.html" as breadcrumb %}
+{% import "components/_range.html" as range_input %}
+{% import "components/_dropdown-menu.html" as dd_menu %}
+{# MAIN LAYOUT #}
+{% extends "layouts/_layout.html" %}
+{% block content %}
+
+    {{header_gbo.header({
+        logo: {
+            description: 
+                {
+                    'text_top': 'Gift delivery to USA and internationally',
+                    'text_bottom': 'Gift baskets to Hawaii'
+                }
+            }
+
+    })}}
+    {% include "components/_carousel.html" %}
+
+    <div class="nation">
+        <div class="nation__container inner">
+            {# BREADCRUMBS #}
+            <div class="nation__breadcrumbs">
+                {{breadcrumb.make([ {"class": "breadcrumb--no-underline"}, {"text": "Home", "link": "ui.html"}, {"text": "USA", "active":
+            true} ]) }}
+            </div>
+            <section class="nation__filter">
+                <!-- FILTERING AREA -->
+                {{toggle.filter_buttons()}}
+                <form action="/" class="filter js-filter">
+                    <div class="filter__text d-sm-none">
+                        <div class="filter__breadcrumb">
+                            {{breadcrumb.make([ {"class": "breadcrumb--colored breadcrumb--big"}, {"text": "Gift Baskets to USA", "link": "ui.html"},
+                        {"text": "Hawaii Hampers", "active": true} ]) }}
+                        </div>
+                    </div>
+                    <div class="filter__filter">
+                        <div class="filter__select-wrapper sm-select-tooltip">
+                            <div class="select-image">
+                                <img src="./assets/img/general/globus-ico.png" alt="">
+                            </div>
+                            <div class="select-select filter__select--long">
+                                {# SELECTOR-1 #}
+                                {{select_builder.sel(selects_set.citySelect)}}
+                            </div>
+                            <div class="select-tooltip js-tooltip" title="{{selects_set.tooltip}}">
+                                {{mixins.icon('info')}}
+                            </div>
+                        </div>
+                        <div class="filter__select-wrapper sm-select-tooltip">
+                            {# SELECT WITH TOOLTIP COMPONENT #}
+                            <div class="select-select">
+                                {{select_builder.sel(selects_set.sortingTypesSelect)}}
+                            </div>
+                            <div class="select-tooltip js-tooltip" title="{{selects_set.tooltip}}">
+                                {{mixins.icon('info')}}
+                            </div>
+                        </div>
+                        <div class="filter__range">
+                            {{range_input.range(0, 1000, 0, 1000)}}
+                        </div>
+                    </div>
+
+                </form>
+            </section>
+            {# TITLE #}
+            <main class="nation__main">
+                <div class="nation__main-title">
+                    {{titles.titleBig('Gift baskets to Hawaii (USA)')}}
+                </div>
+                <div class="nation__secondary-title d-sm-none">
+                    {{titles.titleMiddle('Why send gifts to Middle East with us?')}}
+                </div>
+                <div class="nation__descr text d-sm-none">
+                    <p>Our gift delivery service amet consectetur adipisicing elit. Blanditiis distinctio alias placeat repellendus eos expedita omnis eum pariatur eveniet magnam quo eaque, perferendis veritatis doloremque quibusdam natus ut libero corporis iure nulla ipsum tenetur atque obcaecati doloribus? Totam, quibusdam minus. View our
+                        <a class="text-link" href="#">Gourmet Items</a>,
+                        <a class="text-link" href="#">Sweet Baskets</a>,
+                        <a class="text-link" href="#">Flowers</a>
+                        and business gifts delivered to Hawaii</p>
+                    <p>See
+                        <a class="text-link" href="#">list of serviced cities</a>
+                        in Hawaii</p>
+                    <p>Please review a list of biggest
+                        <a class="text-link" href="#">Hawaii holidays</a>
+                        to learn holiday traditins of gift giving in Hawaii</p>
+                </div>
+                <div class="nation__cards">
+                    <div class="cards sm-one-column js-cards-container">
+                        {{cards_builder.card(cards_set.usaCards)}}
+                    </div>
+                </div>
+                {# DD MENU #}
+                <div class="nation__cities-menu">
+                    {{dd_menu.menu_1()}}
+                </div>
+            </main>
+        </div>
+    </div>
+    {% include "components/_subscribe.html" %}
+    {% include "partials/_footer.html" %}
+{% endblock %}

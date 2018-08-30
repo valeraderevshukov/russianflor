@@ -8,3 +8,27 @@
   // display: flex
   // flex-flow: row nowrap
   // justify-content: space-between
+
+.d-sm-block
+    display: none
+    +sm 
+        display: block
+
+.d-md-block 
+    display: none
+    +md 
+        display: block
+
++lg 
+    .d-lg-none
+        display: none
+
++md 
+    .d-md-none
+        display: none
+
++sm
+    .d-sm-none
+        display: none
+
+

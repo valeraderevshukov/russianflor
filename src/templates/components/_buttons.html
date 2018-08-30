@@ -1,0 +1,12 @@
+{% import "partials/_mixins.html" as mixins %}
+
+{% macro squareButton(props) %}
+	<button class="{% if props.class %}{{props.class}}{% endif %} btn-square btn">
+			<span class="btn-square__text">{{props.text}}</span>	
+		{% if props.icon %}
+			<span class="btn-square__icon">{{mixins.icon(props.icon)}}</span>
+		{% endif %}
+	</button>
+{% endmacro %}
+
+

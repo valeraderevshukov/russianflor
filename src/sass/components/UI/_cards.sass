@@ -1,0 +1,370 @@
+.cards
+	border-left: 1px solid $card-border-color 
+	display: flex
+	flex-wrap: wrap
+	justify-content: flex-start
+	align-items: stretch
+
+.card
+	border-right: 1px solid $card-border-color
+	border-bottom: 1px solid $card-border-color 
+	box-shadow: inset 0 1px 0 0 $card-border-color
+	padding: 12px 0 22px
+	text-align: center
+	font-family: $corp
+	margin-bottom: -1px
+	display: flex
+	flex-flow: column
+	justify-content: space-between
+	&.col-1
+		flex: 0 0 100%
+	&.col-2
+		flex: 0 0 50%
+	&.col-3
+		flex: 0 0 33.33%
+	&.col-4
+		flex: 0 0 25%
+	&.col-25
+		flex: 0 0 25%
+	&.col-5
+		flex: 0 0 20%
+	&.col-md-50
+		+md 
+			flex: 0 0 50%
+	&.col-md-33
+		+md 
+			flex: 0 0 33.33%
+	+hover
+		.card__title
+			color: $main-green
+			+colorTrans
+	&__image
+		display: block
+		background-size: contain
+		background-position: center
+		background-repeat: no-repeat
+		position: relative
+		margin-bottom: 16px
+	&__freemark
+		position: absolute
+		bottom: 0
+		right: 5%
+		+sm 
+			img
+				width: 70px
+	&__title
+		display: block
+		font-size: 22px
+		font-weight: bold
+		font-style: normal
+		font-stretch: condensed
+		line-height: 1.09
+		text-align: center
+		color: $card-title-color
+		text-transform: uppercase
+		+colorTrans
+		letter-spacing: -0.02em
+		word-spacing: 0.01em
+		flex-grow: 1
+		h3 
+			font-size: inherit
+	&__price
+		margin-bottom: 0.5em
+		margin-top: 0.5em
+		font-size: 21px
+		font-weight: bold
+		font-style: normal
+		font-stretch: normal
+		line-height: normal
+		letter-spacing: normal
+		text-align: center
+		color: $card-price-color
+	&__id 
+		font-size: 21px
+		font-weight: bold
+		font-style: normal
+		font-stretch: normal
+		line-height: 1
+		letter-spacing: normal
+		text-align: center
+		margin-bottom: 0.5em
+		&--id
+			color: $id-color-lighter
+		&--number
+	  	color: $id-color-darker
+	&__divider
+		margin: 16px auto 16px
+		// @extend .divider-grey
+	&__button-link
+		display: inline-block
+		text-align: center
+		color: $white
+		border-radius: 4px
+		text-align: center
+		text-transform: uppercase
+		padding: 7px 48px
+		border-radius: 20px
+		background-color: $main-green
+		+colorTrans
+		+hover
+			background-color: $dark-green
+			+colorTrans
+		&--thin
+			padding: 7px 20px
+	&__link
+		display: block
+		font-size: 22px
+		font-weight: bold
+		color: $blue
+		line-height: 1.09
+		text-align: center
+		text-transform: uppercase
+		+colorTrans
+		letter-spacing: -0.02em
+		text-decoration: underline
+
+.card.card__big
+	.card__bottom
+		padding: 0 48px
+		+md
+			padding: 0 32px
+	.card__title
+		padding: 0 48px
+		+md
+			padding: 0 32px
+	.card__image
+		padding-bottom: 275px
+		margin-bottom: 24px
+		+md 
+			padding-bottom: 225px
+	.card__link
+		margin-top: 10px
+	.card__button-link
+		margin: 0
+
+.card.card__middle
+	padding-top: 28px
+	.card__image
+		padding-bottom: 300px
+		+md 
+			padding-bottom: 225px
+	.card__bottom
+		padding: 0 12px
+	.card__title
+		padding: 0 12px
+
+.card.card__slider
+	padding: 2px 0 22px
+	+md 
+		padding: 2px 0 54px
+	.card__image
+		padding-bottom: 200px
+	.card__title
+		font-size: 20px
+		letter-spacing: -1px
+		padding: 0 18px 8px
+
+.card__minimal.card
+	padding: 14px 0 44px
+	.card__image
+		padding-bottom: 300px
+	.card__title
+		padding: 0 12px
+		
+
+.small-card
+	font-family: $corp
+	display: block
+	min-width: 97px
+	font-family: $corp
+	text-align: center
+	&__image
+		+cover
+		padding-bottom: 80px
+	&__title
+		margin-top: 14px
+		font-size: 18px
+		font-weight: bold
+		line-height: 1.22
+		letter-spacing: -0.5px
+		color: $dark_blue
+	&__id
+		font-size: 13px
+		line-height: normal
+		color: $text_black
+	&__price
+		font-size: 15px
+		font-weight: 900
+		line-height: normal
+		color: $blue
+
+.cards
+	&.sm-one-column
+		+sm 
+			max-width: 300px
+			margin: 0 auto
+			.card
+				padding: 16px 0
+			.col-1,
+			.col-2,
+			.col-3,
+			.col-4,
+			.col-5, 
+			.col-25
+				flex: 0 0 100%
+			.card__price
+				font-size: 18px
+			.card__id
+				font-size: 18px
+			.card__bottom
+				padding: 0 6px
+			.card__title
+				padding: 0 6px
+			.card__select
+				max-width: 250px
+				margin: 0 auto
+			.card__button-link
+				font-size: 14px
+				padding: 6px 20px
+			.card__image
+				padding-bottom: 150px
+			
+
+	&.sm-two-columns
+		+sm 
+			.col-1,
+			.col-2,
+			.col-3,
+			.col-4,
+			.col-5, 
+			.col-25
+				flex: 0 0 50%	
+			.card
+				padding: 6px 0 16px
+			.card__bottom
+				padding: 0 6px
+			.card__title
+				font-size: 16px
+				padding: 0 6px
+			.card__image
+				padding-bottom: 150px
+				margin-bottom: 12px
+			.card__button-link
+				font-size: 12px
+				padding: 4px 20px
+			.card__price
+				font-size: 16px
+			.card__id
+				font-size: 16px
+			.card__select
+				max-width: 200px
+				margin: 0 auto
+			.card__link
+				font-size: 16px
+
+
+// ===== ICON-CARDS =====
+
+.card-with-icons
+	border-radius: 5px
+	+md 
+		max-width: 300px
+	&-image 
+		font-size: 0
+	&-title
+		font-size: 22px
+		font-weight: bold
+		font-style: normal
+		font-stretch: normal
+		line-height: 1.23
+		// letter-spacing: -0.6px
+		text-align: left
+		color: $blue
+		+lg 
+			font-size: 20px
+		+md 
+			font-size: 18px
+		+sm 
+			font-size: 16px
+	&-text
+		font-family: CorpidE1sSCd
+		font-size: 20px
+		font-weight: 300
+		font-style: normal	
+		font-stretch: normal
+		line-height: 1.35
+		// letter-spacing: -0.5px
+		text-align: left
+		color: $dark_blue
+		+lg 
+			font-size: 18px
+		+md 
+			font-size: 16px
+
+.time-card 
+	background-color: $special_bg
+	height: 100%
+	padding: 12px 14px 12px 10px
+	+md 
+		padding: 12px
+	&__image
+		float: left	
+		margin-right: 7px
+		font-size: 0
+		.icon
+			font-size: 40px
+	&__title
+		margin-bottom: 14px
+		margin-top: 14px
+
+
+.delivery-card
+	display: flex
+	align-items: center
+	background-color: rgba($main-green, 0.3)
+	border-radius: 5px
+	padding: 10px 14px 14px 20px
+	max-width: 360px
+	+md 
+		padding: 10px 6px 10px 6px
+	&--blue 
+		background-color: $special_bg
+		.delivery-card__img .icon
+			font-size: 60px
+	&--dark-green
+		background-color: $main-green
+	&__img
+		font-size: 0
+		flex: 0 0 80px
+		.icon
+			fill: $blue
+			font-size: 70px
+			display: inline-block
+			vertical-align: middle
+	&__text
+		font-size: 24px
+		+lg 
+			font-size: 20px
+
+.card-sm-buttons
+	display: none
+	position: relative
+	height: 60px
+	.icon
+		fill: $blue
+		font-size: 20px
+	& > *
+		display: inline-block
+	+sm 
+		display: flex
+		align-items: center
+		margin-bottom: 10px
+
+.card-sm-button
+	margin-right: 10px
+	&.is-active
+		.icon
+			fill: $main-green
+
+.sm-filter-btn
+	+vcenter

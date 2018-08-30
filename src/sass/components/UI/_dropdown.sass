@@ -1,0 +1,105 @@
+.dropdown-menu-btn
+    font-family: $corp
+    position: relative
+    font-size: 32px
+    font-style: normal
+    font-stretch: normal
+    line-height: normal
+    letter-spacing: -0.02em
+    text-align: center
+    color: $dark_blue
+    text-transform: uppercase
+    padding: 16px 46px
+    border-radius: 36px
+    background-color: #dfecf7
+    z-index: 100
+    display: inline-flex
+    align-items: center
+    &__text
+        font-weight: 900
+        &--with-dividers
+            font-weight: 400
+            letter-spacing: -1.6px
+            a  
+                font-weight: 900
+                display: inline-block
+                vertical-align: middle
+            +md
+                font-size: 14px
+            // +sm 
+            //     font-size: 14px
+    +md
+        font-size: 28px
+    +sm 
+        font-size: 16px
+        padding: 10px 20px
+    &__icon
+        font-size: 0
+        margin-left: 16px
+    .icon
+        fill: $dark_blue
+        font-size: 30px
+        transition: transform 0.3s linear
+        +md 
+            font-size: 24px
+        +sm 
+            font-size: 16px
+
+.is-open 
+    .dropdown-menu-btn__icon .icon
+        +rotate(180)
+        transition: transform 0.3s
+
+
+.dropdown-container
+    font-family: $corp
+    text-align: center
+    position: relative
+
+.dropdown-menu
+    padding: 50px 52px 30px
+    box-shadow: 0 3px 3px 0 rgba(0,0,0,.5)
+    background-color: #dfecf7
+    position: absolute
+    z-index: 50
+    top: 36px
+    +md
+        top: -33px
+        position: relative
+    +sm
+        padding: 32px 20px
+        
+    &__list
+        column-count: 4
+        text-align: left
+        margin-bottom: 20px
+        +md 
+            column-count: 2
+        +sm 
+            column-count: 1
+    &__item
+        display: inline-block
+        width: 100%
+        margin-bottom: 4px
+    &__links
+        font-size: 17px
+        font-weight: 300
+        color: $text_black
+        line-height: 1
+    &__link
+        display: inline-block
+        border-bottom: 1px solid $text_black
+        +hover
+            border-bottom: 1px solid $dropdown_text
+            color: $dropdown_text
+        &--active
+           color: $dropdown_text
+           border-bottom: 1px solid $dropdown_text
+           font-weight: 700
+    &__letter
+        color: $dropdown_text
+        font-size: 22px
+        font-weight: 800
+        margin-bottom: 6px
+    &__text
+        @extend .dropdown-menu__links

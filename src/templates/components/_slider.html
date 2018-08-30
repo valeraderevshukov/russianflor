@@ -1,0 +1,107 @@
+{% import "components/_cards.html" as cards_builder %}
+{% import "data/_cards.html" as cards_set %}
+{# 
+{% set card_template = [
+    [
+        {
+            "size": "big",
+            "image": {
+                "src": "gift_img_1.jpg"
+            },
+            "free_mark": true,
+            "title": "Endless Connection Necklace in Rose ",
+            "button_link": {
+                "link_link": "#",
+                "link_text": "Details"
+            }
+
+        }
+    ],
+    [
+        {
+            "size": "big",
+            "image": {
+                "src": "gift_img_2.jpg"
+            },
+            "free_mark": true,
+            "title": "Endless Connection Necklace in Rose ",
+            "button_link": {
+                "link_link": "#",
+                "link_text": "Details"
+            }
+
+        }
+    ],
+    [
+        {
+            "size": "big",
+            "image": {
+                "src": "gift_img_3.jpg"
+            },
+            "free_mark": true,
+            "title": "Endless Connection Necklace in Rose ",
+            "button_link": {
+                "link_link": "#",
+                "link_text": "Details"
+            }
+
+        }
+    ],
+    [
+        {
+            "size": "big",
+            "image": {
+                "src": "gift_img_4.jpg"
+            },
+            "free_mark": true,
+            "title": "Endless Connection Necklace in Rose ",
+            "button_link": {
+                "link_link": "#",
+                "link_text": "Details"
+            }
+
+        }
+    ],
+    [
+        {
+            "size": "big",
+            "image": {
+                "src": "gift_img_5.jpg"
+            },
+            "free_mark": true,
+            "title": "Endless Connection Necklace in Rose ",
+            "button_link": {
+                "link_link": "#",
+                "link_text": "Details"
+            }
+
+        }
+    ],
+    [
+        {
+            "size": "big",
+            "image": {
+                "src": "gift_img_6.jpg"
+            },
+            "free_mark": true,
+            "title": "Endless Connection Necklace in Rose ",
+            "button_link": {
+                "link_link": "#",
+                "link_text": "Details"
+            }
+
+        }
+    ]
+] %} #}
+
+<div class="slider-container inner">
+    <div class="slider-wrapper">
+        <div class="slider owl-carousel js-slider" id="slider">
+            {% for item in cards_set.brazilCardsForSlider %}
+                <div class="slide">
+                    {{cards_builder.card(item)}}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

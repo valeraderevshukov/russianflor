@@ -1,0 +1,287 @@
+{% import "partials/_mixins.html" as mixins %}
+{% macro menu_1() %}
+<div class="js-accordion js-accordion-closed dropdown-container">
+
+    {# DD BUTTON #}
+    <button class="js-accordion-header dropdown-menu-btn">
+        <span class="dropdown-menu-btn__text">Serviced cities & towns in Hawaii</span>
+        <span class="dropdown-menu-btn__icon">{{mixins.icon('chevron-down')}}</span>
+    </button>
+
+    {# DD MENU #}
+    <div class="js-accordion-list dropdown-menu">
+
+        {# DD LIST #}
+        <ul class="dropdown-menu__list">
+            <li class="dropdown-menu__item">
+                <div class="dropdown-menu__letter">A</div>
+                <div class="dropdown-menu__links">
+                    <a href="#" class="dropdown-menu__link">Ahuimanu Aiea</a>
+                </div>
+            </li>
+            <li class="dropdown-menu__item">
+                <div class="dropdown-menu__letter">E</div>
+                <div class="dropdown-menu__links">
+                    <a href="#" class="dropdown-menu__link">Ewa</a>,
+                    <a href="#" class="dropdown-menu__link">Ewa beach</a>
+                </div>
+            </li>
+            <li class="dropdown-menu__item">
+                <div class="dropdown-menu__letter">H</div>
+                <div class="dropdown-menu__links">
+                    <a href="#" class="dropdown-menu__link">Halawa</a>,
+                    <a href="#" class="dropdown-menu__link">Hawaiian</a>,
+                    <a href="#" class="dropdown-menu__link">Paradise Park</a>,
+                    <a href="#" class="dropdown-menu__link">Hilo</a>,
+                    <a href="#" class="dropdown-menu__link">Holualoa</a>,
+                    <a href="#" class="dropdown-menu__link">Honolulun</a>
+                </div>
+            </li>
+            <li class="dropdown-menu__item">
+                <div class="dropdown-menu__letter">K</div>
+                <div class="dropdown-menu__links">
+                    <a href="#" class="dropdown-menu__link">Kahului</a>,
+                    <a href="#" class="dropdown-menu__link">Kailua</a>,
+                    <a href="#" class="dropdown-menu__link">Kalaoa</a>,
+                    <a href="#" class="dropdown-menu__link">Keneohe</a>,
+                    <a href="#" class="dropdown-menu__link">Kaneohe Station</a>,
+                    <a href="#" class="dropdown-menu__link">Kapaa</a>,
+                    <a href="#" class="dropdown-menu__link">Kihei</a>,
+                    <a href="#" class="dropdown-menu__link">Koolauloa</a>,
+                    <a href="#" class="dropdown-menu__link">Koolaupoko</a>,
+                    <a href="#" class="dropdown-menu__link">Kula</a>
+                </div>
+            </li>
+            <li class="dropdown-menu__item">
+                <div class="dropdown-menu__letter">L</div>
+                <div class="dropdown-menu__links">
+                    <a href="#" class="dropdown-menu__link">Lahaina</a>
+                </div>
+            </li>
+            <li class="dropdown-menu__item">
+                <div class="dropdown-menu__letter">M</div>
+                <div class="dropdown-menu__links">
+                    <a href="#" class="dropdown-menu__link">Makaha</a>,
+                    <a href="#" class="dropdown-menu__link">Makakilo City</a>,
+                    <a href="#" class="dropdown-menu__link">Makawao</a>,
+                    <a href="#" class="dropdown-menu__link">Mililani Town</a>
+                </div>
+            </li>
+            <li class="dropdown-menu__item">
+                <div class="dropdown-menu__letter">N</div>
+                <div class="dropdown-menu__links">
+                    <a href="#" class="dropdown-menu__link">Nanakuli</a>,
+                    <a href="#" class="dropdown-menu__link">Napili-Honokowi</a>,
+                    <a href="#" class="dropdown-menu__link">North Kohala</a>,
+                    <a href="#" class="dropdown-menu__link">North Kona</a>
+                </div>
+            </li>
+            <li class="dropdown-menu__item">
+                <div class="dropdown-menu__letter">P</div>
+                <div class="dropdown-menu__links">
+                    <a href="#" class="dropdown-menu__link">Pohoa-Kalapana</a>,
+                    <a href="#" class="dropdown-menu__link">Pearl City</a>,
+                    <a href="#" class="dropdown-menu__link">Pukalani</a>
+                </div>
+            </li>
+            <li class="dropdown-menu__item">
+                <div class="dropdown-menu__letter">S</div>
+                <div class="dropdown-menu__links">
+                    <a href="#" class="dropdown-menu__link">Schofield Barracks</a>,
+                    <a href="#" class="dropdown-menu__link">South Kohala</a>,
+                    <a href="#" class="dropdown-menu__link">South Kona</a>
+                </div>
+            </li>
+            <li class="dropdown-menu__item">
+                <div class="dropdown-menu__letter">V</div>
+                <div class="dropdown-menu__links">
+                    <a href="#" class="dropdown-menu__link">Village Park</a>
+                </div>
+            </li>
+            <li class="dropdown-menu__item">
+                <div class="dropdown-menu__letter">W</div>
+                <div class="dropdown-menu__links">
+                    <a href="#" class="dropdown-menu__link">Wahaiawa</a>,
+                    <a href="#" class="dropdown-menu__link">Waianae</a>,
+                    <a href="#" class="dropdown-menu__link">Waihee-Waiehu</a>,
+                    <a href="#" class="dropdown-menu__link">Wailuku</a>,
+                    <a href="#" class="dropdown-menu__link">Waimalu</a>,
+                    <a href="#" class="dropdown-menu__link">Waimea</a>,
+                    <a href="#" class="dropdown-menu__link">Waipahu</a>,
+                    <a href="#" class="dropdown-menu__link">Waipio</a>,
+                    and many other locations in Hawaii. If yuur location of interest is not listed - please
+                    <a href="#" class="dropdown-menu__link">contact our customer service team</a>
+                </div>
+            </li>
+        </ul>
+
+        {# DD TEXT #}
+        <div class="dropdown-menu__text">
+            Please visit our <a href="#" class="dropdown-menu__link dropdown-menu__link--active">International gift service</a> page to send gifts to other countries
+        </div>
+    </div>
+</div>
+{% endmacro %}
+
+{% macro menu_2() %}
+<div class="js-accordion js-accordion-closed dropdown-container">
+
+    {# DD BUTTON #}
+    <button class="js-accordion-header dropdown-menu-btn">
+        <span class="dropdown-menu-btn__text dropdown-menu-btn__text--with-dividers d-sm-none"> 
+            <a href="#">A</a>
+            |
+            <a href="#">B</a>
+            |
+            <a href="#">C</a>
+            |
+            <a href="#">D</a>
+            |
+            <a href="#">F</a>
+            |
+            <a href="#">G</a>
+            |
+            <a href="#">C</a>
+            |
+            <a href="#">I</a>
+            |
+            <a href="#">J</a>
+            |
+            <a href="#">L</a>
+            |
+            <a href="#">M</a>
+            |
+            <a href="#">N</a>
+            |
+            <a href="#">O</a>
+            |
+            <a href="#">P</a>
+            |
+            <a href="#">R</a>
+            |
+            <a href="#">S</a>
+            |
+            <a href="#">T</a>
+            |
+            <a href="#">U</a>
+            |
+            <a href="#">V</a>
+        </span>
+        <span class="dropdown-menu-btn__text d-sm-block">Some Text</span>
+        <span class="dropdown-menu-btn__icon">{{mixins.icon('chevron-down')}}</span>
+    </button>
+
+    {# DD MENU #}
+    <div class="js-accordion-list dropdown-menu">
+
+        {# DD LIST #}
+        <ul class="dropdown-menu__list">
+            <li class="dropdown-menu__item">
+                <div class="dropdown-menu__letter">A</div>
+                <div class="dropdown-menu__links">
+                    <a href="#" class="dropdown-menu__link">Ahuimanu Aiea</a>
+                </div>
+            </li>
+            <li class="dropdown-menu__item">
+                <div class="dropdown-menu__letter">E</div>
+                <div class="dropdown-menu__links">
+                    <a href="#" class="dropdown-menu__link">Ewa</a>,
+                    <a href="#" class="dropdown-menu__link">Ewa beach</a>
+                </div>
+            </li>
+            <li class="dropdown-menu__item">
+                <div class="dropdown-menu__letter">H</div>
+                <div class="dropdown-menu__links">
+                    <a href="#" class="dropdown-menu__link">Halawa</a>,
+                    <a href="#" class="dropdown-menu__link">Hawaiian</a>,
+                    <a href="#" class="dropdown-menu__link">Paradise Park</a>,
+                    <a href="#" class="dropdown-menu__link">Hilo</a>,
+                    <a href="#" class="dropdown-menu__link">Holualoa</a>,
+                    <a href="#" class="dropdown-menu__link">Honolulun</a>
+                </div>
+            </li>
+            <li class="dropdown-menu__item">
+                <div class="dropdown-menu__letter">K</div>
+                <div class="dropdown-menu__links">
+                    <a href="#" class="dropdown-menu__link">Kahului</a>,
+                    <a href="#" class="dropdown-menu__link">Kailua</a>,
+                    <a href="#" class="dropdown-menu__link">Kalaoa</a>,
+                    <a href="#" class="dropdown-menu__link">Keneohe</a>,
+                    <a href="#" class="dropdown-menu__link">Kaneohe Station</a>,
+                    <a href="#" class="dropdown-menu__link">Kapaa</a>,
+                    <a href="#" class="dropdown-menu__link">Kihei</a>,
+                    <a href="#" class="dropdown-menu__link">Koolauloa</a>,
+                    <a href="#" class="dropdown-menu__link">Koolaupoko</a>,
+                    <a href="#" class="dropdown-menu__link">Kula</a>
+                </div>
+            </li>
+            <li class="dropdown-menu__item">
+                <div class="dropdown-menu__letter">L</div>
+                <div class="dropdown-menu__links">
+                    <a href="#" class="dropdown-menu__link">Lahaina</a>
+                </div>
+            </li>
+            <li class="dropdown-menu__item">
+                <div class="dropdown-menu__letter">M</div>
+                <div class="dropdown-menu__links">
+                    <a href="#" class="dropdown-menu__link">Makaha</a>,
+                    <a href="#" class="dropdown-menu__link">Makakilo City</a>,
+                    <a href="#" class="dropdown-menu__link">Makawao</a>,
+                    <a href="#" class="dropdown-menu__link">Mililani Town</a>
+                </div>
+            </li>
+            <li class="dropdown-menu__item">
+                <div class="dropdown-menu__letter">N</div>
+                <div class="dropdown-menu__links">
+                    <a href="#" class="dropdown-menu__link">Nanakuli</a>,
+                    <a href="#" class="dropdown-menu__link">Napili-Honokowi</a>,
+                    <a href="#" class="dropdown-menu__link">North Kohala</a>,
+                    <a href="#" class="dropdown-menu__link">North Kona</a>
+                </div>
+            </li>
+            <li class="dropdown-menu__item">
+                <div class="dropdown-menu__letter">P</div>
+                <div class="dropdown-menu__links">
+                    <a href="#" class="dropdown-menu__link">Pohoa-Kalapana</a>,
+                    <a href="#" class="dropdown-menu__link">Pearl City</a>,
+                    <a href="#" class="dropdown-menu__link">Pukalani</a>
+                </div>
+            </li>
+            <li class="dropdown-menu__item">
+                <div class="dropdown-menu__letter">S</div>
+                <div class="dropdown-menu__links">
+                    <a href="#" class="dropdown-menu__link">Schofield Barracks</a>,
+                    <a href="#" class="dropdown-menu__link">South Kohala</a>,
+                    <a href="#" class="dropdown-menu__link">South Kona</a>
+                </div>
+            </li>
+            <li class="dropdown-menu__item">
+                <div class="dropdown-menu__letter">V</div>
+                <div class="dropdown-menu__links">
+                    <a href="#" class="dropdown-menu__link">Village Park</a>
+                </div>
+            </li>
+            <li class="dropdown-menu__item">
+                <div class="dropdown-menu__letter">W</div>
+                <div class="dropdown-menu__links">
+                    <a href="#" class="dropdown-menu__link">Wahaiawa</a>,
+                    <a href="#" class="dropdown-menu__link">Waianae</a>,
+                    <a href="#" class="dropdown-menu__link">Waihee-Waiehu</a>,
+                    <a href="#" class="dropdown-menu__link">Wailuku</a>,
+                    <a href="#" class="dropdown-menu__link">Waimalu</a>,
+                    <a href="#" class="dropdown-menu__link">Waimea</a>,
+                    <a href="#" class="dropdown-menu__link">Waipahu</a>,
+                    <a href="#" class="dropdown-menu__link">Waipio</a>,
+                    and many other locations in Hawaii. If yuur location of interest is not listed - please
+                    <a href="#" class="dropdown-menu__link">contact our customer service team</a>
+                </div>
+            </li>
+        </ul>
+
+        {# DD TEXT #}
+        <div class="dropdown-menu__text">
+            Please visit our <a href="#" class="dropdown-menu__link dropdown-menu__link--active">International gift service</a> page to send gifts to other countries
+        </div>
+    </div>
+</div>
+{% endmacro %}

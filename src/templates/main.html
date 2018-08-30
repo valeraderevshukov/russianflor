@@ -1,0 +1,193 @@
+{# --- title: Index page --- #}
+{# MAIN LAYOUT #}
+{% extends "layouts/_layout.html" %}
+{% block content %}
+    {{header_gbo.header({
+        marker: true
+    })}}
+    {% include "components/_carousel.html" %}
+    <div class="start-page">
+        <div class="start-page__special special">
+            <div class="start-page__container inner">
+                <h3 class="title-thin d-sm-none">
+                    Send Gifts to
+                    <a href="#" class="text-link-green"><span class="roboto">200</span> Countries</a>
+                    in <span class="roboto-light">3</span> Easy Steps
+                    <a href="#">{{mixins.icon('video')}}</a>
+                                       
+                </h3>
+                <section class="start-page__filter">
+                    {{toggle.filter_buttons()}}
+                    <form action="" class="filter filter--center js-filter">
+                        <div class="filter__select-wrapper">
+                            <label class="select-label">
+                                step <span class="roboto">1</span> :
+                                <span class="blue-colored">delivery location</span>
+                            </label>
+                            <div class="select-select select-select--long">
+                                {{select_builder.sel(selects_set.destinationCountries)}}
+                            </div>
+                        </div>
+                        <div class="filter__select-wrapper">
+                            <label class="select-label">
+                                step <span class="roboto">2</span>:
+                                <span class="blue-colored">occasion</span>
+                            </label>
+                            <div class="select-select select-select--long">
+                                {{select_builder.sel(selects_set.occasionSet)}}
+                            </div>
+                        </div>
+                        <div class="filter__select-wrapper">
+                            <label class="select-label">
+                                step <span class="roboto">3</span>:
+                                <span class="blue-colored">date</span>
+                            </label>
+                            <div class="select-select select-select--long">
+                                {{select_builder.sel(selects_set.datesSet)}}
+                            </div>
+                        </div>
+                        <div class="filter__btn ">
+                            <button class="btn btn-rounded btn-rounded--green">
+                                Find Gifts
+                            </button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+        <div class="start-page__container inner">
+            <section class="start-page__cards">
+                {{titles.titleBig('CUSTOMER FAVORITES')}}
+                <div class="cards sm-one-column js-cards-container">
+                    {{cards_builder.card(cards_set.cardsMain)}}
+                </div>
+            </section>
+            <div class="divider-blue"></div>
+            <section class="start-page__holidays">
+                {{titles.titleBig('Upcoming International Holidays')}}
+                <h4 class="title-middle-uppercase">drinkable for
+                    <a href="" class="text-link-green">upcoming-holidays</a>
+                    :</h4>
+                <p class="text">
+                    Thanksgiving, Hanukkah, Christmas, New Year and gifts for major events: Birthdays & Anniversaries, Weddings, Graduations. Send Corporate Gift Baskets for clients & employees delivered internationally in 200 countries Worldwide:
+                </p>
+                <div class="start-page__filter">
+                    <form action="/" class="filter filter--single">
+                        <div class="filter__select-wrapper">
+                            <div class="select-image">
+                                {{mixins.icon('globe-blue')}}
+                            </div>
+                            <div class="select-select select-select--long">
+                                {{select_builder.sel(selects_set.destinationMain)}}
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <p class="text">
+                    Drinkable.com offers personal & corporate Gift Baskets to the US, Canada & Mexico, Latin America & Caribbean, Australia & New Zealand, Japan, China & anywhere in Asia, South Africa & other African countries, Israel, UAE & Middle East, the UK and all countries of Europe.
+                </p>
+            </section>
+            <div class="divider-blue"></div>
+            <section class="start-page__baskets">
+                {{titles.titleBig('Send Corporate Gift Baskets Worldwide & Domestically')}}
+                <div class="advantages">
+                    <div class="advantage">
+                        <div class="advantage__img" style="background-image: url(./assets/img/general/main/1.jpg)"></div>
+                        <a href="#" class="advantage__title">
+                            Improve Your Customer Loyalty
+                        </a>
+                    </div>
+                    <div class="advantage">
+                        <div class="advantage__img" style="background-image: url(./assets/img/general/main/2.jpg)"></div>
+                        <a href="#" class="advantage__title">
+                            Resolve Complaints & Improve Customer Relationships
+                        </a>
+                    </div>
+                    <div class="advantage">
+                        <div class="advantage__img" style="background-image: url(./assets/img/general/main/3.jpg)"></div>
+                        <a href="#" class="advantage__title">
+                            Employee Recognition Awards & Long Term Service Awards
+                        </a>
+                    </div>
+                    <div class="advantage">
+                        <div class="advantage__img" style="background-image: url(./assets/img/general/main/4.jpg)"></div>
+                        <a href="#" class="advantage__title">
+                            Increase Employee Morale
+                        </a>
+                    </div>
+                </div>
+                <form action="" class="request-gift-form">
+                    <input type="email" class="request-gift-form__input" placeholder="Your email adress">
+                    <button type="submit" class="request-gift-form__submit">Request Gift Option</button>
+                </form>
+            </section>
+            <div class="divider-blue"></div>
+            <section class="start-page__brand">
+                {{titles.titleBig('Brand Your Corporate Gifts')}}
+                <div class="add-logo">
+                    <a href="#" class="add-logo__logo">
+                        <div class="add-logo__link">Add Company Logo</div>
+                        <div class="add-logo__image" style="background-image: url(./assets/img/general/main/14.jpg)"></div>
+                    </a>
+                    <div class="add-logo__descr">
+                        <div class="text">
+                            <p>
+                                Make your
+                                <a href="#" class="text-link">clients</a>
+                                and
+                                <a href="#" class="text-link">employees</a>
+                                feel like VIPs and keep your brand image fresh in their minds with beautiful gift basket emblazoned with your logo or other brandable materials (view cards samples here). Celebrate success with your business associates and partners with high-quality appreciation gifts made with the best ingredients: sweets, fine wines, fresh fruits, beautiful flowers, and spa products. Choose from a stunning array of ready-made corporate gift baskets from our catalog, or build a custom gift.
+                            </p>
+                            <p>
+                                Please review our Corporate Gifting FAQs or contact us if you have any questions. Sending gifts next door and around the world has never been easier.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="gift-variants">
+                    <div class="gift-variant">
+                        <h5 class="gift-variant__title">
+                            Gifts for Customers
+                        </h5>
+                        <div class="gift-variant__image" style="background-image: url(./assets/img/general/main/11.jpg)"></div>
+                        <div class="gift-variant__text">
+                            Keep Them Thinking of You by Thinking of Them
+                        </div>
+                        <a href="" class="gift-variant__link">
+                            > Learn more
+                        </a>
+                    </div>
+                    <div class="gift-variant">
+                        <h5 class="gift-variant__title">
+                            Gift Baskets for Employees
+                        </h5>
+                        <div class="gift-variant__image" style="background-image: url(./assets/img/general/main/12.jpg)"></div>
+                        <div class="gift-variant__text">
+                            Make it More Than Just a Job!
+                        </div>
+                        <a href="" class="gift-variant__link">
+                            > Learn more
+                        </a>
+                    </div>
+                    <div class="gift-variant">
+                        <h5 class="gift-variant__title">
+                            Hampers to Business Partners
+                        </h5>
+                        <div class="gift-variant__image" style="background-image: url(./assets/img/general/main/13.jpg)"></div>
+                        <div class="gift-variant__text">
+                            Pave the Way to Success With Business Partners
+                        </div>
+                        <a href="" class="gift-variant__link">
+                            > Learn more
+                        </a>
+                    </div>
+                </div>
+                <button class="btn btn-rounded btn-rounded--green">Submit Inquiry</button>
+            </section>
+            
+        </div>
+    </div>
+    {% include "components/_subscribe.html" %}
+    {% include "partials/_footer.html" %}
+{% endblock %}

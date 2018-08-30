@@ -1,0 +1,102 @@
+{# --- title: Index page --- #}
+{# IMPORTING DATA COMPONENTS #}
+{% import "data/_cards.html" as cards_set %}
+{% import "data/_selects.html" as selects_set %}
+{# IMPORTING MIXINS #}
+{% import "partials/_mixins.html" as mixins %}
+{% import "components/_titles.html" as titles %}
+{% import "components/_cards.html" as cards_builder %}
+{% import "components/_sm-toggle-buttons.html" as toggle %}
+{% import "components/_select.html" as select_builder %}
+{% import "components/_breadcrumb.html" as breadcrumb %}
+{% import "components/_range.html" as range_input %}
+{% import "components/_dropdown-menu.html" as dd_menu %}
+{# MAIN LAYOUT #}
+{% extends "layouts/_layout.html" %}
+{% block content %}
+    {{header_gbo.header({
+        logo: {
+            description: 
+                {
+                    'text_top': 'Gift delivery to USA and internationally',
+                    'text_bottom': 'Gift baskets to Hawaii'
+                }
+            }
+
+    })}}
+    <div class="basket-to-city">
+        <div class="basket-to-city__container inner">
+            {# BREADCRUMBS #}
+            <div class="basket-to-city__breadcrumbs">
+                {{breadcrumb.make([ {"class": "breadcrumb--no-underline"}, {"text": "Home", "link": "ui.html"}, {"text": "Home", "link":
+            "ui.html"}, {"text": "Gift baskets to Brazil", "link": "ui.html"}, {"text": "Santos", "active": true} ]) }}
+            </div>
+            <div class="basket-to-city__main-title">
+                {{titles.titleBig('Gift basket to Santos, Brazil is available')}}
+            </div>
+        </div>
+
+        {% include "components/_slider.html" %}
+
+        <div class="basket-to-city__container inner">
+            <aside class="basket-to-city__sidebar sidebar">
+                {% include "components/_collapse.html" %}
+            </aside>
+            <main class="basket-to-city__main">
+                <section class="basket-to-city__descr d-sm-none">
+                    <h5 class="subtitle">
+                        Learn most important Brazil holidays:
+                        <a href="#" class="text-link">holiday traditions of gift giving in Brazil</a>
+                    </h5>
+                    {{titles.titleMiddle('What Our Clients Say?')}}
+                    <div class="basket-to-city__testimonials">
+                        <div class="testimonial">
+                            <div class="testimonial__text">
+                                I have ordered several bouquets from Russian Flora from the USA and they are fantastic! Nancy, Katherine, Natalie, Margaret and all of the team there are so professional and helpful, and make international floral delivery so easy for me. The flowers have been absolutely gorgeous on every occasion! The personalized attention my orders have received has been beyond compare, and they have gone over and above on every delivery! I will continue to use them and would highly recommend them to everyone.
+                            </div>
+                            <div class="testimonial__details">
+                                • Reviewed by Debora - October 16, 2015 (USA)
+                            </div>
+                        </div>
+                        <div class="testimonial">
+                            <div class="testimonial__text">
+                                You guys are seriously AMAZING. I order a lot of flowers internationally and you are the absolute BEST!
+                            </div>
+                            <div class="testimonial__details">
+                                • Reviewed by Ronda - October 16, 2015 (El Cajon CA, USA)
+                            </div>
+                        </div>
+                        <div class="basket-to-city__more-testimonials subtitle">
+                            <a href="#">More testimonials</a>
+                            |
+                            <a href="#">Better Bussiness Bureau</a>
+                        </div>
+                    </div>
+                </section>
+                <div class="gift-basket-to__cards">
+                    {{toggle.buttons()}}
+                    <div class="cards sm-one-column js-cards-container">
+                        {{cards_builder.card(cards_set.brazilCardsTo)}}
+                    </div>
+                </div>
+                <section class="basket-to-city__video">
+                    <h5 class="subtitle">
+                        We deliver gift baskets to most of the
+                        <a href="#" class="text-link">locations in Brazil</a>
+                    </h5>
+                    <div class="video-middle">
+                        <iframe src="https://www.youtube.com/embed/n_GA_vQRu9c?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+                    </div>
+                </section>
+                <hr>
+                <section class="basket-to-city__bottom text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero rerum cumque rem aperiam. Eligendi ex ipsum delectus, quisquam voluptates praesentium? Accusamus ex odit quas culpa deleniti rem libero error rerum minima cumque, unde, exercitationem et molestiae nemo nesciunt voluptas sequi.</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime corrupti dolorem sequi qui, quidem placeat sunt dolores veritatis. Maxime impedit assumenda ipsum aliquam, eius id. Quae quam facilis cupiditate voluptatum laudantium soluta eveniet velit in debitis saepe? Repellat architecto consequatur laborum facere earum itaque et nulla praesentium odit doloremque nostrum fugiat veniam commodi hic ipsam vero, consequuntur rerum nihil distinctio nemo aliquid necessitatibus eius tenetur. Aut magni nihil adipisci assumenda veritatis culpa, eaque maiores distinctio. Ipsam unde vitae ducimus repudiandae, necessitatibus provident rerum quo magnam cumque! Illo consectetur doloribus voluptas a! Velit doloremque similique error, doloribus facilis animi iure reprehenderit?</p>
+                </section>
+            </main>
+
+        </div>
+    </div>
+    {% include "components/_subscribe.html" %}
+    {% include "partials/_footer.html" %}
+{% endblock %}

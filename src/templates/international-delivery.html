@@ -1,0 +1,218 @@
+{# --- title: Index page --- #}
+
+{% set countries = [
+    'Afghanistam APO FPO',
+    'Bahrain',
+    'Egypt',
+    'Iraq APO FPO',
+    'Israel',
+    'Iordan',
+    'Kuwait',
+    'Lebanon',
+    'Oman',
+    'Pakistan',
+    'Palestine',
+    'Qatar',
+    'Saudi Arabia',
+    'UAE',
+    'Yemen',
+    'Other Countries'
+] %}
+
+{% extends "layouts/_layout.html" %}
+{% block content %}
+    {{header_gbo.header({
+        logo: {
+            description: 
+                {
+                    'text_top': 'Gift delivery to USA and internationally',
+                    'text_bottom': 'Gift baskets to Hawaii'
+                }
+            }
+
+    })}}
+    {% include "components/_carousel.html" %}
+    <div class="international">
+        <div class="international__container inner">
+            {# BREADCRUMBS #}
+            <div class="international__breadcrumbs">
+                {{breadcrumb.make([ {"class": "breadcrumb--no-underline"}, {"text": "Home", "link": "ui.html"}, {"text": "Middl East", "active":
+            true} ]) }}
+            </div>
+
+            <!-- FILTERING AREA -->
+            <section class="international__filter">
+                {{toggle.filter()}}
+                <form action="/" class="filter  js-filter">
+                    <div class="filter__text d-sm-none">
+                        Ramadan Gift Baskets to Middle East
+                        <br>
+                        - Ramadan Gift Delivery to ...
+                    </div>
+                    <div class="filter__filter">
+                        <div class="filter__select-wrapper filter__select-wrapper--left-centered sm-select-tooltip">
+                            <a href="#" class="select-country-flag">
+                                <img class="js-selected-counry-flag" src="./assets/img/general/ru.png" alt="">
+                            </a>
+                            <div class="select-image">
+                                <img src="./assets/img/general/globus-ico.png" alt="">
+                            </div>
+                            <div class="select-select">
+                                {# SELECT-1 #}
+                                {{select_builder.sel(selects_set.countriesSelect)}}
+                            </div>
+                            <div class="select-tooltip js-tooltip" title="{{selects_set.tooltip}}">
+                                {{mixins.icon('info')}}
+                            </div>
+                        </div>
+                        <div class="filter__select-wrapper sm-select-tooltip">
+                            {# SELECT-2 #}
+                            <div class="select-select">
+                                {{select_builder.sel(selects_set.sortingTypesSelect)}}
+                            </div>
+                            <div class="select-tooltip js-tooltip" title="{{selects_set.tooltip}}">
+                                {{mixins.icon('info')}}
+                            </div>
+                        </div>
+                        <div class="filter__range">
+                            {{range_input.range(0, 1000, 0, 1000)}}
+                        </div>
+                    </div>
+                </form>
+            </section>
+            <div class="international__main-title">
+                {{titles.titleBig('why send gifts to middle east with us?')}}
+            </div>
+            <section class="international__descr">
+                {{titles.titleMiddle('Why send gifts to Middle East with us?')}}
+                <div class="international__general-links">
+                    <ul class="general-links">
+                        <li class="general-links__item">
+                            <a href="#" class="general-links__link">Gift Catalog in Middle East and Beyond</a>
+                        </li>
+                        <li class="general-links__item">
+                            <a href="#" class="general-links__link">Fortune 500 & SMB Clients</a>
+                        </li>
+                        <li class="general-links__item">
+                            <a href="#" class="general-links__link">A-ranked Member of BBB</a>
+                        </li>
+                        <li class="general-links__item">
+                            <a href="#" class="general-links__link">Testimonials & Reviews</a>
+                        </li>
+                        <li class="general-links__item">
+                            <a href="#" class="general-links__link">Corporate Discounts</a>
+                        </li>
+                        <li class="general-links__item">
+                            <a href="#" class="general-links__link">How to order? (Bulk Order Form)</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="international__quarantee">
+                    <div class="international__quarantee-image">
+                        <img src="./assets/img/general/satisfaction-big.jpg" alt="guarantee">
+                    </div>
+                    <div class="international__quarantee-text text">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            <a href="#" class="text-link">Ramadan gifts sent to Middle East</a>
+                            Delectus provident expedita omnis veritatis eum! Necessitatibus, numquam. Tenetur, veritatis est! Expedita mollitia quasi, optio inventore ducimus voluptatibus accusamus, debitis necessitatibus, voluptates consequatur tenetur reiciendis unde laboriosam veritatis nemo blanditiis eveniet cupiditate repudiandae sapiente velit. Atque iure veritatis ipsum, illo ut reprehenderit quibusdam quae nihil omnis dignissimos repudiandae, odio odit consectetur minima error, ab hic nisi quas quam in commodi similique. Veniam est laborum, saepe, corrupti adipisci
+                        </p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            <a href="#" class="text-link">Build Your Unique Gift Basket[?]</a>
+                            Architecto sit beatae illum non magnam! Et sequi obcaecati odio temporibus perferendis vero placeat illum, distinctio culpa dolore nulla. Nam ipsum quis maxime obcaecati, iste sed eius? Ullam natus iste nulla quos, dignissimos deleniti harum dolorum est ipsa iusto rerum laboriosam officiis. Ut repudiandae eligendi eveniet ad. Repellat aperiam dolores id, dolore eos sapiente odio autem quia expedita illum quas quod inventore laborum. Maiores ipsam possimus incidunt, pariatur illo aliquid enim temporibus consequatur optio accusamus voluptatum deserunt quis officiis earum repudiandae obcaecati saepe officia blanditiis dolores veritatis ut deleniti iste fugiat. Nihil?</p>
+                    </div>
+                </div>
+
+            </section>
+            <div class="international__local-links">
+                {{titles.titleBig('international gift delivery service in middle east:')}}
+                <div class="local-links">
+                    {% for item in countries | slice(4) %}
+                        <div class="local-links__col">
+                            {% for country in item %}
+                                {% if country != 'Other Countries' %}
+                                    <a href="#">{{country}}
+                                        Gift Delivery</a>
+                                {% else %}
+                                    <a href="#">Other Countries</a>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <div class="international__global-links special">
+            <div class="international__global-links-container inner">
+                <a href="#" class="global-button-link">
+                    Gifts to Africa
+                </a>
+                <a href="#" class="global-button-link">
+                    Gifts to Asia
+                </a>
+                <a href="#" class="global-button-link">
+                    Gifts to Caribbean
+                </a>
+                <a href="#" class="global-button-link">
+                    Gifts to Europe
+                </a>
+                <a href="#" class="global-button-link">
+                    Gifts to Middle East
+                </a>
+                <a href="#" class="global-button-link">
+                    Gifts to Latin America
+                </a>
+                <a href="#" class="global-button-link">
+                    Gifts to North America
+                </a>
+                <a href="#" class="global-button-link">
+                    Gifts to Oceania
+                </a>
+                <div class="subtitle">
+                    <a href="#" class="text-link">
+                        See alphabetized list of all servixed countries for more details
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="international__container inner">
+            <div class="international__cards">
+                <div class="card-sm-buttons">
+                    <div class="js-cards-1-column card-sm-button is-active">
+                        {{mixins.icon('square-inside-a-circle')}}
+                    </div>
+                    <div class="js-cards-2-columns card-sm-button">
+                        {{mixins.icon('four-squares-button')}}
+                    </div>
+                </div>
+                <div class="cards sm-one-column js-cards-container">
+                    {{cards_builder.card(cards_set.cardsInternationalSet)}}
+                </div>
+            </div>
+            <div class="international__order">
+                {{titles.titleThin('want help getting started?')}}
+                <div class="subtitle">
+                    Take a look at our how to
+                    <a href="#" class="text-link">order page</a>
+                </div>
+                {{titles.titleMiddle('Need to send a large order for 5 or more recipients?')}}
+                <div class="text-big">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate delectus error dolorem omnis placeat facilis, neque animi atque impedit velit ea ullam alias molestiae. Numquam iusto laudantium aspernatur id tempora, alias illum consectetur tenetur iste sint doloremque, nisi quod aliquam dolorum earum dicta neque laboriosam accusantium,
+                    <span class="inline-tooltip js-tooltip" title="{{selects_set.tooltip}}">
+                        {{mixins.icon('info')}}
+                    </span>
+                    nobis mollitia sed quasi culpa. Tempore, odit. Sunt tempora voluptate ipsa omnis nisi! Unde molestiae maiores, reprehenderit hic officiis nam quam nostrum vero perspiciatis. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil!
+                    <form action="" class="inline-form">
+                        <input type="text" class="inline-form__input" placeholder="Adress">
+                        <button type="submit" class="btn inline-form__submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% include "components/_subscribe.html" %}
+{% include "partials/_footer.html" %}
+{% endblock %}

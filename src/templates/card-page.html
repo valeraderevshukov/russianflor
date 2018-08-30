@@ -1,0 +1,218 @@
+{# --- title: Index page --- #}
+
+{# MAIN LAYOUT #}
+{% extends "layouts/_layout.html" %}
+{% block content %}
+    {{header_gbo.header()}}
+    <div class="special">
+        <div class="inner">
+            <h4 class="special__text">
+                <strong class="special__bold-dark">Happy Women's Day, March, 8!</strong>
+                Order and get
+                <span class="special__bold-light">7%</span>
+                off any order with coupon code:
+                <span class="special__bold-light">WSR53</span>
+                <strong class="special__bold-dark">- FREE Delivery to Moscow</strong>
+            </h4>
+        </div>
+    </div>
+
+    <div class="inner">
+        <div class="card-page-breadcrumbs">
+            {# BREADCRUMBS #}
+            {{breadcrumb.make([ 
+    		{"text": "Home", "link": "#"},
+			{"text": "Catalog", "link": "#"},
+            {"text": "Endless Connection Necklace in Rose", "link": "#", "active": true} ]) 
+        }}
+        </div>
+    </div>
+    <div class="card-page">
+        <div class="card-page__container inner">
+            {# ===== LEFT ===== #}
+            <div class="card-page__left">
+                <div class="card-page__image">
+                    <img src="./assets/img/general/gifts-1/card_image.png" alt="">
+                </div>
+                <div class="card-page__go-back">
+                    <a href="#" class="go-back">
+                        <span class="go-back__icon">{{mixins.icon('prev-slide-button')}}</span>
+                        <span class="go-back__text">Go Back</span>
+                    </a>
+                </div>
+                <div class="card-page__tabs">
+                    {% include "components/_tabs.html" %}
+                </div>
+                <div class="card-page__divider divider-green"></div>
+                <div class="card-page__download d-sm-none">
+                    <a href="#" class="download-spreadsheet">
+                        <div class="download-spreadsheet__icon">
+                            {{mixins.icon('spreadsheet')}}
+                        </div>
+                        <div class="download-spreadsheet__text">
+                            <div class="download-spreadsheet__title">Corporate & Bulk Orders</div>
+                            <div class="download-spreadsheet__download">Download Spreadsheet</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card-page__divider divider-green d-sm-none"></div>
+                <h3 class="card-page__purchased-number-title d-sm-none">THIS GIFT WAS PURCHASED MORE THAN 1000 TIMES</h3>
+                <div class="card-page__card-list d-sm-none">
+                    <img src="./assets/img/general/card-list-on-card-page.png" alt="">
+                </div>
+            </div>
+
+            {# ===== RIGHT ===== #}
+            <div class="card-page__right">
+                <div class="card-page__main-title">
+                    {{titles.titleBiggest('Burst Of Romance')}}
+                </div>
+                <div class="card-page__id">
+                    <span class="card-page__id--id">Product ID:
+                    </span>
+                    <span class="card-page__id--number">276</span>
+                </div>
+                <div class="divider-grey"></div>
+                {# TOTAL PRICE #}
+                <div class="card-page__total-price">
+                    <div class="select-with-price">
+                        <div class="select-with-price__price">$ 614.95</div>
+                        <div class="select-with-price__select">
+                            {{select_builder.sel(selects_set.priceSelect)}}
+                        </div>
+                    </div>
+                </div>
+                <div class="divider-grey"></div>
+                {# DELIVERY #}
+                <div class="card-page__delivery">
+                    <div class="card-page__delivery-item">
+                        <div class="location-card">
+                            <h5 class="location-card__title">
+                                Availability and price depend on the delivery location:
+                            </h5>
+                            <div class="location-card__select-wrapper">
+                                <div class="location-card__label">
+                                    Change City:
+                                </div>
+                                <div class="location-card__select">
+                                    {{select_builder.sel(selects_set.citySelect)}}
+                                </div>
+                            </div>
+                            <div class="location-card__select-wrapper">
+                                <div class="location-card__label">
+                                    Change Country:
+                                </div>
+                                <a href="#" class="select-country-flag">
+                                    <img class="js-selected-counry-flag" src="./assets/img/general/ru.png" alt="">
+                                </a>
+                                <div class="location-card__select location-card__select--countries">
+                                    {{select_builder.sel(selects_set.countriesSelect)}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-page__delivery-item d-sm-none">
+                        <div class="time-card card-with-icons">
+                            <div class="time-card__image card-with-icons-image">
+                                {{mixins.icon('clock-blue')}}
+                            </div>
+                            <h5 class="time-card__title card-with-icons-title">
+                                Want it Monday, March 5?
+                            </h5>
+                            <div class="card__text card-with-icons-text">Order within 12 hrs, 19 mins</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="divider-grey"></div>
+                {# BUDGET #}
+                <div class="card-page__budget">
+                    <form class="budget-form" id="new-item">
+                        <div class="budget-form__title">
+                            {{titles.titleSmall('Set Your Budget:')}}
+                        </div>
+                        <div class="budget-form__select">
+                            <div class="select-with-tooltip">
+                                <div class="select-with-tooltip__label">
+                                    Select number of Box:
+                                </div>
+                                <div class="select-with-tooltip__select">
+                                    {{select_builder.sel(selects_set.priceSelect2)}}
+                                </div>
+                                <div class="select-with-tooltip__tooltip js-tooltip" title="{{selects_set.tooltip}}">
+                                    {{mixins.icon('info')}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="budget-form__select">
+                            <div class="select-with-tooltip">
+                                <div class="select-with-tooltip__label">
+                                    Choose a Vase for your bouquet:
+                                </div>
+                                <div class="select-with-tooltip__select">
+                                    {{select_builder.sel(selects_set.vaseSelect)}}
+                                </div>
+                                <div class="select-with-tooltip__tooltip js-tooltip" title="{{selects_set.tooltip}}">
+                                    {{mixins.icon('info')}}
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-rounded btn-rounded--green btn-rounded--big">Add to cart</button>
+                    </form>
+                </div>
+                <div class="divider-grey"></div>
+                {# REVIEW #}
+                <div class="card-page__review">
+                    <article class="review">
+                        <header class="review__header">
+                            <div class="review__title">
+                                {{titles.titleSmall('Customer Reviews:')}}
+                            </div>
+                            <div class="stars stars-rating-2">
+                                <span class="star">{{mixins.icon('star')}}</span>
+                                <span class="star">{{mixins.icon('star')}}</span>
+                                <span class="star">{{mixins.icon('star')}}</span>
+                                <span class="star">{{mixins.icon('star')}}</span>
+                                <span class="star">{{mixins.icon('star')}}</span>
+                            </div>
+                            <div class="review__number">(40 reviews)</div>
+                            <button class="btn-underline btn-underline--big btn">Add Your Review</button>
+                        </header>
+                        <div class="review__single-review">
+                            <div class="review__text">
+                                I have ordered several bouquets from Russian Flora from the USA and they are fantastic! Nancy, Katherine, Natalie, Margaret and all of the team there are so professional and helpful, and make international floral delivery so easy for me. The flowers have been absolutely gorgeous on every occasion! The personalized attention my orders have received has been beyond compare, and they have gone over and above on every delivery! I will continue to use them and would highly recommend them to everyone.
+                            </div>
+                            <div class="review__details">
+                                • Reviewed by Debora - October 16, 2015 (USA)
+                            </div>
+                        </div>
+                        <div class="review__single-review">
+                            <div class="review__text">
+                                You guys are seriously AMAZING. I order a lot of flowers internationally and you are the absolute BEST!
+                            </div>
+                            <div class="review__details">
+                                • Reviewed by Ronda - October 16, 2015 (El Cajon CA, USA)
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="divider-grey"></div>
+                <div class="card-page__recently-viewed">
+                    {{titles.titleSmall('Recently Viewed')}}
+                    <div class="cards-container">
+                        {{cards_builder.smallCard(cards_set.cardSmall_1)}}
+                        {{cards_builder.smallCard(cards_set.cardSmall_2)}}
+                    </div>
+                    <div class="video">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/n_GA_vQRu9c?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+                    </div>
+                    <button type="submit" class="btn btn-rounded btn-rounded--green btn-rounded--big" form="new-item">Add to cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% include "components/_subscribe.html" %}
+{% include "partials/_footer.html" %}
+{% endblock %}

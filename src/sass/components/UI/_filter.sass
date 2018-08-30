@@ -1,0 +1,101 @@
+.filter
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    font-family: $corp
+    +md 
+        flex-wrap: wrap
+    +sm
+        display: none
+        flex-flow: column
+        margin: 20px auto
+        justify-content: center
+        align-items: center
+    &--center 
+        justify-content: center
+        flex-wrap: wrap
+        align-items: flex-end
+        .filter__select-wrapper
+            flex: 0 0 27%
+    &--single
+        justify-content: center
+        +sm 
+            display: block
+    &__filter
+        display: flex
+        flex-wrap: wrap
+        justify-content: flex-start
+        margin-left: auto
+        +md 
+            flex: 0 0 100%
+            justify-content: center
+        +sm
+            flex-flow: column
+            width: 100%
+            align-items: center
+            justify-content: center
+            margin-left: 0
+    &__text
+        min-width: 450px
+        padding-bottom: 24px
+        +lg 
+            min-width: 250px
+        +sm 
+            min-width: inherit
+    &__found
+        font-family: $corp
+        font-size: 24px
+        font-weight: 300
+        font-style: normal
+        font-stretch: normal
+        line-height: normal
+        letter-spacing: normal
+        text-align: left
+        color: #3a5864
+        margin-right: auto
+        &--bold
+            font-weight: 700
+    &__select-wrapper
+        padding: 0 20px 24px
+        font-size: 0
+        text-align: center
+        .filter--single &
+            padding: 0 20px 0
+            +sm 
+                padding: 0 0 20px
+        &--left-centered
+            margin-left: -20px
+            +sm 
+                margin-left: 0
+        +sm 
+            padding: 0 0 20px 0
+            text-align: center
+            flex: 0 0 100%
+            width: 100%
+    &__range
+        display: flex
+        flex: 0 0 400px
+        +md 
+            flex: 0 0 auto
+            padding-left: 24px
+        +sm 
+            width: 100%
+            padding: 0
+            justify-content: center
+            align-items: center
+    &__breadcrumb
+        margin-right: auto
+    &__btn
+        flex: 0 0 100%
+        text-align: center
+        width: 100%
+    &__or
+        text-align: center
+        align-self: flex-end
+        line-height: 30px
+        padding-bottom: 24px
+        font-size: 18px
+        +sm 
+            line-height: 1
+            font-size: 14px
+            padding-bottom: 14px

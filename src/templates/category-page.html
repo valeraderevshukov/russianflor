@@ -1,0 +1,98 @@
+{# --- title: Index page --- #}
+{# IMPORTING DATA COMPONENTS #}
+{% import "data/_cards.html" as cards_set %}
+{% import "data/_selects.html" as selects_set %}
+{# IMPORTING MIXINS #}
+{% import "partials/_mixins.html" as mixins %}
+{% import "components/_titles.html" as titles %}
+{% import "components/_cards.html" as cards_init %}
+{% import "components/_sm-toggle-buttons.html" as toggle %}
+{% import "components/_select.html" as select_builder %}
+{% import "components/_breadcrumb.html" as breadcrumb %}
+{% import "components/_range.html" as range_input %}
+{# MAIN LAYOUT#}
+
+{% extends "layouts/_layout.html" %}
+{% block content %}
+{{header_gbo.header()}}
+    <div class="category">
+        <div class="category__special special">
+            <div class="category__container inner">
+                <h4 class="special__text">
+                    <strong class="special__bold-dark">Happy Women's Day, March, 8!</strong>
+                    Order and get
+                    <span class="special__bold-light">7%</span>
+                    off any order with coupon code:
+                    <span class="special__bold-light">WSR53</span>
+                    <strong class="special__bold-dark">- FREE Delivery to Moscow</strong>
+                </h4>
+            </div>
+        </div>
+
+        <div class="category__container inner">
+            <div class="category__breadcrumb">
+                {# BREADCRUMBS #}
+                {{breadcrumb.make([ {"text": "Home", "link": "#"}, {"text": "Catalog", "link": "#"}, {"text": "March 8
+			Flowers Gifts", "link": "#", "active": true} ]) }}
+            </div>
+            <!-- FILTERING AREA -->
+            <section class="category__filter">
+                {{toggle.filter_buttons()}}
+                <form action="/" class="filter js-filter">
+                    <div class="filter__text">
+                        <div class="filter__found">
+                            <span class="filter__found--bold">243</span>
+                            items found
+                        </div>
+                    </div>
+                    <div class="filter__filter">
+                        <div class="filter__select-wrapper filter__select-wrapper--left-centered sm-select-tooltip">
+                            <a href="#" class="select-country-flag">
+                                <img class="js-selected-counry-flag" src="./assets/img/general/ru.png" alt="">
+                            </a>
+                            <div class="select-image">
+                                <img src="./assets/img/general/globus-ico.png" alt="">
+                            </div>
+                            <div class="select-select">
+                                {# SELECT-1 #}
+                                {{select_builder.sel(selects_set.countriesSelect)}}
+                            </div>
+                            <div class="select-tooltip js-tooltip" title="{{selects_set.tooltip}}">
+                                {{mixins.icon('info')}}
+                            </div>
+                        </div>
+                        <div class="filter__select-wrapper sm-select-tooltip">
+                            {# SELECT-2 #}
+                            <div class="select-select">
+                                {{select_builder.sel(selects_set.sortingTypesSelect)}}
+                            </div>
+                            <div class="select-tooltip js-tooltip" title="{{selects_set.tooltip}}">
+                                {{mixins.icon('info')}}
+                            </div>
+                        </div>
+                        <div class="filter__range">
+                            {{range_input.range(0, 1000, 0, 1000)}}
+                        </div>
+                    </div>
+                </form>
+            </section>
+
+            {# TITLE #}
+            <div class="category__title">
+                {{titles.titleBig('March 8 Flowers Gifts')}}
+            </div>
+            {# CARDS #}
+            <div class="category__cards">
+                <div class="cards sm-one-column js-cards-container">
+                    {{cards_init.card(cards_set.cardsCategoryPage)}}
+                </div>
+            </div>
+            <div class="category__add-cards">
+                <button class="btn btn-rounded btn-rounded--green btn-load-more">Load More</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% include "components/_subscribe.html" %}
+{% include "partials/_footer.html" %}
+{% endblock %}

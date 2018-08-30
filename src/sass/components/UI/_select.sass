@@ -1,0 +1,194 @@
+.select--ordinary
+    display: inline-block
+    // width: 100%
+
+.select2-container.select--ordinary .select2-selection--single,
+.select2-container.select--flag .select2-selection--single,
+    height: 30px
+    +sm 
+        height: 26px
+
+.select2-container--default.select--ordinary .select2-selection--single .select2-selection__arrow b,
+.select2-container--default.select--flag .select2-selection--single .select2-selection__arrow b
+    background: url(../assets/img/general/arr_green.png)
+    background-size: cover
+    width: 14px
+    height: 9px
+    margin: 0 3px
+    border: none
+    left: -5px
+    top: 40%
+    transition: transform 0.3s
+    +sm 
+        width: 12px
+        height: 6px
+        top: 34%
+.select2-container--classic.select2-container--open.select--ordinary .select2-selection--single .select2-selection__arrow b, .select2-container--default.select2-container--open.select--ordinary .select2-selection--single .select2-selection__arrow b,
+.select2-container--classic.select2-container--open.select--flag .select2-selection--single .select2-selection__arrow b, .select2-container--default.select2-container--open.select--flag .select2-selection--single .select2-selection__arrow b
+    transform: rotate(180deg)
+    transition: transform 0.3s
+
+.select2-container--default.select--ordinary .select2-selection--single .select2-selection__rendered,
+.select2-container--default.select--flag .select2-selection--single .select2-selection__rendered,
+.select2-results__option
+    font-family: $corp
+    font-size: 16px !important
+    line-height: 26px
+    text-align: left
+    color: #3a5864
+        // padding-bottom: 4px
+    padding-left: 8px
+    // +sm 
+    //     line-height: 22px
+
+.select2-container.select--ordinary .select2-selection--single,
+.select2-container.select--flag .select2-selection--single,
+.select2-container--default.select--ordinary .select2-selection--single,
+.select2-container--default.select--flag .select2-selection--single,
+.select2-container--default.select--ordinary .select2-selection--single .select2-selection__placeholder,
+.select2-container--default.select--flag .select2-selection--single .select2-selection__placeholder
+    font-family: $corp
+    font-size: 16px
+    text-align: left
+    color: #3a5864
+    height: 30px
+    line-height: 26px
+    +sm 
+        height: 26px
+        // line-height: 22px
+
+.select2-container--default.select--ordinary,
+.select2-container--default.select--flag
+    font-family: $corp
+    .select2-results__option
+        padding-top: 3px
+        padding-bottom: 3px
+    .select2-results__option--highlighted[aria-selected]
+        background-color: $blue
+    .select2-results__option[aria-selected=true]
+        background: $dark_blue
+        color: $white
+
+
+
+
+// [id*='-countries-']
+.select--flag
+    .select2-results__option
+        position: relative
+        padding-left: 30px
+    .img-flag
+        position: absolute
+        left: 6px
+        top: 11px
+        width: 16px
+        margin: 0 5px -2px 0
+    .select2-dropdown
+        min-width: 400px
+        border: 1px solid #c5c5c5 
+        max-height: 300px
+
+.select-with-price
+    &__price
+        display: inline-block
+        vertical-align: bottom
+        margin-right: 10px
+        font-size: 25px
+        line-height: 25px
+        font-weight: 900
+        color: $blue
+    &__select
+        display: inline-block
+        vertical-align: bottom
+        width: 232px
+        .select2-container--default.select--ordinary .select2-selection--single .select2-selection__rendered	
+            color: $dark_blue
+            font-size: 16px
+            line-height: 25px
+
+.select-with-tooltip
+    & > * 
+        display: inline-block
+        vertical-align: middle
+        margin-right: 10px
+    &__label
+        font-size: 16px
+        font-weight: bold
+        line-height: 1.38
+        color: $dark-grey
+        +md 
+            display: block
+    &__select
+        width: 232px
+        +sm 
+            width: 200px
+    &__tooltip
+        margin-left: 6px
+        cursor: pointer
+        font-size: 0
+        .icon
+            font-size: 28px
+
+.select
+    &-image
+        margin-right: 15px 
+        display: inline-block
+        vertical-align: middle
+        .icon
+            font-size: 28px
+        +md 
+            display: none
+    &-select
+        width: 232px
+        display: inline-block
+        vertical-align: middle
+        +sm 
+            width: 100%
+        &--long 
+            width: 278px
+            +md 
+                width: 232px
+            +sm 
+                width: 100%
+    &-label
+        font-size: 18px
+        font-weight: 700
+        text-transform: uppercase
+        color: $text_black
+        display: block 
+        margin-bottom: 8px
+        letter-spacing: -0.03em
+        .blue-colored
+            color: $text-link
+        +lg 
+            font-size: 14px
+        +sm 
+            font-size: 12px
+            margin-bottom: 4px
+    &-tooltip
+        display: inline-block
+        vertical-align: middle
+        margin-left: 6px
+        cursor: pointer
+        font-size: 0
+        .icon
+            font-size: 28px
+    &-country-flag
+        display: inline-block
+        vertical-align: middle
+        max-width: 40px
+        overflow: hidden
+        margin-right: 15px
+        img
+            height: 30px
+            display: inline-block
+            vertical-align: middle
+            +sm 
+                height: 26px
+        +sm 
+            display: none
+
++sm
+    .sm-select-tooltip
+        .select-select
+            width: calc(100% - 34px)

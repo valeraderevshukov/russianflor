@@ -1,0 +1,66 @@
+{#
+{% macro tabs(props) %}
+<div class="{{props.class}}" data-tabs>
+    <ul class="tab-control-list {% if props.controlClass %}{{props.controlListClass}}{% endif %}">
+        {% for item in props.tabs %}
+            <li class="{% if item.active %}is-active{% endif %}tab-control{% if item.controlClass %}{{item.controlClass}}{% endif %}" data-tabs-control="{{item.tabNumber}}">
+                {{item.controlText}}
+            </li>
+        {% endfor %}
+    </ul>
+    <div data-tabs-wrapper {% if props.tabsClass %}class="{{props.tabsListClass}}"{% endif %}>
+        {% for item in props.tabs %}
+        <div class="tab {% if item.active %}is-open{% endif %}{% if item.tabClass %}{{item.tabClass}}{% endif %}" data-tabs-container="{{item.tabNumber}}">
+                {{item.tabText}}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endmacro %}
+#}
+
+{#
+                {{tabs_builder.tabs({
+                    "class": "tabs",
+                    "tabs": {
+                        "active": true,
+                        "tabNumber": "tab-1",
+                        "controlText": "Description",
+                        "tabText": "Falling in love is easy, but staying in love takes devotion. We have put together a bouquet that will help you go that extra mile. Your recipient will receive lovely pink Roses, yellow and purple Alstroemeria, and a stunning Orchid Branch.
+                        Add to your Anniversary, ask for forever, or make her smile with Burst Of Romance."
+                    }
+
+                })}}
+#}
+
+<div class="tabs" data-tabs>
+    <ul class="tab-control-list">
+        <li class="is-active tab-control" data-tabs-control="tab-1">
+            Description
+        </li>
+        <li class="tab-control" data-tabs-control="tab-2">
+            Contents
+        </li>
+        <li class="tab-control" data-tabs-control="tab-3">
+            Delivery
+        </li>
+    </ul>
+    <div data-tabs-wrapper>
+        <div class="is-open tab" data-tabs-container="tab-1">
+            Falling in love is easy, but staying in love takes devotion. We have put together a bouquet that will help you go that extra
+            mile. Your recipient will receive lovely pink Roses, yellow and purple Alstroemeria, and a stunning Orchid Branch.
+            Add to your Anniversary, ask for forever, or make her smile with Burst Of Romance.
+        </div>
+        <div class="tab" data-tabs-container="tab-2">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit est odit aliquam, exercitationem at aut minus, iusto numquam
+            saepe repellendus hic, quo reiciendis neque facilis quaerat veniam eius tempore molestiae?
+        </div>
+        <div class="tab" data-tabs-container="tab-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae molestiae nemo voluptas, nesciunt maxime distinctio
+            sit velit eum magni totam id nam sequi corrupti explicabo cumque sed quidem accusantium, iste debitis laudantium
+            ipsam suscipit quis! Nisi maxime, omnis beatae cum ullam, voluptatem inventore dolorum quidem atque, voluptatibus
+            ipsum. Doloribus commodi aperiam id voluptatum, ratione repellendus quia. Quia nulla non voluptas ipsam facere.
+            Amet assumenda animi culpa labore quae unde explicabo.
+        </div>
+    </div>
+</div>

@@ -1,0 +1,52 @@
+.noUi-horizontal .noUi-handle
+    width: 17px
+    height: 17px
+    top: -3px
+    right: -9px !important
+    +sm 
+        width: 14px
+        height: 
+        right: -13px !important
+    &:before,
+    &:after
+        display: none
+.noUi-connect
+    background: #eaeef0
+    height: 13px
+.noUi-horizontal
+    height: 13px
+    +sm
+        height: 12px
+
+.range
+    display: inline-flex
+    justify-content: flex-start
+    align-items: center
+    +md
+        flex-flow: column
+        justify-content: center
+        align-items: flex-start
+    +sm 
+        align-items: center
+        width: 100%
+    &__slider
+        width: 207px
+        +md
+            order: -1
+        +sm 
+            // width: 200px    
+            width: calc(100% - 14px)
+    &__numbers
+        font-family: $corp
+        font-size: 16px
+        line-height: 1
+        text-align: left
+        color: #3a5864
+        margin-right: 10px
+        min-width: 95px
+        +md 
+            text-align: center
+            width: 232px
+            margin-top: 10px
+
+            

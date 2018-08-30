@@ -1,0 +1,278 @@
+.progress
+    display: flex
+    align-items: flex-end
+    justify-content: center
+    +sm 
+        flex-flow: column
+        align-items: flex-start
+    &__dot
+        height: 18px
+        width: 18px
+        border-radius: 50%
+        background-color: $blue
+        margin: 0 40px
+        display: flex
+        align-items: center
+        justify-content: center
+        position: relative
+        +sm 
+            margin: 0
+        &:after
+            content: ''
+            position: absolute
+            left: 100%
+            top: 50%
+            transform: translateY(-50%)
+            width: 90px
+            height: 3px
+            background-color: $blue
+            +sm 
+                display: none
+        .is-checked &
+            background-color: $light-brown
+            &:after
+                background-color: $light-brown
+            .icon
+                display: block
+        .is-active &
+            background-color: $dark-green
+        .icon
+            display: none
+            font-size: 10px
+            fill: $white
+    &__item
+        display: flex
+        flex-flow: column
+        align-items: center
+        &:nth-last-child(2) .progress__dot:after
+            display: none
+        &:nth-last-child(2) .progress__dot:before
+            position: absolute
+            content: ''
+            left: 100%
+            top: 0
+            bottom: 0
+            width: 30px
+            background-color: $special_bg
+            z-index: 300
+            +sm 
+                display: none
+        +sm 
+            flex-flow: row
+            justify-content: flex-start
+            flex: 0 0 40px
+    &__status
+        font-family: $corp
+        text-transform: uppercase
+        font-size: 15px
+        font-weight: bold
+        letter-spacing: -0.01em
+        color: $blue
+        padding-top: 9px
+        line-height: 1
+        +sm 
+            padding-top: 0
+            padding-left: 20px
+        .is-checked &
+            color: $light-brown
+        .is-active &
+            color: $dark-green
+    &__details
+        background-color: $white
+        font-family: CorpidE1sSCd
+        font-size: 15px
+        font-weight: 300
+        color: #666666
+        margin-bottom: 11px
+        padding: 4px 17px
+        border-radius: 4px
+        +sm 
+            order: 3
+            padding: 0 20px 
+            margin: 0
+    &__lock
+        .icon
+            font-size: 40px
+    &__checkout 
+        text-align: center
+        .progress__status
+            color: $dark-green
+        +sm 
+            display: flex
+            flex-flow: row
+            display: none
+        .progress__status
+            padding-top: 2px
+
+.login-page
+    font-family: $corp
+    &__container
+        max-width: 1024px
+        margin: 0 auto
+        padding: 0 12px 
+
+    .title-biggest
+        margin-top: 36px
+        margin-bottom: 32px
+        +sm 
+            margin: 16px 0
+    &__checkout-descr
+        margin-top: 30px
+        margin-bottom: 48px
+        h4 
+            font-size: 16px
+            font-weight: bold
+            line-height: 1.38
+            color: $text_black
+        p 
+            font-size: 16px
+            font-weight: 300
+            text-align: left
+            color: #1d1d1b
+    &__policy
+        max-width: 750px
+        margin: 0 auto
+        +clr
+        & > * 
+            display: inline-block
+            vertical-align: middle
+            margin: 0 12px
+        a:nth-child(1),
+        a:nth-child(2)
+            float: left
+            +sm 
+                float: none
+                
+        span,
+        a:nth-child(3)
+            float: right
+            +sm     
+                float: none
+                
+
+.login
+    display: flex
+    font-family: $corp
+    font-size: 16px
+    font-weight: 300
+    text-align: left
+    color: #1d1d1b
+    padding-bottom: 81px
+    position: relative
+    margin-bottom: 12px
+    +sm 
+        padding-bottom: 32px
+    &:before
+        position: absolute
+        content: ''
+        width: 3px
+        background: url(../assets/img/general/divider-grey.svg)
+        left: 50%
+        transform: translateX(-50%)
+        top: 0
+        height: 100%
+        background-size: 3px 10px
+        background-repeat: repeat-y
+        background-position: 50% 0
+        +sm 
+            display: none
+    +sm 
+        flex-flow: column
+    &__left,
+    &__right
+        flex-basis: calc(50% - 50px)
+    &__divider
+        flex: 0 0 100px
+        text-align: center
+        align-self: center
+        position: relative
+        z-index: 5
+        background-color: $white
+        padding: 10px 0
+        font-family: CorpidE1sSCd
+        font-size: 25px
+        font-weight: 300
+        font-style: italic
+        font-stretch: normal
+        line-height: normal
+        letter-spacing: normal
+        text-align: center
+        color: #666666
+        +sm 
+            flex: 0 0 40px
+    input:not([type="checkbox"])
+        display: block
+        font-family: CorpidE1sSCd
+        font-size: 16px
+        font-weight: normal
+        font-style: normal
+        font-stretch: normal
+        line-height: 1.38
+        letter-spacing: normal
+        text-align: left
+        color: #3a5864
+        padding: 10px 19px 
+        border: 2px solid #ebeff0
+        width: 100%
+        margin-bottom: 13px
+        &:focus
+            background-color: $light-green
+    input[type="checkbox"]
+        position: absolute
+        opacity: 0
+        right: 2000px
+        &:checked + label
+            .check-icon .icon
+                display: block
+    input[type="checkbox"] + label
+        position: relative
+        padding-left: 28px
+        cursor: pointer
+        .check-icon
+            position: absolute
+            display: inline-block
+            left: 0
+            top: 0
+            height: 20px
+            width: 20px
+            border: 1px solid #ebeff0
+            text-align: center
+            font-size: 0
+            background-color: $light-green
+            .icon
+                display: none
+                font-size: 12px
+                +vcenter
+    &__group
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin-bottom: 26px
+    &__btn
+        font-family: $corp
+        font-size: 24px
+        letter-spacing: -0.05em
+        text-align: center
+        color: $white
+        display: flex
+        align-items: center
+        justify-content: center
+        background-color: $main-green
+        width: 100%
+        padding: 14px 
+        text-transform: uppercase
+        +colorTrans 
+        +hover
+            background-color: $dark-green
+            +colorTrans
+        .icon
+            fill: $white
+            font-size: 20px
+            margin-left: 10px
+        +sm 
+            padding: 10px
+            font-size: 18px
+    .title-small
+        margin-bottom: 10px
+    p
+        margin-bottom: 16px

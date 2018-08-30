@@ -1,0 +1,127 @@
+.slider-wrapper
+    max-width: 1000px
+    width: 100%
+    margin: 0 auto
+    border-left: 1px solid $card-border-color
+    border-bottom: 1px solid $card-border-color
+    margin-bottom: 40px
+    .card__title
+        font-size: 16px
+    +r(1200)
+        max-width: 900px
+.slider
+    .owl-prev,
+    .owl-next 
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        .icon
+            font-size: 56px
+            fill: $blue
+            +colorTrans
+            +hover
+                fill: $main-green
+            +r(1200)
+                font-size: 40px
+    .owl-prev 
+        left: -76px
+        +r(1200) 
+            left: -44px
+    .owl-next 
+        right: -76px
+        +r(1200) 
+            right: -44px
+
+
+
+.carousel
+    text-align: center
+    border-bottom: 2px solid $blue
+    font-family: $corp
+    &__slide
+        +cover
+        height: 200px
+    &__btn
+        background-color: $extra-light-green
+        text-transform: uppercase
+        color: $dark-green
+        font-size: 18px
+        padding: 10px 56px
+        border-radius: 10px
+        box-shadow: 3px 3px 10px 2px rgba(#000, 0.2)
+    &__title
+        font-size: 46px
+        font-weight: 800
+        color: $title_dark
+        font-style: normal
+        font-stretch: normal
+        line-height: normal
+        letter-spacing: -0.03em
+        line-height: 1.15
+        +sm
+            font-size: 32px
+            padding-top: 16px
+    &__price
+        color: $text_black
+        font-size: 24px
+        +sm 
+            font-size: 16px
+        // letter-spacing: -0.05em
+    &__number
+        color: $title_dark
+        font-weight: 900
+        font-style: italic
+    &__valid-time
+        color: $text_black
+        font-size: 22px
+        font-style: italic
+        // letter-spacing: -0.05em
+        margin-top: 10px
+        +sm 
+            font-size: 20px
+
+.carousel,
+.slider
+    position: relative
+    .owl-dots
+        position: absolute
+        bottom: 12px
+        left: 50%
+        transform: translateX(-50%)
+        +sm 
+            bottom: 6px
+    .owl-dot
+        border-radius: 50%
+        width: 10px
+        height: 10px
+        background-color: $dark_blue
+        margin: 0 4px
+        &.active
+            background-color: $main-green
+    
+.carousel
+    .owl-next,
+    .owl-prev 
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        height: 60px
+        width: 40px
+        background-color: rgba(#000, 0.6)
+        z-index: 10000
+        opacity: 1
+        text-align: center
+        .icon
+            display: inline-block
+            font-size: 30px
+            fill: $white
+    .owl-prev 
+        left: 0
+        border-radius: 0 40px 40px 0 
+        .icon
+            margin-right: 10px
+    .owl-next 
+        right: 0
+        border-radius: 40px 0 0 40px 
+        .icon
+            margin-left: 10px

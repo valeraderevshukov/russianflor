@@ -1,43 +1,42 @@
 {% import "partials/_mixins.html" as mixins %}
 {% macro block(props) %}
-<!-- begin header -->
-<header class="header{% if props.class %} {{ props.class }}{% endif %} js-header">
-	<div class="header__top">
-		<div class="header__inner inner">
-			<div class="header__logo">
-        <div class="header__top-btn">
-          <button type="button" class="burger js-burger"></button>
-          <button type="button" class="mob-search js-search-open">
-          </button>
+  <!-- begin header -->
+  <header class="header{% if props.class %} {{ props.class }}{% endif %} js-header">
+    <div class="header__top">
+      <div class="header__inner inner">
+        <div class="header__logo">
+          <div class="header__top-btn">
+            <button type="button" class="burger js-burger"></button>
+            <button type="button" class="mob-search js-search-open"></button>
+          </div>
+          <!-- begin logo -->
+          <a href="#" class="logo">
+            <img src="./assets/img/general/{{ props.logo.img }}" alt="logo" class="logo__img">
+            {% if props.logo.description %}
+              <h1 class="logo__description">{{ props.logo.description }}</h1>
+            {% endif %}
+          </a>
+          <!-- end logo -->
         </div>
-				<!-- begin logo -->
-				<a href="#" class="logo">
-					<img src="./assets/img/general/{{ props.logo.img }}" alt="logo" class="logo__img">
-					{% if props.logo.description %}
-					<h1 class="logo__description">{{ props.logo.description }}</h1>
-					{% endif %}
-				</a>
-				<!-- end logo -->
-			</div>
-			<div class="header__info">
-				{% if props.lang %}
-				<!-- begin lang -->
-				<div class="lang js-dropdown">
-					<button type="button" class="lang__current">
-            <img src="./assets/img/general/flags/en-flag.png" alt="">
-            <span class="lang__arr"></span>
-            <span>En</span>
-          </button>
-					<div class="lang__wrap ">
-						<div class="lang__current">
-              <img src="./assets/img/general/flags/en-flag.png" alt="">
-              <div class="lang__current-in">
+        <div class="header__info">
+          {% if props.lang %}
+            <!-- begin lang -->
+            <div class="lang js-dropdown">
+              <button type="button" class="lang__current">
+                <img src="./assets/img/general/flags/en-flag.png" alt="">
                 <span class="lang__arr"></span>
-                <span>English</span>
-              </div>
-            </div>
-						<ul class="lang__list">
-							{% for lang in [
+                <span>En</span>
+              </button>
+              <div class="lang__wrap ">
+                <div class="lang__current">
+                  <img src="./assets/img/general/flags/en-flag.png" alt="">
+                  <div class="lang__current-in">
+                    <span class="lang__arr"></span>
+                    <span>English</span>
+                  </div>
+                </div>
+                <ul class="lang__list">
+                  {% for lang in [
 								{
 									icon: 'fr-flag',
 									text: 'French',
@@ -69,649 +68,653 @@
 									country: '(Russian)'
 								}
 							] %}
-							<li class="lang__item">
-								<a href="#" class="lang__link">
-									<img src="./assets/img/general/flags/{{lang.icon}}.png" alt="">
-									<span>{{ lang.text | safe }}</span>
-								</a>
-								<span class="lang__country">{{ lang.country }}</span>
-							</li>
-							{% endfor %}
-						</ul>
-					</div>
-				</div>
-				<!-- end lang -->
-				{% endif %}
-				<!-- begin links -->
-				<ul class="links">
-					{% for link in props.linksArray %}
-					<li class="links__item links__item_{{ link.icon}} ">
-            {% if link.icon == 'marker' %}
-            <div class="links__dropdown js-dropdown">
-              <a href="#" class="links__link">
-                <span class="links__pic"></span>
-                <span class="links__text">{{ link.text | safe }}</span>
-              </a>
-              <div class="links__dropdown-list">
-                <span class="links__dropdown-arr"></span>
-
-              <ul class="" id="delivery_select">
-                <li>
-                  <a class="g-link-dark" href="/currency/USD">$ USD</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/EUR">€ EUR</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/GBP">£ GBP</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/AUD">$ AUD</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/HKD">$ HKD</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/JPY">¥ JPY</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/NZD">$ NZD</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/FJD">$ FJD</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/LKR">Rs LKR</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/XCD">EC$ XCD</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/KES">K Sh KES</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/NIO">C$ NIO</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/NGN">N NGN</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/BOB">$b BOB</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/UYU">₱ UYU</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/PYG">G PYG</a>
-                </li>
-                  <li>
-                <a class="g-link-dark" href="/currency/BWP">P BWP</a>
-                  </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/NAD">N$ NAD</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/NPR">Rs NPR</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/COP">₱ COP</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/KYD">CI$ KYD</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/UGX">USh UGX</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/XOF">CFAF XOF</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/TND">TD TND</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/YER">YRls YER</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/KZT">₸ KZT</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/BYR">BR BYR</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/PGK">K PGK</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/ZMW">ZK ZMW</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/OMR">RO OMR</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/TZS">TSh TZS</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/SCR">SR SCR</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/SLL">Le SLL</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/MUR">Mau MUR</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/JOD">JD JOD</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/ISK">kr ISK</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/SEK">kr SEK</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/DKK">kr DKK</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/BND">$ BND</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/BDT">Tk BDT</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/KWD">KD KWD</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/TWD">$ TWD</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/ZAR">R ZAR</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/BMD">$ BMD</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/MAD">DH MAD</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/SGD">$ SGD</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/BRL">R$ BRL</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/TRY">₺ TRY</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/NOK">kr NOK</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/AED">Dhs AED</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/ILS">₪ ILS</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/RON">lei RON</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/CHF">₣ CHF</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/UAH">₴ UAH</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/THB">฿ THB</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/VND">₫ VND</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/PHP">₱ PHP</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/BHD">BD BHD</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/QAR">QR QAR</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/LBP">£ LBP</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/PKR">Rs PKR</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/DOP">₱ DOP</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/PEN">S PEN</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/MXN">$ MXN</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/VEF">Bs. F VEF</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/CLP">₱ CLP</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/MYR">RM MYR</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/INR">₹ INR</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/KRW">₩ KRW</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/CNY">¥ CNY</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/ARS">₱ ARS</a>
-                </li>
-                <li>
-                  <a class="g-link-dark" href="/currency/CAD">$ CAD</a>
-                </li>
-              </ul>
+                    <li class="lang__item">
+                      <a href="#" class="lang__link">
+                        <img src="./assets/img/general/flags/{{lang.icon}}.png" alt="">
+                        <span>{{ lang.text | safe }}</span>
+                      </a>
+                      <span class="lang__country">{{ lang.country }}</span>
+                    </li>
+                  {% endfor %}
+                </ul>
               </div>
             </div>
-            {% elseif link.icon == 'basket' %}
-            <a href="#" class="links__link">
-              <span class="links__pic"></span>
-              <span class="links__text">{{ link.text | safe }} <span class="links__mob">$ 166.15</span></span>
-            </a>
-            {% else %}
+            <!-- end lang -->
+          {% endif %}
+          <!-- begin links -->
+          <ul class="links">
+            {% for link in props.linksArray %}
+              <li class="links__item links__item_{{ link.icon}} ">
+                {% if link.icon == 'marker' %}
+                  <div class="links__dropdown js-dropdown">
+                    <a href="#" class="links__link">
+                      <span class="links__pic"></span>
+                      <span class="links__text">{{ link.text | safe }}</span>
+                    </a>
+                    <div class="links__dropdown-list">
+                      <span class="links__dropdown-arr"></span>
 
-            <a href="#" class="links__link">
-              <span class="links__pic"></span>
-              <span class="links__text">{{ link.text | safe }}</span>
-            </a>
+                      <ul class="" id="delivery_select">
+                        <li>
+                          <a class="g-link-dark" href="/currency/USD">$ USD</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/EUR">€ EUR</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/GBP">£ GBP</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/AUD">$ AUD</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/HKD">$ HKD</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/JPY">¥ JPY</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/NZD">$ NZD</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/FJD">$ FJD</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/LKR">Rs LKR</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/XCD">EC$ XCD</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/KES">K Sh KES</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/NIO">C$ NIO</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/NGN">N NGN</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/BOB">$b BOB</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/UYU">₱ UYU</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/PYG">G PYG</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/BWP">P BWP</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/NAD">N$ NAD</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/NPR">Rs NPR</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/COP">₱ COP</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/KYD">CI$ KYD</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/UGX">USh UGX</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/XOF">CFAF XOF</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/TND">TD TND</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/YER">YRls YER</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/KZT">₸ KZT</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/BYR">BR BYR</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/PGK">K PGK</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/ZMW">ZK ZMW</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/OMR">RO OMR</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/TZS">TSh TZS</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/SCR">SR SCR</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/SLL">Le SLL</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/MUR">Mau MUR</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/JOD">JD JOD</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/ISK">kr ISK</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/SEK">kr SEK</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/DKK">kr DKK</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/BND">$ BND</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/BDT">Tk BDT</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/KWD">KD KWD</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/TWD">$ TWD</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/ZAR">R ZAR</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/BMD">$ BMD</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/MAD">DH MAD</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/SGD">$ SGD</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/BRL">R$ BRL</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/TRY">₺ TRY</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/NOK">kr NOK</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/AED">Dhs AED</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/ILS">₪ ILS</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/RON">lei RON</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/CHF">₣ CHF</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/UAH">₴ UAH</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/THB">฿ THB</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/VND">₫ VND</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/PHP">₱ PHP</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/BHD">BD BHD</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/QAR">QR QAR</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/LBP">£ LBP</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/PKR">Rs PKR</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/DOP">₱ DOP</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/PEN">S PEN</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/MXN">$ MXN</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/VEF">Bs. F VEF</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/CLP">₱ CLP</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/MYR">RM MYR</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/INR">₹ INR</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/KRW">₩ KRW</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/CNY">¥ CNY</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/ARS">₱ ARS</a>
+                        </li>
+                        <li>
+                          <a class="g-link-dark" href="/currency/CAD">$ CAD</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                {% elseif link.icon == 'basket' %}
+                  <a href="#" class="links__link">
+                    <span class="links__pic"></span>
+                    <span class="links__text">{{ link.text | safe }}
+                      <span class="links__mob">$ 166.15</span></span>
+                  </a>
+                {% else %}
+
+                  <a href="#" class="links__link">
+                    <span class="links__pic"></span>
+                    <span class="links__text">{{ link.text | safe }}</span>
+                  </a>
+                {% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+          <!-- end links -->
+
+          <!-- begin support -->
+          <ul class="support">
+            {% if props.select %}
+              <li class="support__item">
+                <div class="select">
+                  <img class="select__main" src="./assets/img/general/phone-ico.png" alt="">
+                  <select class="js-select2" name="state">
+                    <option value="de-flag">
+                      <span class="select__pic">
+                        <img src="./assets/img/general/flags/de-flag.png" alt="">
+                      </span>USA Local: +1-617-904-3278</option>
+                    <option value="de-flag">
+                      <span class="select__pic">
+                        <img src="./assets/img/general/flags/de-flag.png" alt="">
+                      </span>
+                      SPB, Russia: +7 (812) 429-7211
+                    </option>
+                    <option value="">
+                      <!-- <span class="select__pic"> <img src="./assets/img/general/flags/ru-flag.png" alt=""> </span> -->
+                      Toll-free (within Russia): +8-800-100-2179
+                    </option>
+                    <option value="de-flag">
+                      <span class="select__pic">
+                        <img src="./assets/img/general/flags/ua-flag.png" alt="">
+                      </span>
+                      Kiev, Ukraine: +380-44-392-2186
+                    </option>
+                    <option value="de-flag">
+                      <span class="select__pic">
+                        <img src="./assets/img/general/flags/uk-flag.png" alt="">
+                      </span>
+                      London, the UK: +44 - 20 8133 7779
+                    </option>
+                    <option value="de-flag">
+                      <span class="select__pic">
+                        <img src="./assets/img/general/flags/italy-flag.png" alt="">
+                      </span>
+                      Italy toll-free: +39-800-126-353
+                    </option>
+                    <option value="de-flag">
+                      <span class="select__pic">
+                        <img src="./assets/img/general/flags/france-flag.png" alt="">
+                      </span>
+                      Paris, France: +33 0970 440 572
+                    </option>
+                    <option value="de-flag">
+                      <span class="select__pic">
+                        <img src="./assets/img/general/flags/france-flag.png" alt="">
+                      </span>
+                      Germany: +49 8231 4014 099
+                    </option>
+                  </select>
+                </div>
+              </li>
             {% endif %}
-					</li>
-					{% endfor %}
-				</ul>
-				<!-- end links -->
+            {% for image in props.supportImage %}
 
-				<!-- begin support -->
-				<ul class="support">
-          {% if props.select %}
-          <li class="support__item">
-            <div class="select">
-              <img class="select__main" src="./assets/img/general/phone-ico.png" alt="">
-              <select class="js-select2" name="state">
-                <option value="de-flag"><span class="select__pic">
-                  <img src="./assets/img/general/flags/de-flag.png" alt="">
-                </span>USA Local: +1-617-904-3278</option>
-                <option value="de-flag">
-                  <span class="select__pic">
-                    <img src="./assets/img/general/flags/de-flag.png" alt="">
-                  </span>
-                  SPB, Russia: +7 (812) 429-7211
-                </option>
-                <option value="">
-                  <!-- <span class="select__pic">
-                    <img src="./assets/img/general/flags/ru-flag.png" alt="">
-                  </span> -->
-                  Toll-free (within Russia): +8-800-100-2179
-                </option>
-                <option value="de-flag">
-                  <span class="select__pic">
-                    <img src="./assets/img/general/flags/ua-flag.png" alt="">
-                  </span>
-                  Kiev, Ukraine: +380-44-392-2186
-                </option>
-                <option value="de-flag">
-                  <span class="select__pic">
-                    <img src="./assets/img/general/flags/uk-flag.png" alt="">
-                  </span>
-                  London, the UK: +44 - 20 8133 7779
-                </option>
-                <option value="de-flag">
-                  <span class="select__pic">
-                    <img src="./assets/img/general/flags/italy-flag.png" alt="">
-                  </span>
-                  Italy toll-free: +39-800-126-353
-                </option>
-                <option value="de-flag">
-                  <span class="select__pic">
-                    <img src="./assets/img/general/flags/france-flag.png" alt="">
-                  </span>
-                  Paris, France: +33 0970 440 572
-                </option>
-                <option value="de-flag">
-                  <span class="select__pic">
-                    <img src="./assets/img/general/flags/france-flag.png" alt="">
-                  </span>
-                  Germany: +49 8231 4014 099
-                </option>
+              <li class="support__item">
+
+                <a href="#" class="support__link"><img src="./assets/img/general/{{ image }}" alt="img"></a>
+
+              </li>
+
+            {% endfor %}
+          </ul>
+          <!-- end support -->
+        </div>
+      </div>
+    </div>
+    {% if props.country or props.locator %}
+      <div class="header__middle">
+        <div class="header__inner inner">
+          <!-- begin country -->
+          <div class="header__country country">
+            <a href="#" class="country__flag"><img src="./assets/img/general/ru.png" alt=""></a>
+            <div class="country__globe"><img src="./assets/img/general/globus-ico.png" alt=""></div>
+            <div class="country__select">
+              <select class="select">
+                <option value="">Enter the gift's destination country</option>
+                <option disabled="">---- Top Serviced Countries ----</option>
+                <option value="2">Ukraine</option>
+                <option value="1" selected="">Russia</option>
+                <option value="3">Latvia</option>
+                <option value="4">Lithuania</option>
+                <option value="5">Estonia</option>
+                <option value="6">Belarus</option>
+                <option value="7">Kazakhstan</option>
+                <option value="8">Moldova</option>
+                <option value="9">Uzbekistan</option>
+                <option value="10">Azerbaijan</option>
+                <option value="11">Kyrgyzstan</option>
+                <option value="12">Armenia</option>
+                <option value="13">Georgia</option>
+                <option value="14">Tajikistan</option>
+                <option value="15">Turkmenistan</option>
+                <option value="44">USA</option>
+                <option value="45">Canada</option>
+                <option value="31">Israel</option>
+                <option value="26">Germany</option>
+                <option value="53">Australia</option>
+                <option disabled="">---- All Serviced Countries ----</option>
+                <option value="92">Afghanistan-APO-FPO</option>
+                <option value="90">Albania</option>
+                <option value="185">Algeria</option>
+                <option value="205">American-Samoa</option>
+                <option value="18">Andorra</option>
+                <option value="180">Angola</option>
+                <option value="148">Anguilla</option>
+                <option value="116">Antigua-and-Barbuda</option>
+                <option value="71">Argentina</option>
+                <option value="124">Aruba</option>
+                <option value="19">Austria</option>
+                <option value="167">Azores</option>
+                <option value="120">Bahamas</option>
+                <option value="112">Bahrain</option>
+                <option value="118">Bangladesh</option>
+                <option value="83">Barbados</option>
+                <option value="187">Bay-of-Islands</option>
+                <option value="17">Belgium</option>
+                <option value="155">Belize</option>
+                <option value="176">Benin</option>
+                <option value="60">Bermuda</option>
+                <option value="134">Bolivia</option>
+                <option value="144">Bonaire</option>
+                <option value="62">Bosnia-Herzegovina</option>
+                <option value="129">Botswana</option>
+                <option value="55">Brazil</option>
+                <option value="142">British-Virgin-Islands</option>
+                <option value="119">Brunei</option>
+                <option value="20">Bulgaria</option>
+                <option value="1006">Burkina-Faso</option>
+                <option value="201">Burundi</option>
+                <option value="88">Cambodia</option>
+                <option value="213">Cameroon</option>
+                <option value="198">Canary-Islands</option>
+                <option value="125">Cayman-Islands</option>
+                <option value="121">Channel-Islands</option>
+                <option value="79">Chile</option>
+                <option value="74">China</option>
+                <option value="85">Colombia</option>
+                <option value="131">Cook-Islands</option>
+                <option value="100">Costa-Rica</option>
+                <option value="21">Croatia</option>
+                <option value="52">Cyprus</option>
+                <option value="22">Czech-Republic</option>
+                <option value="211">Democratic-Republic-of-the-Congo</option>
+                <option value="23">Denmark</option>
+                <option value="115">Dominica</option>
+                <option value="94">Dominican-Republic</option>
+                <option value="109">Ecuador</option>
+                <option value="47">Egypt</option>
+                <option value="126">El-Salvador</option>
+                <option value="202">Eritrea</option>
+                <option value="173">Ethiopia</option>
+                <option value="178">Faroe-Islands</option>
+                <option value="135">Fiji-Islands</option>
+                <option value="24">Finland</option>
+                <option value="25">France</option>
+                <option value="133">French-Guiana</option>
+                <option value="89">French-Polynesia</option>
+                <option value="207">Gabon</option>
+                <option value="66">Germany-APO</option>
+                <option value="114">Ghana</option>
+                <option value="104">Gibraltar</option>
+                <option value="27">Greece</option>
+                <option value="203">Greenland</option>
+                <option value="87">Grenada</option>
+                <option value="157">Guadeloupe</option>
+                <option value="123">Guam</option>
+                <option value="76">Guatemala</option>
+                <option value="161">Guyana</option>
+                <option value="107">Haiti</option>
+                <option value="110">Honduras</option>
+                <option value="56">Hong-Kong</option>
+                <option value="28">Hungary</option>
+                <option value="196">Ibiza-Spain</option>
+                <option value="29">Iceland</option>
+                <option value="75">India</option>
+                <option value="105">Indonesia</option>
+                <option value="69">Iraq-APO-FPO</option>
+                <option value="30">Ireland</option>
+                <option value="154">Isle-of-Man</option>
+                <option value="16">Italy</option>
+                <option value="181">Ivory-Coast</option>
+                <option value="111">Jamaica</option>
+                <option value="49">Japan</option>
+                <option value="67">Japan-APO-FPO</option>
+                <option value="150">Jordan</option>
+                <option value="149">Kenya</option>
+                <option value="182">Kosovo</option>
+                <option value="65">Kuwait</option>
+                <option value="194">Laos</option>
+                <option value="96">Lebanon</option>
+                <option value="193">Lesotho</option>
+                <option value="78">Liechtenstein</option>
+                <option value="32">Luxembourg</option>
+                <option value="102">Macau</option>
+                <option value="50">Macedonia</option>
+                <option value="156">Madagascar</option>
+                <option value="172">Madeira</option>
+                <option value="197">Majorca-Spain</option>
+                <option value="165">Malawi</option>
+                <option value="81">Malaysia</option>
+                <option value="140">Maldives</option>
+                <option value="209">Mali</option>
+                <option value="51">Malta</option>
+                <option value="177">Martinique</option>
+                <option value="147">Mauritius</option>
+                <option value="84">Mexico</option>
+                <option value="214">Micronesia</option>
+                <option value="77">Monaco</option>
+                <option value="166">Mongolia</option>
+                <option value="91">Montenegro</option>
+                <option value="141">Montserrat</option>
+                <option value="59">Morocco</option>
+                <option value="152">Mozambique</option>
+                <option value="113">Myanmar</option>
+                <option value="128">Namibia</option>
+                <option value="127">Nepal</option>
+                <option value="33">Netherlands</option>
+                <option value="106">Netherlands-Antilles</option>
+                <option value="183">New-Caledonia</option>
+                <option value="54">New-Zealand</option>
+                <option value="151">Nicaragua</option>
+                <option value="168">Nigeria</option>
+                <option value="215">Norfolk-Island</option>
+                <option value="212">Northern-Cyprus</option>
+                <option value="34">Norway</option>
+                <option value="163">Oman</option>
+                <option value="95">Pakistan</option>
+                <option value="188">Palau</option>
+                <option value="221">Palestine</option>
+                <option value="103">Panama</option>
+                <option value="191">Papua-New-Guinea</option>
+                <option value="130">Paraguay</option>
+                <option value="93">Peru</option>
+                <option value="82">Philippines</option>
+                <option value="35">Poland</option>
+                <option value="36">Portugal</option>
+                <option value="64">Puerto-Rico</option>
+                <option value="97">Qatar</option>
+                <option value="190">Reunion</option>
+                <option value="37">Romania</option>
+                <option value="171">Rwanda</option>
+                <option value="145">Saint-Kitts-and-Nevis</option>
+                <option value="139">Saint-Lucia</option>
+                <option value="192">Saint-Pierre-and-Miquelon</option>
+                <option value="143">Saint-Vincent-and-the-Grenadines</option>
+                <option value="206">Samoa</option>
+                <option value="184">San-Marino</option>
+                <option value="108">Saudi-Arabia</option>
+                <option value="199">Senegal</option>
+                <option value="58">Serbia</option>
+                <option value="164">Seychelles</option>
+                <option value="195">Sicily-Italy</option>
+                <option value="159">Sierra-Leone</option>
+                <option value="57">Singapore</option>
+                <option value="38">Slovakia</option>
+                <option value="39">Slovenia</option>
+                <option value="189">Solomon-Islands</option>
+                <option value="61">South-Africa</option>
+                <option value="70">South-Korea</option>
+                <option value="219">South-Sudan</option>
+                <option value="40">Spain</option>
+                <option value="137">Sri-Lanka</option>
+                <option value="169">Suriname</option>
+                <option value="174">Swaziland</option>
+                <option value="41">Sweden</option>
+                <option value="42">Switzerland</option>
+                <option value="63">Taiwan</option>
+                <option value="162">Tanzania</option>
+                <option value="72">Thailand</option>
+                <option value="208">Tonga</option>
+                <option value="98">Trinidad-and-Tobago</option>
+                <option value="200">Tunisia</option>
+                <option value="48">Turkey</option>
+                <option value="146">Turks-and-Caicos-Islands</option>
+                <option value="46">UAE</option>
+                <option value="158">Uganda</option>
+                <option value="43">UK</option>
+                <option value="136">Uruguay</option>
+                <option value="68">US-APO-FPO</option>
+                <option value="153">US-Virgin-Islands</option>
+                <option value="175">Vanuatu</option>
+                <option value="160">Vatican-City</option>
+                <option value="80">Venezuela</option>
+                <option value="99">Vietnam</option>
+                <option value="204">Yemen</option>
+                <option value="170">Zambia</option>
+                <option value="138">Zimbabwe</option>
               </select>
             </div>
-          </li>
-          {% endif %}
-					{% for image in props.supportImage %}
-
-          <li class="support__item">
-
-            <a href="#" class="support__link"><img src="./assets/img/general/{{ image }}" alt="img"></a>
-
-					</li>
-
-
-					{% endfor %}
-				</ul>
-				<!-- end support -->
-			</div>
-		</div>
-	</div>
-	{% if props.country or props.locator %}
-	<div class="header__middle">
-		<div class="header__inner inner">
-			<!-- begin country -->
-			<div class="header__country country">
-				<a href="#" class="country__flag"><img src="./assets/img/general/ru.png" alt=""></a>
-				<div class="country__globe"><img src="./assets/img/general/globus-ico.png" alt=""></div>
-				<div class="country__select">
-					<select class="select">
-						<option value="">Enter the gift's destination country</option>
-						<option disabled="">---- Top Serviced Countries ----</option>
-						<option value="2">Ukraine</option>
-						<option value="1" selected="">Russia</option>
-						<option value="3">Latvia</option>
-						<option value="4">Lithuania</option>
-						<option value="5">Estonia</option>
-						<option value="6">Belarus</option>
-						<option value="7">Kazakhstan</option>
-						<option value="8">Moldova</option>
-						<option value="9">Uzbekistan</option>
-						<option value="10">Azerbaijan</option>
-						<option value="11">Kyrgyzstan</option>
-						<option value="12">Armenia</option>
-						<option value="13">Georgia</option>
-						<option value="14">Tajikistan</option>
-						<option value="15">Turkmenistan</option>
-						<option value="44">USA</option>
-						<option value="45">Canada</option>
-						<option value="31">Israel</option>
-						<option value="26">Germany</option>
-						<option value="53">Australia</option>
-						<option disabled="">---- All Serviced Countries ----</option>
-						<option value="92">Afghanistan-APO-FPO</option>
-						<option value="90">Albania</option>
-						<option value="185">Algeria</option>
-						<option value="205">American-Samoa</option>
-						<option value="18">Andorra</option>
-						<option value="180">Angola</option>
-						<option value="148">Anguilla</option>
-						<option value="116">Antigua-and-Barbuda</option>
-						<option value="71">Argentina</option>
-						<option value="124">Aruba</option>
-						<option value="19">Austria</option>
-						<option value="167">Azores</option>
-						<option value="120">Bahamas</option>
-						<option value="112">Bahrain</option>
-						<option value="118">Bangladesh</option>
-						<option value="83">Barbados</option>
-						<option value="187">Bay-of-Islands</option>
-						<option value="17">Belgium</option>
-						<option value="155">Belize</option>
-						<option value="176">Benin</option>
-						<option value="60">Bermuda</option>
-						<option value="134">Bolivia</option>
-						<option value="144">Bonaire</option>
-						<option value="62">Bosnia-Herzegovina</option>
-						<option value="129">Botswana</option>
-						<option value="55">Brazil</option>
-						<option value="142">British-Virgin-Islands</option>
-						<option value="119">Brunei</option>
-						<option value="20">Bulgaria</option>
-						<option value="1006">Burkina-Faso</option>
-						<option value="201">Burundi</option>
-						<option value="88">Cambodia</option>
-						<option value="213">Cameroon</option>
-						<option value="198">Canary-Islands</option>
-						<option value="125">Cayman-Islands</option>
-						<option value="121">Channel-Islands</option>
-						<option value="79">Chile</option>
-						<option value="74">China</option>
-						<option value="85">Colombia</option>
-						<option value="131">Cook-Islands</option>
-						<option value="100">Costa-Rica</option>
-						<option value="21">Croatia</option>
-						<option value="52">Cyprus</option>
-						<option value="22">Czech-Republic</option>
-						<option value="211">Democratic-Republic-of-the-Congo</option>
-						<option value="23">Denmark</option>
-						<option value="115">Dominica</option>
-						<option value="94">Dominican-Republic</option>
-						<option value="109">Ecuador</option>
-						<option value="47">Egypt</option>
-						<option value="126">El-Salvador</option>
-						<option value="202">Eritrea</option>
-						<option value="173">Ethiopia</option>
-						<option value="178">Faroe-Islands</option>
-						<option value="135">Fiji-Islands</option>
-						<option value="24">Finland</option>
-						<option value="25">France</option>
-						<option value="133">French-Guiana</option>
-						<option value="89">French-Polynesia</option>
-						<option value="207">Gabon</option>
-						<option value="66">Germany-APO</option>
-						<option value="114">Ghana</option>
-						<option value="104">Gibraltar</option>
-						<option value="27">Greece</option>
-						<option value="203">Greenland</option>
-						<option value="87">Grenada</option>
-						<option value="157">Guadeloupe</option>
-						<option value="123">Guam</option>
-						<option value="76">Guatemala</option>
-						<option value="161">Guyana</option>
-						<option value="107">Haiti</option>
-						<option value="110">Honduras</option>
-						<option value="56">Hong-Kong</option>
-						<option value="28">Hungary</option>
-						<option value="196">Ibiza-Spain</option>
-						<option value="29">Iceland</option>
-						<option value="75">India</option>
-						<option value="105">Indonesia</option>
-						<option value="69">Iraq-APO-FPO</option>
-						<option value="30">Ireland</option>
-						<option value="154">Isle-of-Man</option>
-						<option value="16">Italy</option>
-						<option value="181">Ivory-Coast</option>
-						<option value="111">Jamaica</option>
-						<option value="49">Japan</option>
-						<option value="67">Japan-APO-FPO</option>
-						<option value="150">Jordan</option>
-						<option value="149">Kenya</option>
-						<option value="182">Kosovo</option>
-						<option value="65">Kuwait</option>
-						<option value="194">Laos</option>
-						<option value="96">Lebanon</option>
-						<option value="193">Lesotho</option>
-						<option value="78">Liechtenstein</option>
-						<option value="32">Luxembourg</option>
-						<option value="102">Macau</option>
-						<option value="50">Macedonia</option>
-						<option value="156">Madagascar</option>
-						<option value="172">Madeira</option>
-						<option value="197">Majorca-Spain</option>
-						<option value="165">Malawi</option>
-						<option value="81">Malaysia</option>
-						<option value="140">Maldives</option>
-						<option value="209">Mali</option>
-						<option value="51">Malta</option>
-						<option value="177">Martinique</option>
-						<option value="147">Mauritius</option>
-						<option value="84">Mexico</option>
-						<option value="214">Micronesia</option>
-						<option value="77">Monaco</option>
-						<option value="166">Mongolia</option>
-						<option value="91">Montenegro</option>
-						<option value="141">Montserrat</option>
-						<option value="59">Morocco</option>
-						<option value="152">Mozambique</option>
-						<option value="113">Myanmar</option>
-						<option value="128">Namibia</option>
-						<option value="127">Nepal</option>
-						<option value="33">Netherlands</option>
-						<option value="106">Netherlands-Antilles</option>
-						<option value="183">New-Caledonia</option>
-						<option value="54">New-Zealand</option>
-						<option value="151">Nicaragua</option>
-						<option value="168">Nigeria</option>
-						<option value="215">Norfolk-Island</option>
-						<option value="212">Northern-Cyprus</option>
-						<option value="34">Norway</option>
-						<option value="163">Oman</option>
-						<option value="95">Pakistan</option>
-						<option value="188">Palau</option>
-						<option value="221">Palestine</option>
-						<option value="103">Panama</option>
-						<option value="191">Papua-New-Guinea</option>
-						<option value="130">Paraguay</option>
-						<option value="93">Peru</option>
-						<option value="82">Philippines</option>
-						<option value="35">Poland</option>
-						<option value="36">Portugal</option>
-						<option value="64">Puerto-Rico</option>
-						<option value="97">Qatar</option>
-						<option value="190">Reunion</option>
-						<option value="37">Romania</option>
-						<option value="171">Rwanda</option>
-						<option value="145">Saint-Kitts-and-Nevis</option>
-						<option value="139">Saint-Lucia</option>
-						<option value="192">Saint-Pierre-and-Miquelon</option>
-						<option value="143">Saint-Vincent-and-the-Grenadines</option>
-						<option value="206">Samoa</option>
-						<option value="184">San-Marino</option>
-						<option value="108">Saudi-Arabia</option>
-						<option value="199">Senegal</option>
-						<option value="58">Serbia</option>
-						<option value="164">Seychelles</option>
-						<option value="195">Sicily-Italy</option>
-						<option value="159">Sierra-Leone</option>
-						<option value="57">Singapore</option>
-						<option value="38">Slovakia</option>
-						<option value="39">Slovenia</option>
-						<option value="189">Solomon-Islands</option>
-						<option value="61">South-Africa</option>
-						<option value="70">South-Korea</option>
-						<option value="219">South-Sudan</option>
-						<option value="40">Spain</option>
-						<option value="137">Sri-Lanka</option>
-						<option value="169">Suriname</option>
-						<option value="174">Swaziland</option>
-						<option value="41">Sweden</option>
-						<option value="42">Switzerland</option>
-						<option value="63">Taiwan</option>
-						<option value="162">Tanzania</option>
-						<option value="72">Thailand</option>
-						<option value="208">Tonga</option>
-						<option value="98">Trinidad-and-Tobago</option>
-						<option value="200">Tunisia</option>
-						<option value="48">Turkey</option>
-						<option value="146">Turks-and-Caicos-Islands</option>
-						<option value="46">UAE</option>
-						<option value="158">Uganda</option>
-						<option value="43">UK</option>
-						<option value="136">Uruguay</option>
-						<option value="68">US-APO-FPO</option>
-						<option value="153">US-Virgin-Islands</option>
-						<option value="175">Vanuatu</option>
-						<option value="160">Vatican-City</option>
-						<option value="80">Venezuela</option>
-						<option value="99">Vietnam</option>
-						<option value="204">Yemen</option>
-						<option value="170">Zambia</option>
-						<option value="138">Zimbabwe</option>
-					</select>
-				</div>
-			</div>
-			<!-- end country -->
-			<!-- begin locator -->
-			<ul class="header__locator locator">
-				{% for item in props.locatorList %}
-				<li class="locator__item"><a href="#" class="locator__link">{{ item }}</a></li>
-				{% endfor %}
-			</ul>
-			<!-- end locator -->
-		</div>
-	</div>
-	{% endif %}
-	<div class="header__bottom ">
-		<div class="header__inner inner">
-			<div class="header__logo-sm">
-				<a href="#" class="logo-sm"></a>
-			</div>
-			<nav class="nav js-menu ">
-				<ul class="nav__list">
-					{% for nav in props.navArray %}
-					<li class="nav__item js-nav ">
-						<button type="button" class="nav__link nav__link_mod "> {{nav.title}}</button>
-
-            <div class="nav__in">
-  						<ul class="nav__drop nav__drop_main">
-                {% for item in nav.ul %}
-                  <li>
-                    {% if item.ulIn %}
-                    {% for num in item.ulIn %}
-      							<ul class="nav__drop nav__drop_secondary">
-                      {% if num.caption %}
-                      <li class="nav__item nav__item_bold">
-                        {{ num.caption}}
-                      </li>
-                      {% endif %}
-      								{% for el in num.list %}
-                      {% if el.last %}
-                      <li class="nav__item nav__item_last">
-                        <a href="#" class="nav__link">{{ el.last }}</a>
-                      </li>
-                      {% else %}
-                      <li class="nav__item"><a href="#" class="nav__link">{{el.text}}</a></li>
-                      {% endif %}
-      								{% endfor %}
-      							</ul>
-                    {% endfor %}
-                    {% else %}
-
-
-      							<ul class="nav__drop ">
-                      {% if item.caption %}
-                      <li class="nav__item nav__item_bold">
-                        {{ item.caption}}
-                      </li>
-                      {% endif %}
-      								{% for el in item.list %}
-                      {% if el.last %}
-                      <li class="nav__item nav__item_last">
-                        <a href="#" class="nav__link">{{ el.last }}</a>
-                      </li>
-                      {% else %}
-                      <li class="nav__item"><a href="#" class="nav__link">{{el.text}}</a></li>
-                      {% endif %}
-      								{% endfor %}
-      							</ul>
-
-
-                    {% endif %}
-                  </li>
-                {% endfor %}
-  						</ul>
-            </div>
-					</li>
-					{% endfor %}
-				</ul>
-			</nav>
-      <form class="search js-search">
-        <div class="search__in">
-          <input type="text" placeholder="Search">
-          <button class="search__button"></button>
-          <button type="button" class="search__close js-search-close"></button>
+          </div>
+          <!-- end country -->
+          <!-- begin locator -->
+          <ul class="header__locator locator">
+            {% for item in props.locatorList %}
+              <li class="locator__item">
+                <a href="#" class="locator__link">{{ item }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+          <!-- end locator -->
         </div>
-      </form>
-    </div>
-	</div>
-</header>
+      </div>
+    {% endif %}
+    <div class="header__bottom ">
+      <div class="header__inner inner">
+        <div class="header__logo-sm">
+          <a href="#" class="logo-sm"></a>
+        </div>
+        <nav class="nav js-menu ">
+          <ul class="nav__list">
+            {% for nav in props.navArray %}
+              <li class="nav__item js-nav ">
+                <button type="button" class="nav__link nav__link_mod ">
+                  {{nav.title}}</button>
 
-<!-- end header -->
+                <div class="nav__in">
+                  <ul class="nav__drop nav__drop_main">
+                    {% for item in nav.ul %}
+                      <li>
+                        {% if item.ulIn %}
+                          {% for num in item.ulIn %}
+                            <ul class="nav__drop nav__drop_secondary">
+                              {% if num.caption %}
+                                <li class="nav__item nav__item_bold">
+                                  {{ num.caption}}
+                                </li>
+                              {% endif %}
+                              {% for el in num.list %}
+                                {% if el.last %}
+                                  <li class="nav__item nav__item_last">
+                                    <a href="#" class="nav__link">{{ el.last }}</a>
+                                  </li>
+                                {% else %}
+                                  <li class="nav__item">
+                                    <a href="#" class="nav__link">{{el.text}}</a>
+                                  </li>
+                                {% endif %}
+                              {% endfor %}
+                            </ul>
+                          {% endfor %}
+                        {% else %}
+
+                          <ul class="nav__drop ">
+                            {% if item.caption %}
+                              <li class="nav__item nav__item_bold">
+                                {{ item.caption}}
+                              </li>
+                            {% endif %}
+                            {% for el in item.list %}
+                              {% if el.last %}
+                                <li class="nav__item nav__item_last">
+                                  <a href="#" class="nav__link">{{ el.last }}</a>
+                                </li>
+                              {% else %}
+                                <li class="nav__item">
+                                  <a href="#" class="nav__link">{{el.text}}</a>
+                                </li>
+                              {% endif %}
+                            {% endfor %}
+                          </ul>
+
+                        {% endif %}
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </div>
+              </li>
+            {% endfor %}
+          </ul>
+        </nav>
+        <form class="search js-search">
+          <div class="search__in">
+            <input type="text" placeholder="Search">
+            <button class="search__button"></button>
+            <button type="button" class="search__close js-search-close"></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <!-- end header -->
 {% endmacro %}

@@ -1,0 +1,68 @@
+<footer class="footer">
+	<div class="footer__container inner">
+		<div class="footer__container-inner">
+			<div class="footer__menus d-md-none">
+				{% include "partials/_footer-menu.html" %}
+			</div>
+		</div>
+
+		<div class="footer__divider divider-grey d-md-none"></div>
+
+		<div class="footer__partners d-sm-none">
+
+			<a href="#" class="footer__partner">
+				<img src="./assets/img/general/footer/mcafe.png" alt="">
+			</a>
+			<a href="#" class="footer__partner">
+				<img src="./assets/img/general/footer/digicept.png" alt="">
+			</a>
+			<a href="#" class="footer__partner">
+				<img src="./assets/img/general/footer/inc500.png" alt="">
+			</a>
+			<a href="#" class="footer__partner">
+				<img src="./assets/img/general/footer/trustpilot.png" alt="">
+			</a>
+			<a href="#" class="footer__partner">
+				<img src="./assets/img/general/footer/bbb.png" alt="">
+			</a>
+			<a href="#" class="footer__partner">
+				<img src="./assets/img/general/footer/satisfaction.png" alt="">
+			</a>
+		</div>
+
+		<div class="footer__divider divider-blue"></div>
+
+		<div class="footer__container-inner payments d-md-none">
+			<div class="payments__title">
+				WE ACCEPT
+			</div>
+			{% set icons = [ 'visa', 'master-card', 'jcb', 'western-union', 'ria', 'mol-pay', 'bolero', 'poli', 'oxxo', 'qiwi', 'giro-pay',
+			'amex', 'discover', 'diners', 'paypal', 'sofort', 'wire-transfer', 'ideal', 'payoneer', 'union-pay', 'alipay' ] %}
+			<a href="#" class="payments__brands">
+				{% for icon in icons %}
+				<div class="payments__brand">
+					{{mixins.icon(icon)}}
+				</div>
+				{% endfor %}
+			</a>
+		</div>
+
+		<div class="footer__divider divider-blue d-md-none"></div>
+
+		<div class="footer__social">
+			{% set soc_icons = ['youtube', 'facebook', 'linkedin', 'twitter', 'googleplus', 'pinterest', 'wordpress'] %}
+				{% for icon	in soc_icons %}
+					<a href="#" class="footer__social-icon {{icon}}">{{mixins.icon(icon)}}</a>
+				{% endfor %}
+		</div>
+
+		<div class="footer__divider divider-blue"></div>
+
+		<div class="footer__copyright">
+			<p>Copyright© 2002-2018</p>
+			<a href="www.drinkablegifts.com">www.drinkablegifts.com</a>
+		</div>
+
+	</div>
+
+</footer>

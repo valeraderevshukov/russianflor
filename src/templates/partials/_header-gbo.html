@@ -1,0 +1,570 @@
+{% import "partials/_mixins.html" as mixins %}
+{% macro header(props) %}
+  <header class="header header_main js-header">
+    <div class="header__top">
+      <div class="header__inner inner">
+        <div class="header__top-btn">
+          <button type="button" class="burger js-burger">
+            {{mixins.icon('bars')}}
+          </button>
+          <button type="button" class="mob-search js-search-open">
+            {{mixins.icon('search')}}
+          </button>
+        </div>
+        <div class="logo d-md-block">
+          <a href="#" class="logo__img">
+            <img src="./assets/img/general/logo.png" alt="logo">
+          </a>
+        </div>
+        <div class="header__text-left d-md-none">
+          {{mixins.icon('map-marker')}}
+          Shopping in
+          <span class="header__currency">Usd</span>
+          to Russia
+        </div>
+        <div class="header__info">
+          <div class="lang js-dropdown">
+            <button type="button" class="lang__current">
+              <img src="./assets/img/general/flags/en-flag.png" alt="">
+              <span class="lang__arr"></span>
+              <span class='d-sm-none'>Languge</span>
+              <span class='d-sm-block'>Eng</span>
+            </button>
+            <div class="lang__wrap ">
+              <div class="lang__current">
+                <img src="./assets/img/general/flags/en-flag.png" alt="">
+                <div class="lang__current-in">
+                  <span class="lang__arr"></span>
+                  <span>English</span>
+                </div>
+              </div>
+              <ul class="lang__list">
+                {% for lang in [ 
+                { icon: 'fr-flag', text: 'French', country: '(français)' }, { icon: 'de-flag', text: 'German', country: '(Deutsch)' }, { icon: 'es-flag', text: 'Spanish', country: '(Español)' }, { icon: 'it-flag', text: 'Italian', country: '(Italiano)' }, { icon: 'tr-flag', text: 'Turkish', country: '(Turkish)' }, { icon: 'ru-flag', text: 'Russian', country: '(Russian)' } ] %}
+                  <li class="lang__item">
+                    <a href="#" class="lang__link">
+                      <img src="./assets/img/general/flags/{{lang.icon}}.png" alt="">
+                      <span>{{ lang.text | safe }}</span>
+                    </a>
+                    <span class="lang__country">{{ lang.country }}</span>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          <!-- end lang -->
+
+          <!-- begin links -->
+          <ul class="links">
+            {% if props.marker %}
+              <li class="links__item links__item_marker">
+                <div class="links__dropdown js-dropdown">
+                  <a href="#" class="links__link">
+                    <span class="links__pic"></span>
+                    <span class="links__text">USD</span>
+                  </a>
+                  <div class="links__dropdown-list">
+                    <span class="links__dropdown-arr"></span>
+
+                    <ul class="" id="delivery_select">
+                      <li>
+                        <a class="g-link-dark" href="/currency/USD">$ USD</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/EUR">€ EUR</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/GBP">£ GBP</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/AUD">$ AUD</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/HKD">$ HKD</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/JPY">¥ JPY</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/NZD">$ NZD</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/FJD">$ FJD</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/LKR">Rs LKR</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/XCD">EC$ XCD</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/KES">K Sh KES</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/NIO">C$ NIO</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/NGN">N NGN</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/BOB">$b BOB</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/UYU">₱ UYU</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/PYG">G PYG</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/BWP">P BWP</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/NAD">N$ NAD</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/NPR">Rs NPR</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/COP">₱ COP</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/KYD">CI$ KYD</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/UGX">USh UGX</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/XOF">CFAF XOF</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/TND">TD TND</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/YER">YRls YER</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/KZT">₸ KZT</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/BYR">BR BYR</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/PGK">K PGK</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/ZMW">ZK ZMW</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/OMR">RO OMR</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/TZS">TSh TZS</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/SCR">SR SCR</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/SLL">Le SLL</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/MUR">Mau MUR</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/JOD">JD JOD</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/ISK">kr ISK</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/SEK">kr SEK</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/DKK">kr DKK</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/BND">$ BND</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/BDT">Tk BDT</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/KWD">KD KWD</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/TWD">$ TWD</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/ZAR">R ZAR</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/BMD">$ BMD</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/MAD">DH MAD</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/SGD">$ SGD</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/BRL">R$ BRL</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/TRY">₺ TRY</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/NOK">kr NOK</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/AED">Dhs AED</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/ILS">₪ ILS</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/RON">lei RON</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/CHF">₣ CHF</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/UAH">₴ UAH</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/THB">฿ THB</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/VND">₫ VND</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/PHP">₱ PHP</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/BHD">BD BHD</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/QAR">QR QAR</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/LBP">£ LBP</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/PKR">Rs PKR</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/DOP">₱ DOP</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/PEN">S PEN</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/MXN">$ MXN</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/VEF">Bs. F VEF</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/CLP">₱ CLP</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/MYR">RM MYR</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/INR">₹ INR</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/KRW">₩ KRW</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/CNY">¥ CNY</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/ARS">₱ ARS</a>
+                      </li>
+                      <li>
+                        <a class="g-link-dark" href="/currency/CAD">$ CAD</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            {% endif %}
+            <li class="links__item links__item_cont">
+              <a href="#" class="links__link">
+                <span class="links__pic"></span>
+                <span class="links__text">Contacts</span>
+              </a>
+            </li>
+            <li class="links__item links__item_basket ">
+              <a href="#" class="links__link">
+                <span class="links__pic"></span>
+                <span class="links__text">
+                  <span class="links__dt">View Cart</span>
+                  <span class="links__mob">$ 166.15</span>
+                </span>
+              </a>
+            </li>
+            <li class="links__item links__item_user ">
+              <a href="#" class="links__link">
+                <span class="links__pic"></span>
+                <span class="links__text links__dt">Login</span>
+              </a>
+            </li>
+          </ul>
+          <!-- end links -->
+
+        </div>
+      </div>
+    </div>
+    <div class="header__logo">
+      <div class="header__logo-container inner">
+        <!-- begin logo -->
+        <div class="logo">
+          <a href="#" class="logo__img {% if not props.logo.description %}logo__img--long{% endif %}">
+            <img src="./assets/img/general/logo.png" alt="logo">
+          </a>
+          {% if props.logo.description %}
+            <h1 class="logo__description">{{ props.logo.description.text_top }}
+              <span class="logo__description-bottom">{{ props.logo.description.text_bottom }}</span>
+            </h1>
+          {% endif %}
+        </div>
+        <!-- end logo -->
+        <!-- begin support -->
+        <ul class="support">
+          <li class="support__item">
+            <a href="#" class="support__link">
+              <img src="./assets/img/general/orders-header-dark.png" alt="img">
+            </a>
+          </li>
+          <li class="support__item">
+            <a href="#" class="support__link">
+              <img src="./assets/img/general/click-to-call_dark.png" alt="img">
+            </a>
+          </li>
+          <li class="support__item">
+            <a href="#" class="support__link">
+              <img src="./assets/img/general/support_gbo_1.png" alt="img">
+            </a>
+          </li>
+        </ul>
+        <!-- end support -->
+
+      </div>
+    </div>
+    <div class="header__middle">
+      <div class="header__inner inner">
+        <!-- begin country -->
+        <div class="header__country country">
+          <a href="#" class="country__flag">
+            <img src="./assets/img/general/ru.png" alt="">
+          </a>
+          <div class="country__globe">
+            <img src="./assets/img/general/globe-blue.png" alt="">
+          </div>
+          <div class="country__input">
+            <div class="country__input-icon">
+              {{mixins.icon('chevron-right')}}
+            </div>
+            <input type="text" placeholder="Type any country name here">
+          </div>
+        </div>
+        <!-- end country -->
+        <!-- begin locator -->
+        <ul class="header__locator locator">
+          {% set locatorList = ['Service Locator', 'Gift Wizard', 'USA', 'UK', 'Germany', 'Canada', 'Mexico', 'Japan', 'Australia',
+        'Brazil', 'A-Z'] %}
+          {% for item in locatorList %}
+            <li class="locator__item">
+              <a href="#" class="locator__link">{{ item }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+        <!-- end locator -->
+      </div>
+    </div>
+
+    <div class="header__bottom ">
+      <div class="header__inner inner">
+        <div class="header__logo-sm">
+          <a href="#" class="logo-sm"></a>
+        </div>
+        <nav class="nav js-menu ">
+          {% set navArray = [
+            {
+              title: 'countries & fees',
+              ul: [
+                {
+                  caption: 'By Category',
+                  list: [
+                    {
+                      text: 'Bouquets'
+                    }, {
+                      text: 'Designer
+ Bouquets ' }, { text: ' Flower Baskets ' }, { text: ' Fruit Bouquets ' }, { text: ' Plants ' }, { last: ' all flowers ' } ] } ] }, { title: ' Gift selectionne ', ul: [ { caption: ' By Category ', list: [ { text: ' Bouquets ' }, { text:
+ ' Designer Bouquets '
+                    }, {
+                      text: ' Flower Baskets '
+                    }, {
+                      text: ' Fruit Bouquets '
+                    }, {
+                      text: ' Plants '
+                    }, {
+                      last: ' all flowers '
+                    }
+                  ]
+                }
+              ]
+            }, {
+              title: ' corporate gift wizard ',
+              ul: [
+                {
+                  caption: ' By Category ',
+                  list: [
+                    {
+                      text: ' Bouquets '
+                    }, {
+                      text: 'Designer Bouquets'
+                    }, {
+                      text: 'Flower Baskets'
+                    }, {
+                      text: 'Fruit Bouquets'
+                    }, {
+                      text: 'Plants'
+                    }, {
+                      last: 'all flowers'
+                    }
+                  ]
+                }
+              ]
+            }, {
+              title: 'why choose us?',
+              ul: [
+                {
+                  caption: 'By Category',
+                  list: [
+                    {
+                      text: 'Bouquets'
+                    }, {
+                      text: 'Designer Bouquets '
+                    }, {
+                      text: ' Flower Baskets '
+                    }, {
+                      text: ' Fruit Bouquets '
+                    }, {
+                      text: ' Plants '
+                    }, {
+                      last: ' all flowers '
+                    }
+                  ]
+                }
+              ]
+            }, {
+              title: ' Partners ',
+              ul: [
+                {
+                  caption: ' By Category ',
+                  list: [
+                    {
+                      text: '
+ Bouquets ' }, { text: ' Designer Bouquets ' }, { text: ' Flower Baskets ' }, { text: ' Fruit Bouquets ' }, { text:
+ ' Plants '
+                    }, {
+                      last: ' all flowers '
+                    }
+                  ]
+                }
+              ]
+            }, {
+              title: '24x7 customer service',
+              ul: [
+                {
+                  ulIn: [
+                    {
+                      caption: 'By
+ Category ', list: [ { text: ' Bouquets ' }, { text: ' Designer Bouquets ' }, { text: ' Flower Baskets ' }, { text: ' Fruit Bouquets ' }, { text: ' Plants ' } ] }, { caption: ' Service Area ', list: [ { text: ' Bouquets ' }, { text:
+ ' Designer Bouquets '
+                    }, {
+                      text: ' Flower Baskets '
+                    }, {
+                      text: ' Fruit Bouquets '
+                    }, {
+                      text: ' Plants '
+                    }, {
+                      last: ' all flowers '
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }] %}
+          <ul class="nav__list">
+            {% for nav in navArray %}
+              <li class="nav__item js-nav ">
+                <button type="button" class="nav__link nav__link_mod">
+                  {{nav.title}}</button>
+                <div class="nav__in">
+                  <ul class="nav__drop nav__drop_main">
+                    {% for item in nav.ul %}
+                      <li>
+                        {% if item.ulIn %}
+                          {% for num in item.ulIn %}
+                            <ul class="nav__drop nav__drop_secondary">
+                              {% if num.caption %}
+                                <li class="nav__item nav__item_bold">
+                                  {{ num.caption}}
+                                </li>
+                              {% endif %}
+                              {% for el in num.list %}
+                                {% if el.last %}
+                                  <li class="nav__item nav__item_last">
+                                    <a href="#" class="nav__link">{{ el.last }}</a>
+                                  </li>
+                                {% else %}
+                                  <li class="nav__item">
+                                    <a href="#" class="nav__link">{{el.text}}</a>
+                                  </li>
+                                {% endif %}
+                              {% endfor %}
+                            </ul>
+                          {% endfor %}
+                        {% else %}
+
+                          <ul class="nav__drop ">
+                            {% if item.caption %}
+                              <li class="nav__item nav__item_bold">
+                                {{ item.caption}}
+                              </li>
+                            {% endif %}
+                            {% for el in item.list %}
+                              {% if el.last %}
+                                <li class="nav__item nav__item_last">
+                                  <a href="#" class="nav__link">{{ el.last }}</a>
+                                </li>
+                              {% else %}
+                                <li class="nav__item">
+                                  <a href="#" class="nav__link">{{el.text}}</a>
+                                </li>
+                              {% endif %}
+                            {% endfor %}
+                          </ul>
+
+                        {% endif %}
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </div>
+              {% endfor %}
+          </ul>
+        </nav>
+        <form class="search js-search">
+          <div class="search__in">
+            <input type="text" placeholder="Search">
+            <button class="search__button">{{mixins.icon('search')}}</button>
+            <button type="button" class="search__close js-search-close"></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </header>
+{% endmacro %}

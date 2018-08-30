@@ -1,0 +1,127 @@
+{# --- title: Index page --- #}
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+    {{header_gbo.header()}}
+    <div class="login-page">
+        <div class="login-page__special special">
+            <div class="login-page__container inner">
+                <ul class="progress">
+                    <li class="progress__item is-checked">
+                        <div class="progress__details">
+                            888.776.5801
+                        </div>
+                        <div class="progress__dot">
+                            {{mixins.icon('check')}}
+                        </div>
+                        <div class="progress__status">
+                            gift options
+                        </div>
+                    </li>
+                    <li class="progress__item is-active">
+                        <div class="progress__dot">
+                            {{mixins.icon('check')}}
+                        </div>
+                        <div class="progress__status">
+                            sign in
+                        </div>
+                    </li>
+                    <li class="progress__item">
+                        <div class="progress__dot">
+                            {{mixins.icon('check')}}
+                        </div>
+                        <div class="progress__status">
+                            delivery
+                        </div>
+                    </li>
+                    <li class="progress__item">
+                        <div class="progress__dot">
+                            {{mixins.icon('check')}}
+                        </div>
+                        <div class="progress__status">
+                            gift message
+                        </div>
+                    </li>
+                    <li class="progress__item">
+                        <div class="progress__dot">
+                            {{mixins.icon('check')}}
+                        </div>
+                        <div class="progress__status">
+                            payment info
+                        </div>
+                    </li>
+                    <li class="progress__item">
+                        <div class="progress__dot">
+                            {{mixins.icon('check')}}
+                        </div>
+                        <div class="progress__status">
+                            review
+                        </div>
+                    </li>
+                    <li class="progress__checkout">
+                        <div class="progress__lock">
+                            {{mixins.icon('lock')}}
+                        </div>
+                        <div class="progress__status">
+                            secure
+                            <br>
+                            checkout
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="login-page__container">
+            {{titles.titleBiggest('Please login or continue as guest')}}
+            <form action="" class="login">
+                <div class="login__left">
+                    {{titles.titleSmall('Returning Customers')}}
+                    <p class="d-sm-none">Sign-in for a quicker checkout, if you have ordered with us before.</p>
+                    <input type="email" placeholder="Email">
+                    <input type="password" placeholder="Password">
+                    <div class="login__group">
+                        <input type="checkbox" name="showPassword" id="showPassword">
+                        <label for="showPassword">Show Password
+                            <span class="check-icon">{{mixins.icon('check')}}</span>
+                        </label>
+                        <a href="#" class="btn btn-underline">Forgot password?</a>
+                    </div>
+                    <button class="login__btn">
+                        Sign In
+                        {{mixins.icon('chevron-right')}}
+                    </button>
+                </div>
+                <div class="login__divider">
+                    OR
+                </div>
+                <div class="login__right">
+                    {{titles.titleSmall('New Customers and Guests')}}
+                    <p class="d-sm-none">You'll have a chance to create an account later.</p>
+                    <input type="email" placeholder="Email">
+                    <button class="login__btn">
+                        Continue as guest
+                        {{mixins.icon('chevron-right')}}
+                    </button>
+                </div>
+            </form>
+            <div class="divider-grey divider-grey--bold"></div>
+            <div class="login-page__checkout-descr">
+                <h4>Secure Checkout</h4>
+                <p>
+                    All transactions with this web site are secure, as indicated by the icon on your browser window.
+                </p>
+            </div>
+        </div>
+        <div class="login-page__special special">
+            <div class="login-page__policy inner">
+                <a href="#" class="btn btn-underline">Privacy Policy</a>
+                <a href="#" class="btn btn-underline">Terms Of Use</a>
+                <a href="#" class="btn btn-underline">Site Feedback</a>
+                <span>888.776.5801</span>
+            </div>
+        </div>
+    </div>
+
+    {% include "components/_subscribe.html" %}
+    {% include "partials/_footer.html" %}
+{% endblock %}

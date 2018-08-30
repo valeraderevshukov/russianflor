@@ -15,6 +15,31 @@
 =rob-cr
 	font-family: "RobotoCondensed-Regular", Arial, Helvetica, sans-serif
 
+//FONTS
+=fontpath($name, $name1, $file)
+	src: local($name), local($name1), url("../fonts/" + $file + ".woff2") format("woff2"), url("../fonts/" + $file + ".woff") format("woff")
+=fontdefault($style, $weight, $name)
+	font-family: $name
+	font-style: $style
+	font-weight: $weight
+
+$corp: 'CorpidE1sSCd'
+
+@font-face
+	+fontdefault(normal, 400, $corp)
+	+fontpath('corpide1sscd-regular', 'corpide1sscd-regular', corpide1sscd-regular)
+@font-face
+	+fontdefault(light, 300, $corp)
+	+fontpath('corpide1sscd-light', 'corpide1sscd-light', corpide1sscd-light)
+@font-face
+	+fontdefault(normal, 700, $corp)
+	+fontpath('corpide1sscd-bold', 'corpide1sscd-bold', corpide1sscd-bold)
+@font-face
+	+fontdefault(normal, 800, $corp)
+	+fontpath('corpide1sscd-heavy', 'corpide1sscd-heavy', corpide1sscd-heavy)
+@font-face
+	+fontdefault(normal, 900, $corp)
+	+fontpath('corpide1sscd-black', 'corpide1sscd-black', corpide1sscd-black)
 
 
 body
@@ -23,7 +48,7 @@ body
   line-height: 1.4
   font-size: 17px
   min-width: 320px
-  //min-height: 1400px
+  min-height: 1400px
   overflow-x: hidden
   +rob-l
 

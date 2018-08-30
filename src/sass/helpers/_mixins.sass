@@ -274,3 +274,13 @@
   @if $letter-spacing != null
     letter-spacing: ($letter-spacing / 1000) + em
 
+=first($num) 
+  @if $num == '1'
+    &:first-child 
+      @content
+  @else 
+    &:nth-child(-n + #{$num}) 
+      @content
+
+=colorTrans
+  transition: color .5s, background-color .5s, fill .5s, border-color 0.5s

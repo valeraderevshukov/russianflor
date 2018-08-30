@@ -3,6 +3,8 @@ export const OPEN = 'is-open';
 export const ACTIVE = 'is-active';
 export const ANIMATE = 'is-animate';
 export const OVERFLOW_HIDDEN = 'is-overflow-hidden';
+export const DISABLED = 'is-disabled';
+export const HIDDEN = 'is-hidden';
 
 export const widthMD = 1024;
 export const widthSM = 768;

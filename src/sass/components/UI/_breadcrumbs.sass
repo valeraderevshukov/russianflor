@@ -1,0 +1,53 @@
+.breadcrumb
+    +sm     
+        margin-bottom: 16px
+    &-item
+        font-family: CorpidE1sSCd
+        font-size: 16px
+        text-align: justify
+        color: $title_dark
+        display: inline-block
+        position: relative
+        margin-right: 24px
+        line-height: 1
+        &:not(:last-child):after
+            content: '>'
+            position: absolute
+            top: 50%
+            right: -18px
+            transform: translateY(-50%)
+            color: $title_dark
+        &.active
+            color: $dark-grey
+        &:nth-last-of-type(2)
+            border-bottom: 1px solid $title_dark
+            &::after
+                color: $dark-grey
+
+    &--no-underline
+        .breadcrumb-item
+            &:nth-last-of-type(2)
+                border: none
+            &:not(:first-child)
+                color: $dark-grey
+                &:after
+                    color: $dark-grey
+
+    &--colored
+        .breadcrumb-item
+            color: $blue
+        .breadcrumb-item.active
+            color: $light-blue
+    
+    &--big
+        .breadcrumb-item
+            font-size: 20px
+            line-height: 30px
+            &:nth-last-of-type(2)
+                border-bottom: none
+            &:after
+                font-weight: bold
+
+            
+            
+ 

@@ -3,3 +3,27 @@ ProjectTitle: russianflora
 PageList:
 - file: page.html
   ready: 50
+- file: category-page.html
+  ready: 50
+- file: shopping-page.html
+  ready: 50
+- file: card-page.html
+  ready: 50
+- file: country-page-USA.html
+  ready: 50
+- file: gift-basket-to.html
+  ready: 50
+- file: gift-deliver-to.html
+  ready: 50
+- file: gifts-online-catalog.html
+  ready: 50
+- file: holiday-traditions.html
+  ready: 50
+- file: international-delivery.html
+  ready: 50
+- file: main.html
+  ready: 50
+- file: login-page.html
+  ready: 50
+- file: gift-basket-to-city.html
+  ready: 50

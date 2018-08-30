@@ -1,0 +1,179 @@
+{# --- title: Index page --- #}
+{# IMPORTING MIXINS #}
+{% import "partials/_mixins.html" as mixins %}
+{% import "components/_titles.html"
+as titles %}
+{% import "components/_breadcrumb.html" as breadcrumb %}
+{% import "components/_buttons.html" as button %}
+{#
+MAIN LAYOUT #}
+{% extends "layouts/_layout.html" %}
+{% block content %}
+    {{header_gbo.header({
+        marker: false
+    })}}
+  <div class="shopping-page">
+    <div class="shopping-page__container inner">
+      {# BREADCRUMBS #}
+      <div class="shopping-page__breadcrumbs">
+        {{breadcrumb.make([ {"text": "Home", "link": "ui.html"}, {"text": "How to check-table", "link": "#"}, {"text": "Shopping
+			Cart", "link": "#", "active": true} ]) }}
+      </div>
+
+      {# TITLE #}
+      <div class="shopping-page__title">
+        {{titles.titleBiggest('Shopping Cart')}}
+      </div>
+
+    </div>
+    <!-- COUPONS -->
+    <div class="shopping-page__special special">
+      <div class="shopping-page__container inner coupons">
+        <div class="coupons__title">
+          {{titles.titleSmall('Coupons & Offer Codes')}}
+          <span class="coupons__tooltip js-tooltip js-tooltip-right" title="Here some text">
+            {{mixins.icon('info')}}
+          </span>
+        </div>
+        <div class="coupons__form">
+          <form action="" class="coupons-form">
+            <input type="text" class="coupons-form__input" placeholder="Enter Code">
+            <button type="submit" class="btn btn-rounded btn-rounded--green coupons-form__submit">Apply</button>
+          </form>
+          <div class="coupons__subtotal">
+            Subtotal:
+            <span class="coupons__subtotal--price">
+              $89.99
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="shopping-page__container inner">
+      <main class="chekout">
+        <div class="checkout__top">
+          <div class="checkout__buttons">
+            <div class="js-dropdown-container shopping">
+              {{button.squareButton({ "class": "js-dropdown-btn", "text": "CONTINUE SHOPPING", "icon": "chevron-down" }) }}
+              <ul class="shopping__list">
+                <li class="shopping__item">
+                  <a href="#" class="shopping__link">Homepage</a>
+                </li>
+                <li class="shopping__item">
+                  <a href="#" class="shopping__link">Recently Viewed Item</a>
+                </li>
+                <li class="shopping__item">
+                  <a href="#" class="shopping__link">Gifts to CountryX</a>
+                </li>
+                <li class="shopping__item">
+                  <a href="#" class="shopping__link">Recently Viewed Item</a>
+                </li>
+              </ul>
+            </div>
+            {{button.squareButton({ "class": "hover-bg", "text": "to shopping cart", "icon": "chevron-right" }) }}
+          </div>
+        </div>
+        <div class="checkout__table">
+          <table class="check-table">
+            <thead>
+              <tr>
+                <th class="check-table__title">Product</th>
+                <th class="check-table__title">Price</th>
+                <th class="check-table__title check-table__title--center">Quantity</th>
+                <th class="check-table__title">TOTAL</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Product" class="check-table__descr">
+                  <div class="check-table__photo">
+                    <img class="check-table__img" src="./assets/img/general/gifts-1/gift_img_2.jpg" alt="">
+                    <button class="btn-underline btn">Remove Item</button>
+                  </div>
+                  <div class="check-table__text">
+                    <h5 class="check-table__name">
+                      Jim Beam Distiller's Masterpiece Limited Edition
+                    </h5>
+                    <div class="check-table__id">
+                      Product ID:
+                      <span class="check-table__id--number">11019</span>
+                    </div>
+                  </div>
+                </td>
+                <td class="check-table__price" data-label="Price">
+                  $
+                  <span class="js-table-price">59.95</span>
+                </td>
+                <td class="check-table__amount" data-label="Quantity">
+                  {% include "components/_plus-minus.html" %}
+                </td>
+                <td class="check-table__total" data-label="Total">
+                  $
+                  <span class="js-table-total">59.95</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="check-table__descr" data-label="Product">
+                  <div class="check-table__photo">
+                    <img class="check-table__img" src="./assets/img/general/gifts-1/gift_img_2.jpg" alt="">
+                    <button class="btn-underline btn">Remove Item</button>
+                  </div>
+                  <div class="check-table__text">
+                    <h5 class="check-table__name">
+                      Valentine Melody
+                    </h5>
+                    <div class="check-table__id">
+                      Product ID:
+                      <span class="check-table__id--number">504008</span>
+                    </div>
+                  </div>
+                </td>
+                <td class="check-table__price" data-label="Price">
+                  $
+                  <span class="js-table-price">129.95</span>
+                </td>
+                <td class="check-table__amount" data-label="Quantity">
+                  {% include "components/_plus-minus.html" %}
+                </td>
+                <td class="check-table__total" data-label="Total">
+                  $
+                  <span class="js-table-total">129.95</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="checkout__bottom">
+          <div class="checkout__descr">
+            <p>The above subtotal does not include tax and
+              <a href="#" class="green-link">shipping</a>, which will be calculated during checkout after entering the delivery zip code and preferred shipping method.
+            </p>
+            <p>You will have a chance to review the final total before submitting your order.</p>
+          </div>
+          <div class="checkout__buttons">
+            <div class="js-dropdown-container shopping">
+              {{button.squareButton({ "class": "js-dropdown-btn", "text": "CONTINUE SHOPPING", "icon": "chevron-down" }) }}
+              <ul class="shopping__list">
+                <li class="shopping__item">
+                  <a href="#" class="shopping__link">Homepage</a>
+                </li>
+                <li class="shopping__item">
+                  <a href="#" class="shopping__link">Recently Viewed Item</a>
+                </li>
+                <li class="shopping__item">
+                  <a href="#" class="shopping__link">Gifts to CountryX</a>
+                </li>
+                <li class="shopping__item">
+                  <a href="#" class="shopping__link">Recently Viewed Item</a>
+                </li>
+              </ul>
+            </div>
+            {{button.squareButton({ "class": "hover-bg", "text": "to shopping cart", "icon": "chevron-right" }) }}
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+  {% include "components/_subscribe.html" %}
+  {% include "partials/_footer.html" %}
+{% endblock %}
