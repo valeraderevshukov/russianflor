@@ -15,7 +15,7 @@
         text-align: center
         margin-bottom: 20px
     &__descr
-        margin-bottom: 30px
+        margin-bottom: 46px
         // +clr
         display: flex
         flex-wrap: wrap
@@ -161,23 +161,38 @@
 .inline-form
     display: inline-block
     padding: 10px 
+    font-family: $corp
+    // font-size: 0
     +sm 
-        display: block
+        width: 100%
+        padding: 10px 0
+    &__label
+        vertical-align: middle
+        display: inline-block
+        margin-right: 16px
+        font-size: 30px
+        font-weight: 300
+        letter-spacing: -0.02em
+        color: $text-link
+        +md
+            display: none
     &__input
         display: inline-block
         vertical-align: middle
         border: 1px solid $text-link
         padding: 6px 20px
         font-size: 20px
-        font-family: $corp
         border-radius: 6px
         line-height: 1
         width: 300px
+        margin-right: 12px
         +placeholder
             font-size: inherit
             color: inherit
+        +md 
+            width: auto
         +sm 
-            display: block
+            // display: block
             width: 100%
     &__submit
         font-size: 20px
@@ -190,6 +205,8 @@
         +hover
             background-color: $dark-green
             +colorTrans
+        &_thin
+            padding: 9px 14px
         +sm 
             display: block
             width: 100%

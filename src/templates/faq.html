@@ -1,0 +1,80 @@
+{% set links = [
+    {
+        text: "How do you deliver my gift overseas in less than a week?",
+        link: "card-page.html"
+    }, {
+        text: "Why do I see different prices on the same gift on your website?",
+        link: "#"
+    }, {
+        text: "My gift is going a long way, won’t it get spoiled or broken?",
+        link: "#"
+    }, {
+        text: "Is my gift going through Customs? Won’t that take forever? Are there duty fees?",
+        link: "#"
+    }, {
+        text: "Can I include our company’s branded greeting cards with the gifts?",
+        link: "#"
+    }, {
+        text: "Why are your gifts so expensive? Compare us!",
+        link: "#"
+    }, {
+        text: "How can you deliver to more than 200 countries?",
+        link: "#"
+    }
+] %}
+
+{# --- title: Index page --- #}
+{# MAIN LAYOUT #}
+{% extends "layouts/_layout.html" %}
+{% block content %}
+    {{header_gbo.header( 
+        { logo: { description: { 'text_top': 'Answers to Questions About Our Service', 'text_bottom': 'How GBO Makes Your Gifts Happen?' } } } 
+    )}}
+    <div class="faq">
+        <div class="faq__container inner">
+
+            {# BREADCRUMBS #}
+            <div class="faq__breadcrumbs">
+                {{breadcrumb.make( 
+                    [ {"class": "breadcrumb--no-underline"}, {"text": "Home", "link": "ui.html"}, {"text": "How we make it all happen", "active": true} ]
+                ) }}
+            </div>
+
+            {# TITLE #}
+            {{titles.titleBig('Our Answers to Common Questions')}}
+            {# ARTICLE #}
+            <section class="faq__descr text text_black">
+                <p>We hear it all the time: The world is getting smaller. There’s no doubt that we’re living in a global economy. There are more long-distance relationships than ever before: from couples who met on their favorite game server or forum, to companies with tightly-knit partnerships and employees around the globe, to the many families in a wide array of countries whose sons and daughters are in the military, the chances are high that each of us cares about someone far away.</p>
+                <p>But while our virtual connections are plentiful, there's still just the same amount of physical distance between us. It’s easy to send an email or chat message, but it’s much harder to send a hug, to show your gratitude to someone you care about, or to give them something tangible.</p>
+                <p>That’s where we come in. With over ten years of expertise in connecting you to your loved ones and colleagues – no matter where you, or they, are – GiftBasketsOverseas.com knows how to deliver your unique gifts of love and loyalty in over 200 countries, usually in less than a week.</p>
+            </section>
+            <section class="faq__main">
+                <div class="subtitle subtitle_blue">
+                    <span class="title-bold-green">We know:</span>
+                    It sounds too good to be true, and you probably have some questions about how on earth we manage that. Sometimes it surprises us too, but we’ve got the answers for you, right here:
+                </div>
+                <ul class="text-list">
+                    {% for link in links %}
+                        <li class="text-list__item">
+                            <a href="{{link.link}}" class="text-list__link" target="_blank">{{link.text | safe}}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+                <div class="faq__buttons">
+                    <div>
+                        <span class="text-big text-big_thin">Don’t see the answer to your question here?</span>
+                        <button class="btn btn-rounded btn-rounded_faq btn-rounded_green btn_sm-full">Check out our FAQ page.</button>
+                    </div>
+                    <div>
+                        <span class="text-big text-big_thin">And if you still don’t see your question,
+                        </span>
+                        <button class="btn btn-rounded btn-rounded_faq btn-rounded_green btn_sm-full">
+                            give us a call or drop us an email.</button>
+                    </div>
+                </div>
+            </section>
+            <div class="faq__video">
+                {{mixins.videoMiddle()}}
+            </div>
+        </div>
+    {% endblock %}

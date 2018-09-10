@@ -33,11 +33,13 @@
     <!-- BEGIN content -->
     <div class="out">
       {% block content %}{% endblock %}
+      {% include "components/_subscribe.html" %}
+      {% include "partials/_footer.html" %}
     </div>
     <!-- END content -->
 
     <!-- BEGIN scripts -->
-    
+
     <script type="text/javascript" src="js/app.js"></script>
 
     <!-- END scripts -->

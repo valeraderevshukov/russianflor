@@ -14,7 +14,7 @@
 
 {% extends "layouts/_layout.html" %}
 {% block content %}
-{{header_gbo.header()}}
+    {{header_gbo.header()}}
     <div class="category">
         <div class="category__special special">
             <div class="category__container inner">
@@ -88,11 +88,10 @@
                 </div>
             </div>
             <div class="category__add-cards">
-                <button class="btn btn-rounded btn-rounded--green btn-load-more">Load More</button>
+                <button class="btn btn-rounded btn-rounded_green btn-load-more">Load More</button>
             </div>
         </div>
     </div>
 </div>
-{% include "components/_subscribe.html" %}
-{% include "partials/_footer.html" %}
+
 {% endblock %}

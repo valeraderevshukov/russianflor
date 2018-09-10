@@ -46,10 +46,6 @@
     text-transform: uppercase
     word-spacing: 0.1em
     line-height: 1
-    // +md 
-    //     font-size: 28px
-    // +sm 
-    //     font-size: 26px
 
 .title-small
     font-family: $corp
@@ -83,10 +79,14 @@
     text-align: left
     color: $dark_blue
     line-height: 1.22
-    &--bold 
+    &_black
+        color: $text_black
+    &_small
+        font-size: 17px
+    &_bold 
         color: $text_black
         font-weight: bold
-    p
+    p:not(:last-child)
         margin-bottom: 16px
 
 .text-link,
@@ -100,6 +100,11 @@
         width: 100%
         height: 1px
         background-color: $text-link 
+        transition: transform 0.5s
+    +hover 
+        &:after
+            transform: scaleY(3)
+
 
 .text-link
     color: $text-link
@@ -113,6 +118,8 @@
     font-size: 20px
     font-weight: 700
     color: $text_black
+    &_blue
+        color: $blue
     +md 
         font-size: 18px
     +sm 
@@ -123,6 +130,9 @@
     font-family: $corp
     line-height: 1.22
     letter-spacing: -0.01em
+    color: $text-black
+    &_thin
+        font-weight: 300
     p 
         margin-bottom: 16px
     &--italic
@@ -153,3 +163,20 @@
     +rob-r
 .roboto-light
     +rob-l
+
+.text-blue
+    color: $text-link
+    
+.image-title
+    font-family: $corp
+    font-size: 20px
+    font-weight: 900
+    text-transform: uppercase
+    font-style: italic
+    
+.title-bold-green
+    font-family: $corp
+    font-size: 20px
+    font-weight: 900
+    text-transform: uppercase
+    color: $main-green

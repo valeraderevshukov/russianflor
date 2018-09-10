@@ -27,3 +27,7 @@ PageList:
   ready: 50
 - file: gift-basket-to-city.html
   ready: 50
+- file: corporate-gifts.html
+  ready: 50
+- file: faq.html
+  ready: 50

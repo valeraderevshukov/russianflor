@@ -1,0 +1,85 @@
+{% set links = [ "Impress your employees with your generosity and fine taste by sending delicious gourmet foods, fine wines,
+decadent chocolates, gorgeous flowers, and soothing spa gifts", "Increase your
+<a class='text-link' href='#' '>brand loyalty</a> and boost sales by including your company <a class='text-link ' href='#
+    ''>logo</a>,
+<a class='text-link' href='#' '>slogan</a>, <a class='text-link ' href='# ''>and even offers</a> in our gift baskets", "Enjoy incredible
+<a class='text-link' href='#'>discounts</a> on bulk orders.", "Send luxurious gifts to customers anywhere in the world in over
+<a class='text-link' href='#'>200 countries</a>" ] %}
+{# --- title: Index page --- #}
+{# MAIN LAYOUT #}
+{% extends "layouts/_layout.html" %}
+{% block content %}
+    {{header_gbo.header({ logo: { description: { 'text_top': 'Gifts for Your Employees', 'text_bottom': 'Corporate Gifts to
+Boost Staff Morale' } } })}}
+    <div class="corporate">
+        <div class="corporate__container inner">
+
+            {# BREADCRUMBS #}
+            <div class="corporate__breadcrumbs">
+                {{breadcrumb.make([ {"class": "breadcrumb--no-underline"}, {"text": "Home", "link": "ui.html"}, {"text": "Gifts for Employees",
+            "active": true} ]) }}
+            </div>
+
+            {# TITLE #}
+            {{titles.titleBig('Corporate Gifts for your Employees')}}
+            {# ARTICLE #}
+            <article class="corporate__article corporate__article_top">
+                {{titles.titleMiddle('Send Gifts to Boost Employee Morale')}}
+                <div class="corporate__image">
+                    <span class="image-rounded image-rounded_bold-border image-rounded_dark-border" style="background-image: url(./assets/img/general/corporate_1.jpg)"></span>
+                    <h3 class="image-title text-blue">Make it More Than Just a Job!</h3>
+                </div>
+                <div class="corporate__text text text_black">
+                    <p>There was a time when you could hire an employee — train them, invest in them — and be assured that they would be loyal for thirty years, collect their 401K, and retire without setting foot in another office. But times change. The economy has shifted, the work force has different values, and now employees change jobs often, sometimes going to competitors (oh no!), seeking higher wages, or changing industries completely.
+                    </p>
+                    <p>But why do they leave? Did they get bored? Need more opportunities?</p>
+                    <p>While these may be the reasons occasionally, the most prevalent reason for turnover is that many employees feel under-appreciated, or even unappreciated, by the companies for whom they work. No matter how great the pay is, when one’s work seems to goes unnoticed, the loss of morale can be crushing, and many employees end up feeling like a change will do them good.
+                    </p>
+                    <div class="corporate__form-field">
+                        <button class="btn btn-rounded btn-rounded_faq btn-rounded_green btn_sm-full">Submit an inquiry form</button>
+                        <span class="text-big">and our corporate gift consultant will be in touch within hours.</span>
+                    </div>
+                </div>
+            </article>
+
+            {% macro article(img) %}
+                <article class="corporate__article">
+                    {{titles.titleMiddle('Send Our Corporate Gifts and:')}}
+                    <div class="corporate__image">
+                        <span class="image-rounded image-rounded_bold-border image-rounded_light-border image-rounded_small" style="background-image: url(./assets/img/general/{{img}})"></span>
+                    </div>
+                    <div class="corporate__text">
+                        <ul class="text-list">
+                            {% for link in links %}
+                                <li class="text-list__item">
+                                    {{link | safe}}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                        <h5 class="title-middle text-blue">How Does It Work?</h5>
+                        <div class="text text_small text_black">
+                            It's easy! Just download our easy-to-use Excel form. Tell us which gifts you want to send, fill in your employees' names, tell us where you want your gifts to go – don't forget to include a personalized message – and we'll make sure your gifts get there: guaranteed! Send us your completed template by email. Your account will be taken care of by a dedicated corporate gift consultant, and you'll receive a notification before gifts are sent, and a tracking number to monitor status of each delivery.
+                        </div>
+                        <div class="corporate__form-field">
+                            <button class="btn btn-rounded btn-rounded_faq btn-rounded_green btn_sm-full">Get started</button>
+                            <span class="text-big text-big_thin">with your bulk order today or just place an order directly on our
+                                <a href="#" class="text-link">website.</a>
+                            </span>
+                        </div>
+                        <div class="corporate__form-field">
+                            <form action="" class="inline-form">
+                                <label class="inline-form__label" for="req">Email:
+                                </label>
+                                <input type="text" id="req" class="inline-form__input" placeholder="Your Email Address">
+                                <button type="submit" class="btn btn-rounded_faq inline-form__submit inline-form__submit_thin">Request gift options</button>
+                            </form>
+                        </div>
+                    </div>
+                </article>
+            {% endmacro %}
+            {{article('corporate_2.jpg')}}
+            {{article('corporate_2.jpg')}}
+            {{article('corporate_2.jpg')}}
+        </div>
+    </div>
+{% endblock %}

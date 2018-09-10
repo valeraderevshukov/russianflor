@@ -4,6 +4,10 @@
 	vertical-align: middle
 	font-size: 17px
 	text-align: center
+	&_sm-full
+		+sm 
+			width: 100%
+
 
 .btn-square
 	position: relative
@@ -44,12 +48,16 @@
 	text-transform: uppercase
 	padding: 7px 30px
 	border-radius: 20px
-	&--green 
+	&_green
 		background-color: $main-green
 		+colorTrans
 		&:hover
 			background-color: $dark-green
 			+colorTrans
+	&_faq
+		text-transform: none
+		font-size: 20px
+		padding: 6px 18px
 	&--big
 		padding: 16px 19px
 		text-transform: uppercase

@@ -62,12 +62,8 @@
         flex: 0 0 50%
         margin-bottom: 24px
     &__img
-        padding-bottom: 200px
         margin: 0 auto 20px
         width: 200px
-        +cover
-        border-radius: 50%  
-        border: 2px solid $blue
     &__title
         display: block
         font-family: $corp
@@ -174,9 +170,6 @@
         margin: 0 auto 12px
         width: 200px
         padding-bottom: 200px
-        // background-size: contain
-        // background-position: 50% 50%
-        // background-repeat: no-repeat
         +cover
         border: 2px solid $blue
     &__title
@@ -203,3 +196,20 @@
         font-size: 18px
         font-weight: 300
         color: $dark-green
+
+.image-rounded
+    display: block
+    +cover
+    border-radius: 50%  
+    border: 2px solid $blue
+    padding-bottom: calc(100% - 4px)
+    width: 100%
+    &_bold-border
+        border-width: 5px
+        padding-bottom: calc(100% - 10px)
+    &_dark-border
+        border-color: $text-link
+    &_light-border
+        border-color: $special_bg
+    &_small
+        background-size: 80% 80%

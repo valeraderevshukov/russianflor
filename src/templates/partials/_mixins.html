@@ -1,7 +1,15 @@
 {% macro icon(i) %}
-<svg class="icon icon-{{i}}"><use xlink:href="assets/img/general/sprite.svg#icon-{{i}}"></use></svg>
+    <svg class="icon icon-{{i}}">
+        <use xlink:href="assets/img/general/sprite.svg#icon-{{i}}"></use>
+    </svg>
 {% endmacro %}
 
 {% macro pngicon(i) %}
-<span class="iconpng iconpng-{{i}}"></span>
+    <span class="iconpng iconpng-{{i}}"></span>
+{% endmacro %}
+
+{% macro videoMiddle() %}
+    <div class="video video-middle">
+        <iframe src="https://www.youtube.com/embed/n_GA_vQRu9c?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+    </div>
 {% endmacro %}
