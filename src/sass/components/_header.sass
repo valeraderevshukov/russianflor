@@ -82,6 +82,12 @@
       //text-transform: uppercase
     .links__text
       color: $borde
+    .links__item_tracker
+      .links__pic
+        background: url('../assets/img/general/tracking_s.png')
+        background-repeat: no-repeat;
+        top: 5px;
+        position: relative;
     .links__item_cont
       .links__pic
         background: url('../assets/img/general/cont.png')
@@ -151,6 +157,12 @@
       background-image: url('../assets/img/general/top-menu-ico.png')
       background-repeat: no-repeat
       background-size: contain
+    .links__item_tracker
+      .links__pic
+        background: url('../assets/img/general/tracking_s.png')
+        background-repeat: no-repeat;
+        top: 5px;
+        position: relative;
     .links__item_cont
       .links__pic
         background: url('../assets/img/general/cont-yellow.png')
@@ -225,6 +237,12 @@
       background-image: url('../assets/img/general/top-menu-ico.png')
       background-repeat: no-repeat
       background-size: contain
+    .links__item_tracker
+      .links__pic
+        background: url('../assets/img/general/tracking_s.png')
+        background-repeat: no-repeat;
+        top: 5px;
+        position: relative;
     .links__item_cont
       .links__pic
         background: url('../assets/img/general/cont-gray.png')
@@ -312,6 +330,12 @@
       background-image: url('../assets/img/general/top-menu-ico.png')
       background-repeat: no-repeat
       background-size: contain
+    .links__item_tracker
+      .links__pic
+        background: url('../assets/img/general/tracking_s.png')
+        background-repeat: no-repeat;
+        top: 5px;
+        position: relative;
     .links__item_cont
       .links__pic
         background: url('../assets/img/general/cont-gray.png')
@@ -399,6 +423,12 @@
       background-image: url('../assets/img/general/top-menu-ico.png')
       background-repeat: no-repeat
       background-size: contain
+    .links__item_tracker
+      .links__pic
+        background: url('../assets/img/general/tracking_s.png')
+        background-repeat: no-repeat;
+        top: 5px;
+        position: relative;
     .links__item_cont
       .links__pic
         background: url('../assets/img/general/cont-gray.png')
@@ -485,6 +515,12 @@
       background-image: url('../assets/img/general/top-menu-ico.png')
       background-repeat: no-repeat
       background-size: contain
+    .links__item_tracker
+      .links__pic
+        background: url('../assets/img/general/tracking_s.png')
+        background-repeat: no-repeat;
+        top: 5px;
+        position: relative;
     .links__item_cont
       .links__pic
         background: url('../assets/img/general/cont-gray.png')
@@ -586,37 +622,37 @@
   //   z-index: -1
   &_main //russian flora
     .header__top
-      background-color: $special_bg
-      padding-bottom: 10px
-      padding-top: 12px
-      text-align: center
-      +r(960)
-        padding-bottom: 0
-        font-size: 0
-      .header__text-left
-        text-align: right
-        font-family: $corp
-        font-size: 17px
-        font-weight: 300
-        color: $dark-blue
-        float: left
-        width: 420px
-        +lg 
-          width: 345px
-        .icon
-          vertical-align: middle
-          font-size: 25px
-          fill: $dark-blue
-        .header__currency
-          text-transform: uppercase
-          text-decoration: underline
-          font-weight: 700
+    background-color: $special_bg
+    padding-bottom: 10px
+    padding-top: 12px
+    text-align: center
+    +r(960)
+      padding-bottom: 0
+      font-size: 0
+    .header__text-left
+      text-align: right
+      font-family: $corp
+      font-size: 17px
+      font-weight: 300
+      color: $dark-blue
+      float: left
+      width: 420px
+      +lg
+        width: 345px
+      .icon
+        vertical-align: middle
+        font-size: 25px
+        fill: $dark-blue
+      .header__currency
+        text-transform: uppercase
+        text-decoration: underline
+        font-weight: 700
     .header__logo
       float: none
       padding: 0
       +r(960)
         display: none
-    
+
     .header__logo-container
       display: flex
       align-items: center
@@ -632,15 +668,15 @@
       +lg
         flex: 0 0 100%
         justify-content: center
-        +r(960) 
+        +r(960)
           display: inline-block
           flex: auto
           margin: 0
       &.d-md-block
         display: none
-        +r(960) 
+        +r(960)
           display: inline-block
-      +sm 
+      +sm
         float: none
         display: inline-block
         width: auto
@@ -648,19 +684,19 @@
         flex: 0 0 50%
         text-align: center
         display: block
-        &--long 
+        &--long
           flex: 0 0 440px
-        img 
+        img
           max-width: 100%
           display: inline-block
-        +r(960) 
+        +r(960)
           flex: auto
           display: inline-block
           max-width: 200px
           vertical-align: top
-        +sm 
+        +sm
           max-width: 150px
-          
+
       &__description
         float: right
         font-family: $corp
@@ -669,7 +705,7 @@
         text-transform: uppercase
         flex: 0 0 45%
         font-size: 14px
-        +lg 
+        +lg
           display: none
       &__description-bottom
         display: block
@@ -689,15 +725,15 @@
           font-weight: 800
           color: $main-green
     .header__info
-       font-size: 0 
-       margin-top: 0
-       +r(960)
+      font-size: 0
+      margin-top: 0
+      +r(960)
         margin-top: 16px
     .support
       flex: 0 0 45%
       margin: 15px auto
       text-align: center
-      +lg 
+      +lg
         flex: 0 0 100%
       &__item
         font-size: 0
@@ -706,7 +742,7 @@
     .lang
       margin-right: 100px
       font-family: $corp
-      +lg 
+      +lg
         margin-right: 10px
       +r(960)
         position: absolute
@@ -715,15 +751,15 @@
       background-image: url(../assets/img/general/arr_dark.png);
     .lang__link
       font-size: 17px
-      span 
+      span
         color: $dark_blue
     .lang__current span
       color: $dark_blue
       &.d-sm-block
         display: none
-        +sm 
+        +sm
           display: inline-block
-      +sm 
+      +sm
         &.d-sm-none
           display: none
     .links
@@ -738,6 +774,12 @@
     .links__dt
       +r(960)
         display: none
+    .links__item_tracker
+      .links__pic
+        background: url('../assets/img/general/tracking_s.png')
+        background-repeat: no-repeat;
+        top: 5px;
+        position: relative;
     .links__item_cont
       .links__pic
         background-image: url('../assets/img/general/contacts-gbo.png')
@@ -775,7 +817,7 @@
       color: $light-blue
     .locator__item
       margin-left: 0
-    .locator__item:not(:last-child):after 
+    .locator__item:not(:last-child):after
       color: $light-blue
       margin-left: 0
     .nav__link_mod:after
@@ -783,11 +825,11 @@
       border: none
       width: 14px
       height: 18px
-    .nav__item.is-open 
+    .nav__item.is-open
       .nav__list>li:hover .nav__link_mod:after,
       .nav__link_mod:after
         content: url('../assets/img/general/chevron-down-black.svg')
-    .lang__wrap .lang__current span, 
+    .lang__wrap .lang__current span,
     .links__item:hover .links__text
       color: $text-link
     .header__country
@@ -800,7 +842,7 @@
       +r(960)
         max-width: 100vw
     .country__globe
-      +sm 
+      +sm
         display: none
     .country__input
       position: relative
@@ -817,7 +859,7 @@
         border-radius: 6px
         +r(960)
           width: 100%
-        +sm 
+        +sm
           font-size: 15px
       .country__input-icon
         position: absolute
@@ -866,7 +908,7 @@
       width: 30px
       height: 31px
       background-size: cover
-    .search 
+    .search
       input
         border-radius: 6px
         height: 30px
@@ -879,7 +921,7 @@
         padding-left: 12px
         +placeholder
           color: inherit
-      +lg 
+      +lg
         width: 100%
         text-align: left
       +r(960)
@@ -897,7 +939,7 @@
       color: $text-link
       font-size: 17px
     .links__text
-      +sm 
+      +sm
         font-size: 17px
         color: $text-link
 
