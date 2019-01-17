@@ -68,44 +68,43 @@
         &:not(:last-child)
           margin-right: 10px
 
+  &_yellow
+    //russian flora
+       background: $yellow
+       border-top: 3px solid $yellow2
+       +r(960)
+         border-top-color: transparent
+       .logo__description
+         margin: -14px 0 0 60px
+         color: $red
+         //font-size: 15px
+         //text-transform: uppercase
+       .links__text
+         color: $borde
+       .links__item_tracker
+         .links__pic
+           background: url('../assets/img/general/tracking_s.png')
+           background-repeat: no-repeat;
+           top: 5px;
+           position: relative;
+       .links__item_cont
+         .links__pic
+           background: url('../assets/img/general/cont.png')
+           background-size: cover
+       .links__item_marker
+         .links__pic
+           background: url('../assets/img/general/coins_rf.png')
+           background-size: contain
+           background-repeat: no-repeat
+           vertical-align: middle
+           margin-bottom: -5px
+           width: 23px
+           height: 20px
 
-
-  &_yellow //russian flora
-    background: $yellow
-    border-top: 3px solid $yellow2
-    +r(960)
-      border-top-color: transparent
-    .logo__description
-      margin: -14px 0 0 60px
-      color: $red
-      //font-size: 15px
-      //text-transform: uppercase
-    .links__text
-      color: $borde
-    .links__item_tracker
-      .links__pic
-        background: url('../assets/img/general/tracking_s.png')
-        background-repeat: no-repeat;
-        top: 5px;
-        position: relative;
-    .links__item_cont
-      .links__pic
-        background: url('../assets/img/general/cont.png')
-        background-size: cover
-    .links__item_marker
-      .links__pic
-        background: url('../assets/img/general/coins_rf.png')
-        background-size: contain
-        background-repeat: no-repeat
-        vertical-align: middle
-        margin-bottom: -5px
-        width: 23px
-        height: 20px
-
-    .links__item_basket
-      .links__pic
-        background: url('../assets/img/general/cart2.png')
-        background-size: cover
+       .links__item_basket
+    .links__pic
+    background: url('../assets/img/general/cart2.png')
+    background-size: cover
     .links__item_user
       .links__pic
         background: url('../assets/img/general/user.png')
@@ -132,55 +131,56 @@
       height: 31px
       background-size: cover
 
-  &_dark //drinkable
-    background: $dark
-    background: linear-gradient(180deg,#262626 0,#262626 56%,#0f0f0f)
-    border-top: 3px solid $yellow2
-    +r(960)
-      border-top-color: transparent
-    .header__logo
-      padding: 25px 0
-    .logo__description
-      display: none
-    .links__item
-      +hover
-        .links__text
-          color: #fff
-    .links__text,
-    .locator__link
-      color: $yellow2
-    .logo-sm
-      display: inline-block
-      vertical-align: middle
-      width: 31px
-      height: 33px
-      background-image: url('../assets/img/general/top-menu-ico.png')
-      background-repeat: no-repeat
-      background-size: contain
-    .links__item_tracker
-      .links__pic
-        background: url('../assets/img/general/tracking_s.png')
-        background-repeat: no-repeat;
-        top: 5px;
-        position: relative;
-    .links__item_cont
-      .links__pic
-        background: url('../assets/img/general/cont-yellow.png')
-        background-size: cover
-    .links__item_marker
-      .links__pic
-        background-image: url('../assets/img/general/coins-drinkable.png')
-        //background-size: contain
-        //background-repeat: no-repeat
-        //vertical-align: middle
-        //margin-bottom: -5px
-        //width: 23px
-        //height: 20px
+  &_dark
+    //drinkable
+       background: $dark
+       background: linear-gradient(180deg,#262626 0,#262626 56%,#0f0f0f)
+       border-top: 3px solid $yellow2
+       +r(960)
+         border-top-color: transparent
+       .header__logo
+         padding: 25px 0
+       .logo__description
+         display: none
+       .links__item
+         +hover
+           .links__text
+             color: #fff
+       .links__text,
+       .locator__link
+         color: $yellow2
+       .logo-sm
+         display: inline-block
+         vertical-align: middle
+         width: 31px
+         height: 33px
+         background-image: url('../assets/img/general/top-menu-ico.png')
+         background-repeat: no-repeat
+         background-size: contain
+       .links__item_tracker
+         .links__pic
+           background: url('../assets/img/general/tracking_s.png')
+           background-repeat: no-repeat;
+           top: 5px;
+           position: relative;
+       .links__item_cont
+         .links__pic
+           background: url('../assets/img/general/cont-yellow.png')
+           background-size: cover
+       .links__item_marker
+         .links__pic
+           background-image: url('../assets/img/general/coins-drinkable.png')
+           //background-size: contain
+           //background-repeat: no-repeat
+           //vertical-align: middle
+           //margin-bottom: -5px
+           //width: 23px
+           //height: 20px
 
-    .links__item_basket
-      .links__pic
-        background: url('../assets/img/general/cart-ico-yellow.png')
-        background-size: cover
+       .links__item_basket
+    .links__pic
+    background: url('../assets/img/general/cart-ico-yellow.png')
+    background-size: cover
     .links__item_user
       .links__pic
         background: url('../assets/img/general/user-yellow.png')
@@ -193,7 +193,7 @@
       background: #535d68
     .header__bottom
       background: #daa85f
-      background: linear-gradient(180deg,#daa85f 0,#8e643a)
+      background: linear-gradient(180deg, #daa85f 0, #8e643a)
     .burger
       background: url('../assets/img/general/burger-drinkable.png')
     .mob-search
@@ -204,7 +204,7 @@
       background: #fc9
     .nav__list > li
       +hover
-        background:  #fc9
+        background: #fc9
       &.is-open
         background: #fc9
     .nav__drop
@@ -214,7 +214,7 @@
           +hover
             color: #23527c
     .lang__current span
-      color:  #fc9
+      color: #fc9
   &_white //f2m moscow
     .logo__description
     margin: 0
@@ -240,9 +240,9 @@
     .links__item_tracker
       .links__pic
         background: url('../assets/img/general/tracking_s.png')
-        background-repeat: no-repeat;
-        top: 5px;
-        position: relative;
+        background-repeat: no-repeat
+        top: 5px
+        position: relative
     .links__item_cont
       .links__pic
         background: url('../assets/img/general/cont-gray.png')
@@ -333,9 +333,9 @@
     .links__item_tracker
       .links__pic
         background: url('../assets/img/general/tracking_s.png')
-        background-repeat: no-repeat;
-        top: 5px;
-        position: relative;
+        background-repeat: no-repeat
+        top: 5px
+        position: relative
     .links__item_cont
       .links__pic
         background: url('../assets/img/general/cont-gray.png')
@@ -426,9 +426,9 @@
     .links__item_tracker
       .links__pic
         background: url('../assets/img/general/tracking_s.png')
-        background-repeat: no-repeat;
-        top: 5px;
-        position: relative;
+        background-repeat: no-repeat
+        top: 5px
+        position: relative
     .links__item_cont
       .links__pic
         background: url('../assets/img/general/cont-gray.png')
@@ -518,9 +518,9 @@
     .links__item_tracker
       .links__pic
         background: url('../assets/img/general/tracking_s.png')
-        background-repeat: no-repeat;
-        top: 5px;
-        position: relative;
+        background-repeat: no-repeat
+        top: 5px
+        position:relative
     .links__item_cont
       .links__pic
         background: url('../assets/img/general/cont-gray.png')
@@ -584,9 +584,6 @@
     .lang__current span
       color: #0086cb
 
-
-
-
 .burger
   display: inline-block
   vertical-align: middle
@@ -595,9 +592,6 @@
   background-size: cover
   margin-top: -2px
 
-
-
-
 .mob-search
   display: inline-block
   vertical-align: middle
@@ -605,23 +599,12 @@
   height: 20px
   background-size: cover
 
-
 // =================== GBO ==========================================================================================
 
 .header
   font-family: $corp
-  // &:before
-  //   position: absolute
-  //   content: ''
-  //   top: 0
-  //   left: 0
-  //   right: 0
-  //   height: 50px
-  //   width: 100%
-  //   background-color: $special_bg
-  //   z-index: -1
-  &_main //russian flora
-    .header__top
+  &_main
+   .header__top
     background-color: $special_bg
     padding-bottom: 10px
     padding-top: 12px
@@ -748,7 +731,7 @@
         position: absolute
         top: 12px
     .lang__arr
-      background-image: url(../assets/img/general/arr_dark.png);
+      background-image: url(../assets/img/general/arr_dark.png)
     .lang__link
       font-size: 17px
       span
@@ -777,9 +760,9 @@
     .links__item_tracker
       .links__pic
         background: url('../assets/img/general/tracking_s.png')
-        background-repeat: no-repeat;
-        top: 5px;
-        position: relative;
+        background-repeat:no-repeat
+        top: 5px
+        position:relative
     .links__item_cont
       .links__pic
         background-image: url('../assets/img/general/contacts-gbo.png')
@@ -826,7 +809,7 @@
       width: 14px
       height: 18px
     .nav__item.is-open
-      .nav__list>li:hover .nav__link_mod:after,
+      .nav__list > li:hover .nav__link_mod:after,
       .nav__link_mod:after
         content: url('../assets/img/general/chevron-down-black.svg')
     .lang__wrap .lang__current span,
@@ -835,7 +818,7 @@
     .header__country
       font-family: $corp
       padding: 10px 10px 10px 70px
-      max-width: 440px
+      max-width: 350px
       width: 100%
       +lg
         padding: 10px 0
@@ -871,9 +854,9 @@
           fill: $main-green
           font-size: 13px
     .header__bottom
-      background: linear-gradient($text-link ,$blue)
+      background: linear-gradient($text-link, $blue)
       +r(960)
-        background: linear-gradient($text-link ,$blue)
+        background: linear-gradient($text-link, $blue)
     .burger
       vertical-align: middle
       +hover
@@ -943,5 +926,5 @@
         font-size: 17px
         color: $text-link
 
-.no-touch .header_main .nav__list>li:hover .nav__link_mod:after
+.no-touch .header_main .nav__list > li:hover .nav__link_mod:after
   content: url('../assets/img/general/chevron-down-black.svg')
